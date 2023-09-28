@@ -1,0 +1,28 @@
+.middleContainer{
+    padding-top: 100px;
+    .middleTop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+
+        .middleTitle{
+            font-size: 32px;
+            font-weight: bold;
+
+        }
+        .middleDesc{
+            font-size: 18px;
+        }
+        .middleImg{
+            width: 225.2px;
+            height: 20px;
+
+        }
+    }
+
+    .middleMain{
+        
+    }
+}
