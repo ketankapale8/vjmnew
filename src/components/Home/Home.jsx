@@ -5,6 +5,9 @@ import MiddleHomeC from './MiddleHomeContainer/MiddleHomeC.jsx';
 import './home.scss'
 import KaryakramSangya from './KaryakramSangya/KaryakramSangya';
 import SamajiKalyaan from './SamajikKalyaan/SamajikKalyaan';
+import SamajikPehle from './SamajikPehle/SamajikPehle';
+import Gyaan from './GyaanSection/Gyaan';
+import NavjeevanSadhana from './NavjeevanSadhana/NavjeevanSadhana';
 const Home = () => {
   return (
     <div className='home'>
@@ -12,6 +15,9 @@ const Home = () => {
       <MiddleHomeC/>
       <KaryakramSangya/>
       <SamajiKalyaan/>
+      <SamajikPehle/>
+      <Gyaan/>
+      <NavjeevanSadhana/>
     </div>
   )
 }
