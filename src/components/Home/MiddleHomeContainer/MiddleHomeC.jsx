@@ -1,6 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './middlehomec.scss';
 import vectorDesign from '../../../assets/commonAssets/Vector.png'
+import img1 from '../../../assets/EventsPage/Bhakti.jpg';
+import img2 from '../../../assets/EventsPage/poornima.jpg';
+import img3 from '../../../assets/EventsPage/Yagya.jpg';
+import location from '../../../assets/EventsPage/location.png';
+
+
+import {BsCalendarDate} from 'react-icons/bs';
+import {FaCity} from 'react-icons/fa';
+
 
 const EventsArrayHindi = [
     {
@@ -163,9 +172,9 @@ const EventsArrayHindi = [
   ]
 
   
-
-
-const MiddleHomeC = () => {
+  
+  const MiddleHomeC = () => {
+  const [current , setCurrent] = useState(EventsArrayHindi)
   return (
     <div className='middleContainer'>
         <div className="middleTop">
@@ -175,7 +184,43 @@ const MiddleHomeC = () => {
 
         </div>
         <div className="middleMain">
+          <div className="buttonContainer">
 
+                      <button className={current == EventsArrayHindi ? 'buttons-current' : "buttons"} onClick={()=> setCurrent(EventsArrayHindi)}>All</button>
+                        <button className={current == EventsArraySpecial ? 'buttons-current' : "buttons"} onClick={()=> setCurrent(EventsArraySpecial)}>Monthly</button>
+                        <button className={current == EventsArraySatsang ? 'buttons-current' : "buttons"} onClick={()=> setCurrent(EventsArraySatsang)}>Satsang</button>
+                        <button className={current == EventsArrayYugrishi ? 'buttons-current' : "buttons"}onClick={()=> setCurrent(EventsArrayYugrishi)}>Yugrishi Anusthan</button>
+                        <button className={current == EventsArrayPournima ? 'buttons-current' : "buttons"}  onClick={()=> setCurrent(EventsArrayPournima)}>Poornima</button>
+          </div>
+
+          <div className="events">
+
+{current.map(item=>{
+  return (
+    <>
+    <div className="boxContainer" 
+    >
+      <div className="top">
+        <img className='postImg' alt='post' src={item.img}/>  
+      </div>
+      <div className="bottom">
+
+          <h4>{item.title}</h4>
+            <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', padding: '6px 12px 12px 12px'}}>{item.tag}</button>
+          <p>{item.desc}</p>
+      </div>
+          <div className="tags">
+            <BsCalendarDate style={{ paddingLeft:'4px'}}/>
+            <p>{item.date}</p>
+            <img style={{ paddingLeft:'4px'}} src={location}/>
+            <p>{item.city}</p>
+          </div>
+    </div>
+    
+    </>
+  )
+})}
+</div>
         </div>
     </div>
   )
