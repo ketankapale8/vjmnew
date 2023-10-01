@@ -1,7 +1,7 @@
 import React from 'react';
 import './ganeshlakshmi.scss';
 import HeaderImgC from '../../common/HeaderImgContainer/HeaderImgC';
-import BannerImg from '../../assets/BannerImgs/BannerImg2.png'
+import BannerImg from '../../assets/BannerImgs/BannerImg6.png'
 import TitlePage from '../../common/EventPagesCommon/TitlePage/TitlePage';
 import BankTransfer from '../../common/EventPagesCommon/BankTransferPage/BankTransfer';
 import bannerImg from '../../assets/GaneshLakshmi/rightImg1.png';
@@ -38,7 +38,6 @@ const GaneshLakshmi = () => {
   const leftdesc1 = "यदि आप किसी कारणवश यज्ञ में भाग नहीं ले पा रहे हैं तो संकल्पित यजमान के रूप में भाग लें। गुरुकुल के ऋषिकुमार आपकी ओर से यज्ञ करेंगे, और आपका श्री यंत्र, उपहार और प्रसाद डाक द्वारा भेज दिया जाएगा।";
   const leftdate1 = " "
   const lefttime1= ""
-
 
 
   return (

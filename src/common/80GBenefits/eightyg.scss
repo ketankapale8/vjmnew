@@ -1,0 +1,19 @@
+.eightyg{
+    width: 100%;
+    padding-bottom: 30px;
+
+    .eightygContainer{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      
+      .eightygImg{
+        width: 700px;
+        height: 240px
+      }
+
+
+    }
+}

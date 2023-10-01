@@ -1,10 +1,10 @@
 import React from 'react';
-import './rishikesh.scss';
+import './newlife.scss';
 import HeaderImgC from '../../common/HeaderImgContainer/HeaderImgC';
-import BannerImg from '../../assets/BannerImgs/BannerImg4.png'
+import BannerImg from '../../assets/BannerImgs/BannerImg5.png'
 import TitlePage from '../../common/EventPagesCommon/TitlePage/TitlePage';
 import BankTransfer from '../../common/EventPagesCommon/BankTransferPage/BankTransfer';
-import bannerImg from '../../assets/ManaliMeditation/One.png'
+import bannerImg from '../../assets/newlife/bannerRight.png'
 import bannerImgLeft from '../../assets/rishikeshmeditation/Six.png';
 import bannerImgLeft2 from '../../assets/GaneshLakshmi/leftimg2.png';
 import bannerImgRight2 from '../../assets/GaneshLakshmi/rightimg2.png';
@@ -20,15 +20,15 @@ import img4 from '../../assets/rishikeshmeditation/four.png';
 import img5 from '../../assets/rishikeshmeditation/five.png';
 // import Mahayagya from './MahaYagya/Mahayagya';
 
-const RishikeshMeditation = () => {
+const NewLifeMeditation = () => {
   const title = "4-दिवसीय हिमालयन मेडिटेशन रिट्रीट"
-  const desc = "परमार्थ निकेतन, ऋषिकेश, भारत में परम पूज्य सुधांशु जी महाराज और डॉ अर्चिका दीदी द्वारा निर्देशित आंतरिक शांति, आत्म-जागरूकता और आध्यात्मिक प्रगति के लिए, पवित्र गंगा के तट पर एक सुंदर ध्यान साधना का कार्यक्रम।";
+  const desc = "भगवान शिव का दर्शन अलौकिक है और उनके भक्त अद्वितीय हैं। सांसारिकता के प्रति उनका दृष्टिकोण असाधारण है। उनका रहन-सहन और परम योगी के प्रति लगाव अत्यंत आकर्षक है। वे प्राकृतिक साधक हैं और महाशिवरात्रि इन सभी भक्तों के लिए एक गुरु के सानिध्य में अथाह भक्ति की ओर जाने का सही अवसर अवसर प्रदान करती है।";
 
 
-  const lefttitle = "(ध्यान साधना शिविर)";
-  const leftdesc = "मेडिटेशन रिट्रीट आध्यात्मिक प्रवचनों और ध्यान सत्रों के माध्यम से आंतरिक दुनिया के विभिन्न पहलुओं की खोज करता है। यह साधकों को स्वयं के बेहतर संस्करण को पुनः खोजने के लिए एक स्पष्ट पथ पर आगे बढ़ते हुए ‘स्व‘ को समझने में सहायता करने के लिए डिज़ाइन किया गया है।";
-  const leftdate = "17 नवंबर से 20 नवंबर, 2022 तक "
-  const lefttime = ""
+  const righttitle = "यह कोर्स अलग क्यों है?";
+  const rightdesc = "अगले 365 दिनों तक प्रत्येक दिन की शुरुआत महाराजश्री के दिव्य मार्गदर्शन से करें। ध्यान को अपनी जीवनशैली में शामिल करने का एक अनूठा अवसर।";
+  const rightdate = ""
+  const righttime = ""
 
   // const lefttitle = "मनाली में 5 दिवसीय मेडिटेशन रिट्रीट";
   // const leftdesc = "मनुष्य रचनात्मक ऊर्जा का एक बंडल है जो सृष्टि के सभी रूपों से जुड़ा हुआ है, ब्रह्मांड के निर्माण से लेकर विचारों की प्राप्ति तक, रिश्तों के निर्माण तक। इस 'शक्ति' को सक्रिय करने के तरीकों में विशिष्ट श्वास व्यायाम, मुद्रा और ध्यान तकनीक शामिल हैं।";
@@ -122,12 +122,12 @@ const RishikeshMeditation = () => {
 
 
   return (
-    <div className='manalimeditation'>
+    <div className='newlifemeditation'>
         <HeaderImgC img={BannerImg}/>
         <TitlePage title={title} desc={desc}/>
-        {/* <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}/> */}
-        <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgLeft}/>
-        <BottomComponent title={bottomTitle} desc={bottomDesc} EventsArray1={EventsArray1} EventsArray2={EventsArray2}/>
+        <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}/>
+        {/* <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgLeft}/> */}
+        {/* <BottomComponent title={bottomTitle} desc={bottomDesc} EventsArray1={EventsArray1} EventsArray2={EventsArray2}/> */}
         {/* <RightImg righttitle={righttitle1} rightdate={rightdate1} rightdesc={rightdesc1} righttime={righttime1} bannerImg={bannerImgRight2}/>
         <LeftImg lefttitle={lefttitle1} leftdate={leftdate1} leftdesc={leftdesc1} lefttime={lefttime1} bannerImg={bannerImgLeft2}/> */}
         {/* <Mahayagya/> */}
@@ -136,4 +136,4 @@ const RishikeshMeditation = () => {
   )
 }
 
-export default RishikeshMeditation
+export default NewLifeMeditation
