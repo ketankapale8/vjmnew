@@ -37,7 +37,7 @@ line-height: normal;
                     // flex: 0.3;
                     flex-direction: column;
                     // margin-top: 20px;
-                    height: 485px;
+                    height: 525px;
                     width: 322px;
                     padding-bottom: 3px;
                     background-color: white;
@@ -77,7 +77,7 @@ line-height: normal;
                     .bottom{
                         width: 95%;
                         max-height: 290px;
-                        height: 280px;
+                        height: 290px;
                         padding-left: 12px;
                         padding-right: 120px;
                         display: flex;
@@ -104,39 +104,39 @@ line-height: normal;
                             
                         }
         
-                        .date-Share{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: start;
+                        // .date-Share{
+                        //     display: flex;
+                        //     flex-direction: row;
+                        //     align-items: start;
         
-                            .share{
-                                padding-left: 120px;
-                                padding-top: 52px;
-                                width: 15px;
-                                height: 10px;
-                            }
-        
-        
+                        //     .share{
+                        //         padding-left: 120px;
+                        //         padding-top: 52px;
+                        //         width: 15px;
+                        //         height: 10px;
+                        //     }
         
         
-                        }
-                    }
-                    .tags{
-                        padding-top: 50px;
-                        margin-bottom: 10px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 17px;
-                        // padding: 10px;
-    
-                        // p{
-                        //     padding: 12px;
+        
+        
                         // }
-    
-    
                     }
+                    // .tags{
+                    //     padding-top: 50px;
+                    //     margin-bottom: 10px;
+                    //     display: flex;
+                    //     flex-direction: row;
+                    //     align-items: center;
+                    //     justify-content: center;
+                    //     gap: 17px;
+                    //     // padding: 10px;
+    
+                    //     // p{
+                    //     //     padding: 12px;
+                    //     // }
+    
+    
+                    // }
                 }
     
     

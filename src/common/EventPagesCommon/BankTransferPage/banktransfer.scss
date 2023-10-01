@@ -1,0 +1,64 @@
+.banktransfer{
+    width: 100%;
+    height: auto;
+    padding-top: 0px ;
+    
+    .banktransferContainer{
+        padding: 0px 100px;
+        display: flex;
+        flex-direction: row;
+        background-color: #6F2323;
+        gap: 50px;
+        
+
+        .banktransferleft{
+            display: flex;
+            align-items: center;
+            .leftImg{
+                width: 454px;
+                height: 369px;
+
+            }
+        }
+
+        .banktransferright{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: start;
+            color: whitesmoke;
+
+            .transferTitle{
+                color: var(--White, #FFF);
+                font-family: Poppins;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal; 
+        
+            }
+          
+            .transferImage{
+                width: 225.2px;
+                height: 20px;
+        
+            }
+
+            .transferDesc{
+                gap: 3px;
+                font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+            }
+
+        }
+    }
+}

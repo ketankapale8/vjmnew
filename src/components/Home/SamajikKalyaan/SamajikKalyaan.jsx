@@ -57,9 +57,9 @@ const SamajiKalyaan = () => {
 
                         <h4>{item.title}</h4>
                         <p>{item.desc}</p>
-                        <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', marginLeft:'10px', marginTop:'16px'}}>अन्वेषण करें {'>'} </button>
                  
                     </div>
+                        <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', marginLeft:'10px', marginTop:'16px'}}>अन्वेषण करें {'>'} </button>
                         </div>
                         
                         </>

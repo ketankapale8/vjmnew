@@ -1,0 +1,70 @@
+.leftimg{
+    width: 100%;
+    height: 680px;
+
+    .leftImgContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+
+
+        .leftContainer{
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+            background-color: #6F2323;
+            gap: 30px;
+            padding-right: 100px;
+            text-align: start;
+
+            .LeftTitle{
+                font-size: 32px;
+                font-weight: bold;
+        
+            }
+            .LeftDesc{
+                font-size: 18px;
+                width: 450px;
+            }
+            .LeftImage{
+                width: 225.2px;
+                height: 20px;
+        
+            }
+
+            .time-date{
+                line-height: 25px;
+            }
+
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                .exploremore1{
+                    margin-top: 50px;
+                    background-color: transparent;
+                    border-radius: 46px;
+                    color: whitesmoke;
+    border: 2px solid var(--White, #FFF); 
+    width: 120px;
+    height: 46px;
+                }
+            }
+
+
+            
+
+
+        }
+        .rightContainer{
+            width: 856px;
+            height: 680px;
+            .rightImgContainer{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.titlepage{
+    padding-top: 50px;
+    
+    .titlePageContainer{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .Title{
+            font-size: 32px;
+            font-weight: bold;
+    
+        }
+        .Desc{
+            font-size: 18px;
+            width: 550px;
+        }
+        .Image{
+            width: 225.2px;
+            height: 20px;
+    
+        }
+    }
+}
