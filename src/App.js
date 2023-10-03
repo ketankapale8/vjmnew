@@ -14,6 +14,19 @@ import Navprabhat from './components/NavPrabhat/Navprabhat';
 import Balkalyaan from './components/BalKalyan/Balkalyan';
 import Gauseva from './components/GauSeva/GauSeva';
 
+import Login from './common/Login/Login';
+import Signup from './common/Signup/Signup';
+import Dikshit from './common/DonationPages/Dikshit/Dikshit';
+import Volunteer from './common/DonationPages/Volunteer/Volunteer';
+
+import VJMMembership from './common/DonationPages/VJMMembership/VjmMembership';
+import Donor from './common/DonationPages/Donor/Donor';
+import Donation from './common/DonationPages/Donation/Donation';
+import BalkalyanDonate from './common/DonationPages/BalkalyanDonate/BalkalyanDonate';
+import DharmadaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
+import AnnapoornaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
+import CowSheltersDonation from './common/CowShelters/CowShelters';
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +43,20 @@ function App() {
           <Route path='/navprabhat' element={<Navprabhat/>}/>
           <Route path='/balkalyaan' element={<Balkalyaan/>}/>
           <Route path='/gauseva' element={<Gauseva/>}/>
+          {/* //login// */}
+          <Route element={<Login/>} path='login'/>
+          <Route element={<Signup/>} path='signup'/>
+          {/* //Donation// */}
+          <Route element={<Dikshit/>} path='diksha'/>
+          <Route element={<Volunteer/>} path='volunteer'/>
+          <Route element={<VJMMembership/>} path='vjm-membership'/>
+          <Route element={<Donor/>} path='donor'/>
+          <Route element={<Donation/>} path='donation'/>
+          <Route element={<BalkalyanDonate/>} path='balkalyan-donation'/>
+          <Route element={<DharmadaDonation/>} path='dharmada-donation'/>
+          <Route element={<CowSheltersDonation/>} path='cowshelter-donation'/>
+          <Route element={<AnnapoornaDonation/>} path='annapoorna-donation'/>
+
         </Routes>
         <Footer/>
       </Router>
