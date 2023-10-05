@@ -1,6 +1,8 @@
 import React , {useState} from 'react';
 import {Link} from 'react-router-dom'
 import './navbar.scss';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 // import playstore from '../../assets/navbarIcons/google-play.png';
 // import appstore from '../../assets/navbarIcons/app-store.png';
 // import donation from '../../assets/navbarIcons/donation.png';
@@ -19,6 +21,8 @@ import './navbar.scss';
 // import EventsDropdown from './EventsDropdown';
 // import DropdownEvents from './DropdownEvents/DropdownEvents';
 import MenuBar from '../Menubar/Menubar.js';
+import { useContext } from 'react';
+import {Context} from '../../index.js';
 
 
 const topNavbar = [
@@ -83,6 +87,9 @@ const topNavbar2 = [
 // ]
 
 const Navbar = () => {
+  const url ="http://localhost:4000";
+  const {isAuthenticated ,setIsAuthenticated , setloading , loading , user , setUser} =  useContext(Context);
+  console.log(user)
 
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
@@ -97,6 +104,34 @@ const Navbar = () => {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const handleLogout = async () => {
+    setloading(true)
+    try{
+       await axios.get(
+        `${url}/api/v1/logout`,
+        
+        // { withCredentials : true }
+      )
+      toast.success("Logged out Successfully")
+      setIsAuthenticated(false);
+      setUser({})
+      setloading(false)
+      
+
+    }catch(err){
+      toast.error(err.msg);
+      setIsAuthenticated(true)
+      setloading(false)
+
+    }
+
+    // dispatch(login(values.email , values.password , values.name))
+    // localStorage.setItem("currentUser", JSON.stringify({values}))
+    // dispatch(login(values.email , values.password));
+  };
+
+
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -185,31 +220,78 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="navbarTop">
         <div className="top1">
-          {topNavbar.map(item=>{
+          {/* {topNavbar.map(item=>{
             return (
               <>
                 <div>
-                  {/* <img className='iconImgs' src={item.icon} /> */}
+                  <img className='iconImgs' src={item.icon} />
                 </div>
               </>
             )
-          })}
+          })} */}
         </div>
         <div className="top2">
-            {topNavbar2.map(item=>{
+            {/* {topNavbar2.map(item=>{
               return (
                 <>
                 <Link to={item.link} style={{textDecoration:'none', color:'inherit'}}>
                   <div className='top2Container'>
                     <h5>{item.name}</h5>
-                    {/* <img className='iconImgsTop2' src={item.icon}/> */}
 
                   </div>
                 
                 </Link>
                 </>
               )
-            })}
+            })} */}
+
+<Link to='/donation' style={{textDecoration:'none', color:'inherit'}}>
+                  <div className='top2Container'>
+                    <h5>Donate</h5>
+
+                  </div>
+                
+</Link>
+{isAuthenticated ? (
+  <>
+  <Link to='/' style={{textDecoration:'none', color:'inherit'}} >
+                    <div className='top2Container' onClick={handleLogout}>
+                      <h5>Logout</h5>
+
+                    </div>
+                  
+  </Link>
+
+  <Link to='/myaccount' style={{textDecoration:'none', color:'inherit'}}>
+                    <div className='top2Container'>
+                      <h5>My Account</h5>
+
+                    </div>
+                  
+  </Link>
+  
+  </>
+
+) : (
+
+<Link to='/login' style={{textDecoration:'none', color:'inherit'}}>
+                  <div className='top2Container'>
+                    <h5>Login</h5>
+
+                  </div>
+                
+</Link>
+
+)}
+
+
+<Link to='/volunteer' style={{textDecoration:'none', color:'inherit'}}>
+                  <div className='top2Container'>
+                    <h5>Volunteer</h5>
+
+                  </div>
+                
+</Link>
         </div>
       </div>
       <div className="navbarBottom">

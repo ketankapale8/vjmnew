@@ -1,8 +1,9 @@
 import React , {useState , useMemo} from 'react';
 import './signup.scss';
-import Footer from '../../common/Footer/Footer';
+import { useContext } from 'react';
+import {Context} from '../../index.js';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link , Navigate} from 'react-router-dom';
 import { Country, State, City }  from 'country-state-city';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
@@ -13,18 +14,74 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const Signup = () => {
-    const [country, setCountry] = useState('');
+  const url ="http://localhost:4000";
+  const {isAuthenticated, setIsAuthenticated , loading , setloading} = useContext(Context)
+    // const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
     // const [countryList , setCountryList] = useState([{label : Country.getAllCountries().map(item=>item.name)}]);
-    console.log(countryList)
 
-   
-    const countrySelection = (e) =>{
-        setCountry(e)
-    }
+    const [values , setValues] = useState({
+      name : '',
+      email :'',
+      password :'',
+      address :'',
+      country : '', 
+      state :'',
+      city :'',
+      pincode : '', 
+      // dob:'',
+      gender : '',
+
+    })
+
+
+    const { email , password , name , address , country , state , city , pincode } = values;
+
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setloading(true)
+      try{
+
+        const {data} = await axios.post(
+          `${url}/api/v1/register`, 
+          {
+            name  , 
+            email ,
+            password,
+            address , country , state , city , pincode
+          },
+          {
+            headers : {
+              "Content-Type" : "application/json",
+            }, 
+            withCredentials : true
+          }
+        )
+
+        toast.success(data.success)
+        setIsAuthenticated(true)
+        setloading(false)
+        
+      }catch(err){
+        toast.error(err.message)
+        setIsAuthenticated(false)
+        setloading(false)
+
+      }
+      
+
+    
+  }
+
+
+  if(isAuthenticated) return <Navigate to={"/login"}/>
+     
 
     
 
@@ -48,23 +105,23 @@ const Signup = () => {
 
                 <div className="inputBox">
                     <h4>Full Name</h4>
-                    <input placeholder='Please enter your name' type='text'/>
+                    <input placeholder='Please enter your name' type='text' onChange={(e)=> setValues({...values , name : e.target.value})}/>
                     <h4>Address</h4>
-                    <input placeholder='Please enter your name' type='text'/>
+                    <input placeholder='Please enter your name' type='text' onChange={(e)=> setValues({...values , address : e.target.value})}/>
                     <h4>Email</h4>
-                    <input placeholder='Please enter your email' type='email'/>
+                    <input placeholder='Please enter your email' type='email' onChange={(e)=> setValues({...values , email : e.target.value})}/>
                     <h4>Password</h4>
-                    <input placeholder='please enter your password' type='password'/>
+                    <input placeholder='please enter your password' type='password' onChange={(e)=> setValues({...values , password : e.target.value})}/>
                     <h4>Select Country</h4>
-                    <Select className='select' options={options} value={country} onChange={countrySelection} placeholder="Country" />
+                    <Select className='select' options={options} value={values.country} onChange={(e)=> setValues({...values , country : e})} placeholder="Country" />
                     <h4 style={{paddingTop:'3px'}}>Enter State</h4>
-                    <input placeholder='Please enter your State' type='text'/>
+                    <input placeholder='Please enter your State'  type='text' onChange={(e)=> setValues({...values , state : e.target.value})}/>
                     <h4>Enter City</h4>
-                    <input placeholder='Please enter your City' type='text'/>
+                    <input placeholder='Please enter your City' type='text' onChange={(e)=> setValues({...values , city : e.target.value})}/>
                     <h4>Enter Pincode</h4>
-                    <input placeholder='Please enter your Pincode' type='text'/>
-                    <h4>Select your DOB</h4>
-                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                    <input placeholder='Please enter your Pincode' type='text' onChange={(e)=> setValues({...values , pincode : e.target.value})}/>
+                    {/* <h4>Select your DOB</h4>
+                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
                     <h4>Select your Gender</h4>
                     <FormControl>
       <RadioGroup
@@ -72,6 +129,7 @@ const Signup = () => {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
         defaultValue="male"
+        onChange={(e)=> setValues({...values , gender : e.target.value})}
       >
         <FormControlLabel value="female" control={<Radio style={{color: '#b73c1d'}}  />} label="Female" />
         <FormControlLabel value="male" control={<Radio  style={{color: '#b73c1d'}}  />} label="Male" />
@@ -123,8 +181,8 @@ const Signup = () => {
     </FormControl> */}
 
                     
-                    <div className="loginSignUp">
-                        <button className='loginBtn'>Sign Up</button>
+                    <div className="loginSignUp" >
+                        <button className='loginBtn' onClick={handleSubmit}>Sign Up</button>
                     </div>
                     <div className="signUpContainer">
                         <h4>Already have an account?</h4>

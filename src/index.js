@@ -1,13 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createContext } from 'react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+export const Context = createContext({isAutheticated : false})
+
+const AppWrapper = () => {
+  const [isAuthenticated, setIsAuthenticated ] = useState(false);
+  const [loading , setloading ] = useState(false);
+  const [user , setUser] = useState({})
+
+  return (
+    <Context.Provider value={{isAuthenticated , user , setIsAuthenticated ,
+     setUser , loading , 
+     setloading}}>
+      <App />
+    </Context.Provider>
+  )
+
+}
+
 root.render(
   <React.StrictMode>
-    <App />
+    <AppWrapper/>
   </React.StrictMode>
 );
 

@@ -26,8 +26,33 @@ import BalkalyanDonate from './common/DonationPages/BalkalyanDonate/BalkalyanDon
 import DharmadaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
 import AnnapoornaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
 import CowSheltersDonation from './common/CowShelters/CowShelters';
+import { useContext, useEffect, useState } from 'react';
+import {Context} from './index.js'
+import axios from 'axios';
 
 function App() {
+  const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+  const [refresh , setRefresh] = useState(false);
+  const url ="http://localhost:4000";
+
+  useEffect(()=>{
+    setloading(true);
+    axios.get(`${url}/api/v1/me`, {
+      withCredentials:true
+    })
+    .then(resp=>{
+      setUser(resp.data.user);
+      setIsAuthenticated(true);
+    setloading(false)
+    })
+    .catch(
+      setUser({}),
+      setIsAuthenticated(false),
+      setloading(false)
+  
+    )
+  },[refresh])
+
   return (
     <div className="App">
       <Router>
