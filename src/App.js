@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast'
 import Home from './components/Home/Home';
 import Navbar from './common/Navbar/Navbar'
 import Footer from './common/Footer/Footer';
@@ -25,33 +26,36 @@ import Donation from './common/DonationPages/Donation/Donation';
 import BalkalyanDonate from './common/DonationPages/BalkalyanDonate/BalkalyanDonate';
 import DharmadaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
 import AnnapoornaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
-import CowSheltersDonation from './common/CowShelters/CowShelters';
+import CowSheltersDonation from './common/DonationPages/CowShelters/CowShelters';
 import { useContext, useEffect, useState } from 'react';
 import {Context} from './index.js'
 import axios from 'axios';
+import MyAccount from './components/MyAccount/MyAccount';
+import Profile from './common/Profile/Profile.jsx'
+import Dharamkosh from './components/Dharamkosh/Dharamkosh';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
   const [refresh , setRefresh] = useState(false);
   const url ="http://localhost:4000";
 
-  useEffect(()=>{
-    setloading(true);
-    axios.get(`${url}/api/v1/me`, {
-      withCredentials:true
-    })
-    .then(resp=>{
-      setUser(resp.data.user);
-      setIsAuthenticated(true);
-    setloading(false)
-    })
-    .catch(
-      setUser({}),
-      setIsAuthenticated(false),
-      setloading(false)
+  // useEffect(()=>{
+  //   setloading(true);
+  //   axios.get(`${url}/api/v1/me`, {
+  //     withCredentials:true
+  //   })
+  //   .then(resp=>{
+  //     setUser(resp.data.user);
+  //     setIsAuthenticated(true);
+  //   setloading(false)
+  //   })
+  //   .catch(
+  //     setUser({}),
+  //     setIsAuthenticated(false),
+  //     setloading(false)
   
-    )
-  },[refresh])
+  //   )
+  // },[refresh])
 
   return (
     <div className="App">
@@ -68,9 +72,17 @@ function App() {
           <Route path='/navprabhat' element={<Navprabhat/>}/>
           <Route path='/balkalyaan' element={<Balkalyaan/>}/>
           <Route path='/gauseva' element={<Gauseva/>}/>
+          <Route path='/dharm-kosh' element={<Dharamkosh/>}/>
+          <Route path='/dharmada-seva' element={<Dharamkosh/>}/>
+          <Route path='/disaster-relief' element={<Dharamkosh/>}/>
+
+
+
           {/* //login// */}
           <Route element={<Login/>} path='login'/>
           <Route element={<Signup/>} path='signup'/>
+          <Route element={<MyAccount/>} path='myaccount'/>
+          <Route element={<Profile/>} path='profile'/>
           {/* //Donation// */}
           <Route element={<Dikshit/>} path='diksha'/>
           <Route element={<Volunteer/>} path='volunteer'/>
@@ -83,6 +95,7 @@ function App() {
           <Route element={<AnnapoornaDonation/>} path='annapoorna-donation'/>
 
         </Routes>
+        <Toaster/>
         <Footer/>
       </Router>
     </div>

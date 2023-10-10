@@ -137,7 +137,7 @@ const AnnapoornaDonation = () => {
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        defaultValue="male"
+        defaultValue="no"
       >
         <FormControlLabel value="Yes" control={<Radio style={{color: '#b73c1d'}}  />} label="Yes" />
         <FormControlLabel value="No" control={<Radio  style={{color: '#b73c1d'}}  />} label="No" />

@@ -13,18 +13,69 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import axios from 'axios';
+import { useContext } from 'react';
+import {Context} from '../../../index.js';
 
 const BalkalyanDonate = () => {
     const [country, setCountry] = useState('');
+    const [val , setVal] = useState();
+    const [val1 , setVal1] = useState();
+    const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
+    const [total , setTotal] = useState(0)
     // const [countryList , setCountryList] = useState([{label : Country.getAllCountries().map(item=>item.name)}]);
-    console.log(countryList)
+    console.log(countryList);
+    const url ="http://localhost:4000";
 
    
     const countrySelection = (e) =>{
         setCountry(e)
     }
+    const totalVal = Number(val) + Number(val1);
+
+    const checkoutHandler = async (amount) =>{
+      const {data:{key}} = await axios.get(`${url}/api/v1/getkey`)
+      const {data :{order}} = await axios.post(`${url}/api/v1/checkout`,{
+        amount
+      })
+
+
+      const options = {
+        key, // Enter the Key ID generated from the Dashboard
+        amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: "INR",
+        name: "Balkalyan Yojana Donation",
+        description: "Payment Gateway",
+        image: "https://vjmmeditation.com/assets/new_theme/new_logo.png",
+        order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        callback_url: "http://localhost:4000/api/v1/paymentverification",
+        prefill: {
+            name: user?.name,
+            email: user?.email,
+            contact: "9000090000"
+        },
+        notes: {
+            "address": "Razorpay Corporate Office"
+        },
+        theme: {
+            "color": "#6F2323"
+        }
+    };
+
+
+    const razor = new window.Razorpay(options);
+    razor.open();
+    }
+
+      // console.log(window)
+
+
+    
+  
+
 
     
 
@@ -35,7 +86,7 @@ const BalkalyanDonate = () => {
     <>
     
     <div className='donatebal'>
-        <div className="loginContainer">
+        <div className="donateContainer">
             <div className="topTitleBox">
                 <img alt='brand' src={logo} className='logo'/>
 
@@ -64,59 +115,11 @@ const BalkalyanDonate = () => {
       </RadioGroup>
     </FormControl>
     <h4>I would like to donate below in INR to educate a child</h4>
-                    <input placeholder='Please enter your amount' type='Number'/>
+                    <input placeholder='Please enter your amount' type="Number"  onChange={(e)=> setVal(e.target.value)}/>
                     <h4>Other Specific Amount</h4>
-                    <input placeholder='Please enter your amount' type='Number'/>
+                    <input placeholder='Please enter your amount' type="Number"  onChange={(e)=> setVal1(e.target.value)}/>
 
-                    <h4>Full Name</h4>
-                    <input placeholder='Please enter your name' type='text'/>
-                    <h4>Address</h4>
-                    <input placeholder='Please enter your name' type='text'/>
-                    <h4>Email</h4>
-                    <input placeholder='Please enter your email' type='email'/>
-                    <h4>Password</h4>
-                    <input placeholder='please enter your password' type='password'/>
-                    <h4>Select Country</h4>
-                    <Select className='select' options={options} value={country} onChange={countrySelection} placeholder="Country" />
-                    <h4 style={{paddingTop:'3px'}}>Enter State</h4>
-                    <input placeholder='Please enter your State' type='text'/>
-                    <h4>Enter City</h4>
-                    <input placeholder='Please enter your City' type='text'/>
-                    <h4>Enter Pincode</h4>
-                    <input placeholder='Please enter your Pincode' type='text'/>
-                    <h4>Select your DOB</h4>
-                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-                    <h4>Select your Gender</h4>
-                    <FormControl>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        defaultValue="male"
-      >
-        <FormControlLabel value="female" control={<Radio style={{color: '#b73c1d'}}  />} label="Female" />
-        <FormControlLabel value="male" control={<Radio  style={{color: '#b73c1d'}}  />} label="Male" />
-        <FormControlLabel value="other" control={<Radio style={{color: '#b73c1d'}}   />} label="Other" />
-        
-      </RadioGroup>
-    </FormControl>
-    <h4>Enter your Profession</h4>
-    <input placeholder='Please enter your Profession' type='text'/>
-    <h4>Enter your Occupation</h4>
-    <input placeholder='Please enter your Occupation' type='text'/>
-    <h4>Are you a Dikshit?</h4>
-    <FormControl>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        defaultValue="male"
-      >
-        <FormControlLabel value="yes" control={<Radio style={{color: '#b73c1d'}}  />} label="yes" />
-        <FormControlLabel value="no" control={<Radio  style={{color: '#b73c1d'}}  />} label="no" />
-        
-      </RadioGroup>
-    </FormControl>
+                    
     <h4>I would like to receive regular program updates through -</h4>
     <FormControl>
       <RadioGroup
@@ -142,10 +145,15 @@ const BalkalyanDonate = () => {
         <FormControlLabel value="No" control={<Radio  style={{color: '#b73c1d'}}  />} label="No" />
       </RadioGroup>
     </FormControl>
+    <h4>Total Amount</h4>
+    <input placeholder='total Amount' disabled type='Number' value={totalVal} />
+
 
                     
-                    <div className="loginSignUp">
-                        <button className='loginBtn'>Submit</button>
+                    <div className="loginSignUp1">
+                        {/* <button className='loginBtn'>Submit</button> */}
+                        <button className='loginBtn' onClick={()=>checkoutHandler(totalVal)}>Donate</button>
+
                     </div>
                     {/* <div className="signUpContainer">
                         <h4>Already have an account?</h4>

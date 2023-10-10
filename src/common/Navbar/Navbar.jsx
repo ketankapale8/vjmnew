@@ -269,6 +269,15 @@ const Navbar = () => {
                     </div>
                   
   </Link>
+
+  <Link to='/profile' style={{textDecoration:'none', color:'inherit'}}>
+                    <div className='top2Container'>
+                      <h5>Profile</h5>
+
+                    </div>
+                  
+  </Link>
+  
   
   </>
 

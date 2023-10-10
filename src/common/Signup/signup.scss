@@ -12,7 +12,9 @@
         margin-left: 31%;
         margin-right: 33%;
         width: 650px;
-        height: 1650px;
+        height: auto;
+        margin-bottom: 50px;
+        padding-bottom: 150px;
         // border: 1px solid black;
         background: linear-gradient(180deg, rgba(190,202,203,0.11705192330838587) 70%, rgba(190,195,185,1) 97%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);

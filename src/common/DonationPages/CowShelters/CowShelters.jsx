@@ -17,6 +17,7 @@ import FormLabel from '@mui/material/FormLabel';
 const CowSheltersDonation = () => {
     const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState(new Date());
+    const [total , setTotal] = useState(0);
     const options = useMemo(() => countryList().getData(), [])
     // const [countryList , setCountryList] = useState([{label : Country.getAllCountries().map(item=>item.name)}]);
     console.log(countryList)
@@ -35,7 +36,7 @@ const CowSheltersDonation = () => {
     <>
     
     <div className='donatecow'>
-        <div className="loginContainer">
+        <div className="donateContainer">
             <div className="topTitleBox">
                 <img alt='brand' src={logo} className='logo'/>
 
@@ -59,6 +60,8 @@ const CowSheltersDonation = () => {
         <FormControlLabel value="2100" control={<Radio style={{color: '#b73c1d'}}  />} label="2100" />
         <FormControlLabel value="3100" control={<Radio  style={{color: '#b73c1d'}}  />} label="3100" />
         <FormControlLabel value="5100" control={<Radio style={{color: '#b73c1d'}}   />} label="5100" />
+        <FormControlLabel value="0" control={<Radio style={{color: '#b73c1d'}}   />} label="None" />
+
         
       </RadioGroup>
     </FormControl>
@@ -73,6 +76,7 @@ const CowSheltersDonation = () => {
         <FormControlLabel value="21000" control={<Radio style={{color: '#b73c1d'}}  />} label="21000" />
         <FormControlLabel value="51000" control={<Radio  style={{color: '#b73c1d'}}  />} label="51000" />
         <FormControlLabel value="75000" control={<Radio style={{color: '#b73c1d'}}   />} label="75000" />
+        <FormControlLabel value="0" control={<Radio style={{color: '#b73c1d'}}   />} label="None"  />
         
       </RadioGroup>
     </FormControl>
@@ -81,7 +85,7 @@ const CowSheltersDonation = () => {
                     <h4>Other Specific Amount</h4>
                     <input placeholder='Please enter your amount' type='Number'/>
 
-                    <h4>Full Name</h4>
+                    {/* <h4>Full Name</h4>
                     <input placeholder='Please enter your name' type='text'/>
                     <h4>Address</h4>
                     <input placeholder='Please enter your name' type='text'/>
@@ -99,9 +103,9 @@ const CowSheltersDonation = () => {
                     <input placeholder='Please enter your Pincode' type='text'/>
                     <h4>Select your DOB</h4>
                     <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-                    <h4>Select your Gender</h4>
+                    <h4>Select your Gender</h4> */}
                     <FormControl>
-      <RadioGroup
+      {/* <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
@@ -111,7 +115,7 @@ const CowSheltersDonation = () => {
         <FormControlLabel value="male" control={<Radio  style={{color: '#b73c1d'}}  />} label="Male" />
         <FormControlLabel value="other" control={<Radio style={{color: '#b73c1d'}}   />} label="Other" />
         
-      </RadioGroup>
+      </RadioGroup> */}
     </FormControl>
     <h4>Enter your Profession</h4>
     <input placeholder='Please enter your Profession' type='text'/>

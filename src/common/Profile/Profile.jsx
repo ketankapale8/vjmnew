@@ -1,5 +1,5 @@
 import React , {useState , useMemo} from 'react';
-import './signup.scss';
+import './profile.scss';
 import { useContext } from 'react';
 import {Context} from '../../index.js';
 import logo from '../../assets/logo.png';
@@ -19,7 +19,7 @@ import toast from 'react-hot-toast';
 
 const Signup = () => {
   const url ="http://localhost:4000";
-  const {isAuthenticated, setIsAuthenticated , loading , setloading} = useContext(Context)
+  const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
     // const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
@@ -27,60 +27,69 @@ const Signup = () => {
 
     const [values , setValues] = useState({
       name : '',
-      email :'',
-      password :'',
+      email : '',
       address :'',
-      country : '', 
       state :'',
       city :'',
       pincode : '', 
       // dob:'',
       gender : '',
+      profession : '',
+      occupation : '',
+      dikshit : '', 
+      volunteer : ''
 
     })
 
 
-    const { email , password , name , address  , state , city , pincode , country, gender} = values;
+    const {  email ,name , address  , state , city , pincode ,
+        
+        gender , 
+        profession,
+      occupation ,
+      dikshit, 
+      volunteer
+    } = values;
+
 
 
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      setloading(true)
-      try{
-
-        const {data} = await axios.post(
-          `${url}/api/v1/register`, 
-          {
-            name  , 
-            email ,
-            password,
-            address  , country, state , city , pincode,gender
-          },
-          {
-            headers : {
-              "Content-Type" : "application/json",
-            }, 
-            withCredentials : true
-          }
-        )
-
-        toast.success(data.success)
-        setIsAuthenticated(true)
-        setloading(false)
+        e.preventDefault();
+        try{
+          await axios.put(
+            `${url}/api/v1/updateprofile`, 
+            {
+                email,
+                 name , address  , state , city , pincode ,
         
-      }catch(err){
-        toast.error(err.message)
-        setIsAuthenticated(false)
-        setloading(false)
-
-      }
-      
-
+                gender , 
+                profession,
+              occupation ,
+              dikshit, 
+              volunteer
+            },
+            {
+              // headers : {
+              //   "Content-Type" : "application/json",
     
-  }
+              // }, 
+              withCredentials : true
+            }
+          )
+          toast.success("Profile Details Updated Successfully on VJM'S Portal")
+          setIsAuthenticated(true)
+          setloading(false)
+          
+    
+        }catch(err){
+          toast.error("Something Wrong! Please Login back again!")
+          setIsAuthenticated(false)
+          setloading(false)
+    
+        }
+      }
 
-
-  if(isAuthenticated) return <Navigate to={"/"}/>
+//   if(isAuthenticated) return <Navigate to={"/"}/>
 
   console.log(values)
      
@@ -100,22 +109,21 @@ const Signup = () => {
 
             </div>
                 <div className="titles" >
-                    <h2>Signup</h2>
+                    <h2>Profile</h2>
                     {/* <p>Login to your VJM Profile</p> */}
 
                 </div>
 
                 <div className="inputBox">
-                    <h4>Full Name</h4>
-                    <input placeholder='Please enter your name' type='text' onChange={(e)=> setValues({...values , name : e.target.value})}/>
+                <h4>Full Name</h4>
+                    <input placeholder='Please enter your name' type='email' onChange={(e)=> setValues({...values , name : e.target.value})}/>
+                    <h4>Email</h4>
+                    <input placeholder='Please enter your name' type='email' onChange={(e)=> setValues({...values , email : e.target.value})}/>
                     <h4>Address</h4>
                     <input placeholder='Please enter your name' type='text' onChange={(e)=> setValues({...values , address : e.target.value})}/>
-                    <h4>Email</h4>
-                    <input placeholder='Please enter your email' type='email' onChange={(e)=> setValues({...values , email : e.target.value})}/>
-                    <h4>Password</h4>
-                    <input placeholder='please enter your password' type='password' onChange={(e)=> setValues({...values , password : e.target.value})}/>
-                    <h4>Select Country</h4>
-                    <Select className='select' options={options} value={values.country} onChange={(e)=> setValues({...values , country : e.target})} placeholder="Country" />
+      
+                 
+                   
                     <h4 style={{paddingTop:'3px'}}>Enter State</h4>
                     <input placeholder='Please enter your State'  type='text' onChange={(e)=> setValues({...values , state : e.target.value})}/>
                     <h4>Enter City</h4>
@@ -139,6 +147,42 @@ const Signup = () => {
         
       </RadioGroup>
     </FormControl>
+    <h4>Enter your Profession</h4>
+    <input placeholder='Please enter your Profession' type='text' onChange={(e)=> setValues({...values , profession : e.target.value})}/>
+    <h4>Enter your Occupation</h4>
+    <input placeholder='Please enter your Occupation' type='text' onChange={(e)=> setValues({...values , occupation : e.target.value})}/>
+    <h4>Are you a Dikshit?</h4>
+
+    <FormControl>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        defaultValue="no"
+        onChange={(e)=> setValues({...values , dikshit : e.target.value})}
+      >
+        <FormControlLabel value="yes" control={<Radio style={{color: '#b73c1d'}}  />} label="yes" />
+        <FormControlLabel value="no" control={<Radio  style={{color: '#b73c1d'}}  />} label="no" />
+        
+      </RadioGroup>
+    </FormControl>
+
+    <h4>Are you willing to Volunteer?</h4>
+
+    <FormControl>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        defaultValue="no"
+        onChange={(e)=> setValues({...values , volunteer : e.target.value})}
+      >
+        <FormControlLabel value="yes" control={<Radio style={{color: '#b73c1d'}}  />} label="yes" />
+        <FormControlLabel value="no" control={<Radio  style={{color: '#b73c1d'}}  />} label="no" />
+        
+      </RadioGroup>
+    </FormControl>
+
     {/* <h4>Enter your Profession</h4>
     <input placeholder='Please enter your Profession' type='text'/>
     <h4>Enter your Occupation</h4>
@@ -184,15 +228,15 @@ const Signup = () => {
 
                     
                     <div className="loginSignUp" >
-                        <button className='loginBtn' onClick={handleSubmit}>Sign Up</button>
+                        <button className='loginBtn' onClick={handleSubmit}>Update</button>
                     </div>
-                    <div className="signUpContainer">
+                    {/* <div className="signUpContainer">
                         <h4>Already have an account?</h4>
                         <Link to="/login" style={{textDecoration:'none', color:'inherit'}}>
                         <button className='loginBtns' style={{marginLeft:'25px'}}>Login</button>
                         </Link>
                         
-                    </div>
+                    </div> */}
                 </div>
 
         </div>
