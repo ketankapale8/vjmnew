@@ -7,6 +7,8 @@
         padding: 0px 100px;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         background-color: #6F2323;
         gap: 50px;
         
@@ -22,6 +24,7 @@
         }
 
         .banktransferright{
+            max-width: 800px;
             padding-top: 30px;
             padding-bottom: 30px;
             display: flex;

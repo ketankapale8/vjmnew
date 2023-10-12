@@ -33,6 +33,7 @@ import axios from 'axios';
 import MyAccount from './components/MyAccount/MyAccount';
 import Profile from './common/Profile/Profile.jsx'
 import Dharamkosh from './components/Dharamkosh/Dharamkosh';
+import DharmadaSeva from './components/DharmadaSeva/DharmadaSeva';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -73,7 +74,7 @@ function App() {
           <Route path='/balkalyaan' element={<Balkalyaan/>}/>
           <Route path='/gauseva' element={<Gauseva/>}/>
           <Route path='/dharm-kosh' element={<Dharamkosh/>}/>
-          <Route path='/dharmada-seva' element={<Dharamkosh/>}/>
+          <Route path='/dharmada-seva' element={<DharmadaSeva/>}/>
           <Route path='/disaster-relief' element={<Dharamkosh/>}/>
 
 
