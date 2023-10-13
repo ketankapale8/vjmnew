@@ -8,3 +8,27 @@
     }
 
 }
+
+// @media (min-width : 760px) and (max-width :1200px){
+//     .headerImg{
+//         width: 100% !important;
+
+//         height: 420px !important;
+//         .bannerImg{
+//             width: 100%;
+//             height: 100%;
+//         }
+//     }
+// }
+
+@media (min-width : 320px) and (max-width :760px){
+    .headerImg{
+
+        width: 100% !important;
+        height: 420px !important;
+        .bannerImg{
+            width: 100% !important;
+            height: 420px !important;
+        }
+    }
+}

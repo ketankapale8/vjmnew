@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Suspense  } from 'react';
 import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast'
 import Home from './components/Home/Home';
@@ -38,11 +39,24 @@ import NaturalDisaster from './components/NaturalDisaster/NaturalDisaster';
 import VedicEducation from './components/VedicEducation/VedicEducation';
 import Maharajshri from './components/Maharajshri/Maharajshri';
 import Archikadidi from './components/ArchikaDidi/Archikadidi';
+import SideMenuComp from './common/SideMenuComponent/SideMenuComp';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
   const [refresh , setRefresh] = useState(false);
   const url ="http://localhost:4000";
+  let [w , setW] = useState(window.innerWidth)
+  //  let width = window.innerWidth;
+  function updateSize(){
+    return setW(window.innerWidth)
+
+  }
+
+  useEffect(()=>{
+    window.addEventListener('resize', updateSize);
+    
+  },[w])
+  console.log(w)
 
   // useEffect(()=>{
   //   setloading(true);
@@ -65,7 +79,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
+      <Suspense fallback={<h4>Loading...</h4>}>
+          {/* { w > 870 ? <Navbar/>: <RenderSideBar/>} */}
+          { w > 870 ? <Navbar/>: <SideMenuComp/>}
+
+
+        </Suspense>
         <Routes>
           {/* //components// */}
           <Route path='/' element={<Home/>}/>

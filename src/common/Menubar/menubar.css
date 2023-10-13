@@ -170,7 +170,7 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 768px) {
+/* @media all and (max-width : 768px) {
 
 	#logo {
 		display: block;
@@ -184,17 +184,16 @@ li > a:only-child:after { content: ''; }
 
 	nav {
 		margin: 0;
-	}
+	} */
 
-	/* Hide the navigation menu by default */
-	/* Also hide the  */
-	.toggle + a,
+	/* .toggle + a,
 	.menu {
 		display: none;
-	}
+	} */
+	/* Hide the navigation menu by default */
 
 	/* Stylinf the toggle lable */
-	.toggle {
+	/* .toggle {
 		display: block;
 		background-color: #b73c1d ;
 		padding:14px 20px;	
@@ -206,15 +205,15 @@ li > a:only-child:after { content: ''; }
 
 	.toggle:hover {
 		background-color: #b73c1d;
-	}
+	} */
 
 	/* Display Dropdown when clicked on Parent Lable */
-	[id^=drop]:checked + ul {
+	/* [id^=drop]:checked + ul {
 		display: block;
-	}
+	} */
 
 	/* Change menu item's width to 100% */
-	nav ul li {
+	/* nav ul li {
 		display: block;
 		width: 100%;
 		}
@@ -239,47 +238,47 @@ li > a:only-child:after { content: ''; }
 		padding:14px 20px;	
 		color:#FFF;
 		font-size:17px; 
-	}
+	} */
   
   
-	nav ul li ul li .toggle,
+	/* nav ul li ul li .toggle,
 	nav ul ul a {
 		background-color: #212121; 
-	}
+	} */
 
 	/* Hide Dropdowns by Default */
-	nav ul ul {
+	/* nav ul ul {
 		float: none;
 		position:static;
 		color: #ffffff;
-		/* has to be the same number as the "line-height" of "nav a" */
-	}
+	} */
+	/* has to be the same number as the "line-height" of "nav a" */
 		
 	/* Hide menus on hover */
-	nav ul ul li:hover > ul,
+	/* nav ul ul li:hover > ul,
 	nav ul li:hover > ul {
 		display: none;
 	}
-		
+		 */
 	/* Fisrt Tier Dropdown */
-	nav ul ul li {
+	/* nav ul ul li {
 		display: block;
 		width: 100%;
-	}
+	} */
 
+/* 
 	nav ul ul ul li {
 		position: static;
-		/* has to be the same number as the "width" of "nav ul ul li" */ 
 
-	}
+	} */
 
-}
+/* } */
 
-@media all and (max-width : 330px) {
+/* @media all and (max-width : 330px) {
 
 	nav ul li {
 		display:block;
 		width: 94%;
 	}
 
-}
+} */
