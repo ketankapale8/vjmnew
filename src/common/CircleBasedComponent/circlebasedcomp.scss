@@ -15,8 +15,9 @@
             flex-direction: column;
             display: flex;
             gap: 30px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            max-width: 850px;
+            padding-top: 10px;
+            padding-bottom: 10px;
     
             .Title{
                 font-size: 32px;
@@ -25,7 +26,7 @@
             }
             .Desc{
                 font-size: 18px;
-                width: 550px;
+                width: 750px;
             }
             .Image{
                 width: 225.2px;
@@ -40,8 +41,8 @@
             display: flex;
             flex-direction: row;
             gap: 40px;
-            padding-bottom: 30px;
-            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-top: 20px;
 
             .boxContainer1{
                 display: flex;

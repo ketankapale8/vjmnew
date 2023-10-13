@@ -1,5 +1,5 @@
 import React from 'react';
-import './dharmadaseva.scss';
+import './naturaldisaster.scss';
 import donationCommonImg from '../../assets/donationCommon/left.png'
 import video from '../../assets/video/Video.mp4';
 import HeaderImgC from '../../common/HeaderImgContainer/HeaderImgC';
@@ -44,9 +44,18 @@ import twelve from '../../assets/dharmadaseva/12.png';
 import daan1 from '../../assets/donation/1.png'
 import daan2 from '../../assets/donation/2.png'
 import daan3 from '../../assets/donation/3.png'
+
+import disaster1 from '../../assets/disasterRelief/1.png';
+import disaster2 from '../../assets/disasterRelief/2.png';
+import disaster3 from '../../assets/disasterRelief/3.png';
+import disaster4 from '../../assets/disasterRelief/4.png';
+
+
+
+
 // import Mahayagya from './MahaYagya/Mahayagya';
 
-const DharmadaSeva = () => {
+const NaturalDisaster = () => {
   const title = "धर्मो रक्षति रक्षितः"
   const desc = "हे पाप-पुण्यों का निर्णय करने वाले धर्मराज! मुझ पर तथा मेरे परिवार पर प्रसन्न हों। मेरे श्रद्धा के पुष्प स्वीकार कीजिए। हे प्रभो! आपकी कृपा से प्राप्त देन आपके चरणों में अर्पित करते हैं। मेरे प्रभो! हमें जीवन भर दाता बनाकर रखें, याचक नहीं।";
 
@@ -256,9 +265,9 @@ const Array3 = [
 
 const Array4 = [
   {
-    title : "अतिनिर्धन कन्या विवाह",
-  //   desc : "गरीबों को शिक्षित करने, गौ सेवा, गरीब रोगियों के लिए स्वास्थ्य सेवा, भंडारा और बुजुर्गों की देखभाल के लिए अपनी कमाई का 2-10% अंशदान करके, अपने जीवन में ईश्वर की कृपा, शांति और समृद्धि को प्राप्त करें।",
-    img: ten,
+    title : "राहत और प्रतिक्रिया",
+   desc : "आपदा की स्थिति में, विश्व जागृति मिशन की राहत और प्रतिक्रिया टीमें भोजन, पानी, दैनिक उपयोग की वस्तुओं और दवाओं की तत्काल आपूर्ति सुनिश्चित करती हैं।",
+    img: disaster1,
     tag : "",
     date: "15,Feb,2023",
     city: "Bhopal",
@@ -267,9 +276,9 @@ const Array4 = [
     // date : '12th March'
   },
   {
-    title : "दैविक आपदा बाढ़-भूकम्प आदि राहत कार्य",
-  //   desc : "विश्व जागृति मिशन इंटरनेशनल योग स्कूल (वीजेएमआईवाईएस) में योग के वास्तविक सार को समझें और इसके पवित्र ज्ञान से खुद को अवगत कराएं। आज के तनावपूर्ण समय में शांति...       ",
-    img: eleven,
+    title : "तत्परता",
+  desc : "स्वयंसेवक और प्राकृतिक आपदाओं के समय खड़े अंतिम व्यक्ति तक पहुँचने की हमारी तैयारियों में हमारा मार्गदर्शन भी करें।     ",
+    img: disaster2,
     tag: "",
     date: "23,May,2023",
     city: "Delhi",
@@ -278,9 +287,21 @@ const Array4 = [
     // date : '10th February'
   },
   {
-      title : "गरीब छात्रें को छात्रवृत्ति",
-    //   desc : "विश्व जागृति मिशन इंटरनेशनल योग स्कूल (वीजेएमआईवाईएस) में योग के वास्तविक सार को समझें और इसके पवित्र ज्ञान से खुद को अवगत कराएं। आज के तनावपूर्ण समय में शांति...       ",
-      img: twelve,
+      title : "रोकथाम और शमन",
+      desc : "हम यह सुनिश्चित करते हैं कि आपका दान वास्तव में जरूरतमंदों की मदद कर रहा है ताकि आप अपनी उदारता के माध्यम से आंतरिक शांति प्राप्त कर सकें।      ",
+      img: disaster3,
+      tag: "",
+      date: "23,May,2023",
+      city: "Delhi",
+      tag : "पूर्णिमा",
+      // share : share,
+      // date : '10th February'
+    },
+
+    {
+      title : "हमारे द्वारा की गई सेवाएं",
+    desc : "1632 चिकित्सा और रक्तदान शिविर लगाए गए।     ",
+      img: disaster4,
       tag: "",
       date: "23,May,2023",
       city: "Delhi",
@@ -326,6 +347,18 @@ const Array5 = [
       // date : '10th February'
     },
 
+    // {
+    //     title : "सकारात्मक परिवर्तन लाने वालों का एक समूह",
+    //    desc : "पूरे भारत और विदेश से आए दयालु आत्माओं के एक समूह का हिस्सा बनें जो समाज में सकारात्मक बदलाव के लिए प्रयास कर रहे हैं।       ",
+    //     img: twelve,
+    //     tag: "",
+    //     date: "23,May,2023",
+    //     city: "Delhi",
+    //     tag : "पूर्णिमा",
+    //     // share : share,
+    //     // date : '10th February'
+    //   },
+
 ]
 
 
@@ -333,12 +366,15 @@ const Array5 = [
 
 
   return (
-    <div className='dharmadaseva'>
-        <HeaderVideoComp title={'धर्मादा सेवा'} desc={'प्रीयतां धर्मराजाय, त्वदीयं वस्तु, गोविन्दं तुभ्यमेव समर्पये।'} video={video}/>
+    <div className='naturaldisaster'>
+        <HeaderVideoComp title={'आपदा राहत कोष'} desc={'प्राकृतिक आपदा सेवा'} video={video}/>
         <DonationCommon title={'अपनी कमाई का दो से दस प्रतिशत दान करना'} desc={'हे पाप-पुण्यों का निर्णय करने वाले धर्मराज! मुझ पर तथा मेरे परिवार पर प्रसन्न हों। मेरे श्रद्धा के पुष्प स्वीकार कीजिए। हे प्रभो! आपकी कृपा से प्राप्त देन आपके चरणों में अर्पित करते हैं। मेरे प्रभो! हमें जीवन भर दाता बनाकर रखें, याचक नहीं।'} img={donationCommonImg}/>
-        <CircleBasedComp title={'अपनी कमाई का दो से दस प्रतिशत दान करें।'} desc={''} Array1={Array1} Array2={Array2} Array3={Array3} Array4={Array4}/>
+        <CircleBasedComp title={'हमारे विश्व जागृति मिशन की स्थानीय सहायता टीम और स्वयंसेवकों में शामिल हों - जब लोगों को हमारी सबसे अधिक आवश्यकता थी तब हम वहां थे'} desc={"आपदा आने पर देश के सबसे गरीब और सबसे कमजोर लोगों को सहायता और राहत की आवश्यकता होती है। विश्व जागृति मिशन की स्थानीय सहायता टीमें तत्काल सहायता के लिए उनके पास पहुंचती हैं क्योंकि उन्हें तत्काल देखभाल और सहायता की आवश्यकता होती है। हमारी टीमों की सहायता करें ताकि प्रभावित लोग भोजन, आश्रय और स्वास्थ्य सुविधाओं के बिना अपने आप को 'असहाय ' महसूस न करें।"} Array1={Array4} Array2={[]} Array3={[]} Array4={[]}/>
+        <CircleBasedComp title={'हमारा प्रभाव'} desc={''} Array1={Array1} Array2={Array2} Array3={[]} Array4={[]} />
+        {/* <CircleBasedComp title={'हमारा प्रभाव'} desc={''} Array1={Array1} Array2={Array2} Array3={[]} Array4={[]} /> */}
+
         <CircleBasedComp title={'शास्त्रों में इन स्थानों पर दान विशेष पुण्यकारी बतलाया गया है'}  Array1={Array5} Array2={[]} Array3={[]} Array4={[]}/>
-        {/* <HeaderImgC img={BannerImg}/> */}
+        {/* <HeaderImgC img={BannerImg}/> */}   
         {/* <TitlePage title={title} desc={desc}/> */}
         {/* <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}/> */}
         {/* <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgLeft}/> */}
@@ -352,4 +388,4 @@ const Array5 = [
   )
 }
 
-export default DharmadaSeva
+export default NaturalDisaster

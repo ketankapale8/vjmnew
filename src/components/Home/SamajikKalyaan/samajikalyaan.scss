@@ -1,18 +1,20 @@
 .samajkalyaan{
     width: 100%;
     padding-top: 50px;
-    margin: 0px 30px;
+    margin: 0px 50px;
     padding-bottom: 80px;
 
     .samajkalyaanContainer{
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        gap: 40px;
 
         .samajkalyaanleft{
             display: flex;
             flex-direction: column;
+            max-width: 700px;
             gap: 10px;
 
             .samajkalyaanTitle{

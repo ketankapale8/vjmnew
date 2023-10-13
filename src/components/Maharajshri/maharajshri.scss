@@ -1,0 +1,182 @@
+.maharajshri{
+    width: 100% !important;
+    height: 100% !important;
+
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    .maharajshriShlok{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding:50px 50px;
+        gap: 15px;
+
+        .maharajshriTitle{
+            font-size: 32px;
+            font-weight: bold;
+
+        }
+        .maharajshriDesc{
+            font-size: 18px;
+        }
+        .maharajshriImg{
+            width: 225.2px;
+            height: 20px;
+
+        }
+    }
+
+    .maharajshriContentContainer{
+        display: flex;
+        flex-direction: row;
+        background-color: #6F2323;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px;
+        gap: 90px;
+        padding-bottom: 20px;
+
+
+        .containerleft{
+            max-width: 500px;
+            text-align: start;
+            color: var(--White, #FFF);
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal; 
+        }
+
+
+        .containerRight{
+            max-width: 500px;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .item{
+
+                color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */ 
+            }
+
+
+        }
+    }
+
+    .maharajshriContentContainer1{
+        display: flex;
+        flex-direction: row;
+        background-image: url('../../assets/maharajshri/backgroundbanner.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+        
+        
+        // background-repeat: no-repeat;
+        
+        width: auto;
+        height: 500px;
+        // background-color: #6F2323;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px;
+        gap: 50px;
+        padding-bottom: 20px;
+
+        .containerRight{
+            padding: 30px;
+            max-width: 850px;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .item{
+
+                color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */ 
+            }
+
+
+        }
+
+
+        .containerleft{
+            padding: 30px;
+
+            // max-width: 500px;
+            text-align: start;
+            color: var(--White, #FFF);
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal; 
+        }
+
+
+       
+    }
+
+    .maharajshriContentContainer2{
+        display: flex;
+        flex-direction: column;
+        background-color: #6F2323;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px;
+        gap: 90px;
+        padding-bottom: 40px;
+
+
+        .containerleft{
+            max-width: 80%;
+            text-align: start;
+            color: var(--White, #FFF);
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal; 
+        }
+
+
+        .containerRight{
+            max-width: 80%;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .item{
+
+                color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */ 
+            }
+
+
+        }
+    }
+
+
+
+}

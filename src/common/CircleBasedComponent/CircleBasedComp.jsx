@@ -5,7 +5,7 @@ import share from '../../assets/articles/share.png'
 
 import vectorDesign from '../../assets/commonAssets/Vector.png'
 
-const CircleBasedComp = ({title , desc , Array1 ,Array2 , Array3 ,Array4}) => {
+const CircleBasedComp = ({title , desc , Array1 ,Array2 , Array3 ,Array4 }) => {
    
       
   return (

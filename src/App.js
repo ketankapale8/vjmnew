@@ -34,6 +34,9 @@ import MyAccount from './components/MyAccount/MyAccount';
 import Profile from './common/Profile/Profile.jsx'
 import Dharamkosh from './components/Dharamkosh/Dharamkosh';
 import DharmadaSeva from './components/DharmadaSeva/DharmadaSeva';
+import NaturalDisaster from './components/NaturalDisaster/NaturalDisaster';
+import VedicEducation from './components/VedicEducation/VedicEducation';
+import Maharajshri from './components/Maharajshri/Maharajshri';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -63,6 +66,7 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
+          {/* //components// */}
           <Route path='/' element={<Home/>}/>
           <Route path='/ganeshlakshmi' element={<GaneshLakshmi/>}/>
           <Route path='/manalimeditation' element={<ManaliMeditation/>}/>
@@ -75,10 +79,9 @@ function App() {
           <Route path='/gauseva' element={<Gauseva/>}/>
           <Route path='/dharm-kosh' element={<Dharamkosh/>}/>
           <Route path='/dharmada-seva' element={<DharmadaSeva/>}/>
-          <Route path='/disaster-relief' element={<Dharamkosh/>}/>
-
-
-
+          <Route path='/disaster-relief' element={<NaturalDisaster/>}/>
+          <Route path='/gurukul-vedic-edu' element={<VedicEducation/>}/>
+          <Route path='/maharajshri' element={<Maharajshri/>}/>
           {/* //login// */}
           <Route element={<Login/>} path='login'/>
           <Route element={<Signup/>} path='signup'/>
