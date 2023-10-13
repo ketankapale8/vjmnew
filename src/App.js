@@ -37,6 +37,7 @@ import DharmadaSeva from './components/DharmadaSeva/DharmadaSeva';
 import NaturalDisaster from './components/NaturalDisaster/NaturalDisaster';
 import VedicEducation from './components/VedicEducation/VedicEducation';
 import Maharajshri from './components/Maharajshri/Maharajshri';
+import Archikadidi from './components/ArchikaDidi/Archikadidi';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -82,6 +83,9 @@ function App() {
           <Route path='/disaster-relief' element={<NaturalDisaster/>}/>
           <Route path='/gurukul-vedic-edu' element={<VedicEducation/>}/>
           <Route path='/maharajshri' element={<Maharajshri/>}/>
+          <Route path='/didi' element={<Archikadidi/>}/>
+
+
           {/* //login// */}
           <Route element={<Login/>} path='login'/>
           <Route element={<Signup/>} path='signup'/>
