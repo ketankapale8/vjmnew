@@ -76,12 +76,12 @@ const Maharajshri = () => {
 
 
 
-        {/* <div className="maharajshriShlok">
+        <div className="maharajshriShlok">
             <img className="Image" src={vectorDesign} alt="design"/>
             <div className="maharajshriTitle">सन्तः स्वतः प्रकाशन्ते गुणा न परतो नृणाम्।</div>
             <div className="maharajshriTitle">आमोदो न हि कस्तूर्याः शपथेन विभाव्यते।।</div>
             <img className="Image" src={vectorDesign} alt="design"/>
-        </div> */}
+        </div>
         </div>
 
     </div>
