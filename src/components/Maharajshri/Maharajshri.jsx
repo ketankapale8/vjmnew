@@ -2,16 +2,19 @@ import React from 'react';
 import './maharajshri.scss';
 import vectorDesign from '../../assets/commonAssets/Vector.png'
 
-
 const Maharajshri = () => {
   return (
     <div className='maharajshri'>
+        <div className="maharajshriContainer">
+
         <div className="maharajshriShlok">
-            <img className="Image" src={vectorDesign} alt="design"/>
+            <img className="maharajshriImg" src={vectorDesign} alt="design"/>
             <div className="maharajshriTitle">यद्यदाचरति श्रेष्ठस्तत्त्देवेतरो जनः।</div>
             <div className="maharajshriTitle">सयत्प्रमाणं कुरुते लोकस्तदनुवर्तते।।</div>
             <img className="Image" src={vectorDesign} alt="design"/>
         </div>
+
+
 
         <div className="maharajshriContentContainer">
             <div className="containerleft">
@@ -76,6 +79,7 @@ const Maharajshri = () => {
             <div className="maharajshriTitle">सन्तः स्वतः प्रकाशन्ते गुणा न परतो नृणाम्।</div>
             <div className="maharajshriTitle">आमोदो न हि कस्तूर्याः शपथेन विभाव्यते।।</div>
             <img className="Image" src={vectorDesign} alt="design"/>
+        </div>
         </div>
 
     </div>

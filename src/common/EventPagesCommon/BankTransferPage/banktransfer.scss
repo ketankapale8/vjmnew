@@ -65,3 +65,79 @@ text-align: left;
         }
     }
 }
+
+@media (min-width : 320px) and (max-width :760px){
+
+    .banktransfer{
+        width: 100%;
+        height: auto;
+        padding-top: 0px ;
+        
+        
+        .banktransferContainer{
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #6F2323;
+            gap: 0px;
+            
+    
+            .banktransferleft{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+               
+                .leftImg{
+                    width: 154px;
+                    height: 169px;
+    
+                }
+            }
+    
+            .banktransferright{
+                // max-width: 400px !important;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                text-align: start;
+                color: whitesmoke;
+    
+                .transferTitle{
+                    color: var(--White, #FFF);
+                    font-family: Poppins;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal; 
+            
+                }
+              
+                .transferImage{
+                    width: 125.2px;
+                    height: 20px;
+            
+                }
+    
+                .transferDesc{
+                    max-width: 200px !important;
+                    gap: 3px;
+                    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 300 !important;
+    // line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+    
+    
+                }
+    
+            }
+        }
+    }
+}

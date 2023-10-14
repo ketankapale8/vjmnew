@@ -68,3 +68,87 @@
         }
     }
 }
+
+
+@media (min-width : 320px) and (max-width :760px){
+    .leftimg{
+        width: 100%;
+        height: auto;
+        
+        .leftImgContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            gap: 0px;
+    
+    
+            .leftContainer{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                // align-items: center;
+                justify-content: center;
+                color: whitesmoke;
+                background-color: #6F2323;
+                gap: 20px;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                text-align: start;
+    
+                .LeftTitle{
+                    font-size: 15px;
+                    font-weight: bold;
+            
+                }
+                .LeftDesc{
+                    font-size: 12px;
+                    width: 200px;
+                }
+                .LeftImage{
+                    width: 125.2px;
+                    height: 20px;
+            
+                }
+    
+                .time-date{
+                    line-height: 25px;
+                }
+    
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    .exploremore1{
+                        margin-top: 10px;
+                    font-size: 7px;
+
+                        background-color: transparent;
+                        border-radius: 46px;
+                        color: whitesmoke;
+        border: 2px solid var(--White, #FFF); 
+        width: 60px;
+        height: 26px;
+                    }
+                }
+    
+    
+                
+    
+    
+            }
+            .rightContainer{
+                width: auto !important;
+                height: 420px;
+
+                .rightImgContainer{
+                    width: 100%;
+                    height: 420px !important;
+                    object-fit:cover;
+
+                }
+            }
+        }
+    }
+  
+}

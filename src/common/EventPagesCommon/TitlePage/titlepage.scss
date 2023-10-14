@@ -26,3 +26,35 @@
         }
     }
 }
+
+@media (min-width : 320px) and (max-width :760px){
+    .titlepage{
+        padding-top: 10px;
+        
+        .titlePageContainer{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+            gap: 10px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+    
+            .Title{
+                font-size: 15px;
+                font-weight: bold;
+        
+            }
+            .Desc{
+                font-size: 12px;
+                width: 250px !important;
+            }
+            .Image{
+                width: 125.2px;
+                height: 20px;
+        
+            }
+        }
+    }
+    
+}
