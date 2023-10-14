@@ -15,8 +15,7 @@ const Maharajshri = () => {
         </div>
 
 
-
-        <div className="maharajshriContentContainer">
+        <div className="maharajshriContentContainerx">
             <div className="containerleft">
             नित्य वंदनीय, प्रातः स्मरणीय, सद्गुरुदेव परमपूज्य श्री सुधांशु जी महाराज का परिचय देने की सामर्थ्य किसी साधारण मनुष्य की लेखनी में कहां? सागर का परिचय भला बूंद कैसे दे सकती है? आपके चरित्र का गुणानुवाद भगवान की उक्ति के आलोक में ही सम्भव है।
             </div>
@@ -30,6 +29,7 @@ const Maharajshri = () => {
                 </div>
             </div>
         </div>
+        
 
         <div className="maharajshriContentContainer1">
         <div className="containerRight">
@@ -46,6 +46,8 @@ const Maharajshri = () => {
             </div>
           
         </div>
+        
+
 
         <div className="maharajshriShlok">
             <img className="Image" src={vectorDesign} alt="design"/>
@@ -74,12 +76,12 @@ const Maharajshri = () => {
 
 
 
-        <div className="maharajshriShlok">
+        {/* <div className="maharajshriShlok">
             <img className="Image" src={vectorDesign} alt="design"/>
             <div className="maharajshriTitle">सन्तः स्वतः प्रकाशन्ते गुणा न परतो नृणाम्।</div>
             <div className="maharajshriTitle">आमोदो न हि कस्तूर्याः शपथेन विभाव्यते।।</div>
             <img className="Image" src={vectorDesign} alt="design"/>
-        </div>
+        </div> */}
         </div>
 
     </div>

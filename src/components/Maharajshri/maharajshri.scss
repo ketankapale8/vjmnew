@@ -10,7 +10,7 @@
     .maharajshriContainer{
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        gap: 40px;
 
         .maharajshriShlok{
             display: flex;
@@ -35,7 +35,7 @@
             }
         }
     
-        .maharajshriContentContainer{
+        .maharajshriContentContainerx{
             display: flex;
             flex-direction: row;
             background-color: #6F2323;
@@ -190,8 +190,9 @@
 
 
 @media (min-width : 320px) and (max-width :760px){
+
     .maharajshri{
-        width: 100% !important;
+        width: auto !important;
         height: auto !important;
         padding-bottom: 30px;
     
@@ -202,7 +203,9 @@
        
     .maharajshriContainer{
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
         gap: 0px;
 
         .maharajshriShlok{
@@ -228,15 +231,15 @@
             }
         }
     
-        .maharajshriContentContainer{
+        .maharajshriContentContainerx{
             display: flex;
-            flex-direction: column;
+            flex-direction: column !important;
             background-color: #6F2323;
             align-items: center;
             // justify-content: center;
-            padding: 20px 20px;
+            padding-bottom: 20px ;
             gap: 30px;
-            padding-bottom: 20px;
+            height: auto;
     
     
             .containerleft{
@@ -267,7 +270,7 @@
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 12px; /* 177.778% */ 
+        line-height: 16px; /* 177.778% */ 
                 }
     
     
@@ -276,41 +279,46 @@
     
         .maharajshriContentContainer1{
             display: flex;
-            flex-direction: column;
-            background-image: url('../../assets/maharajshri/backgroundbanner.png');
-            background-repeat: no-repeat;
-            padding-top: 50px;
-            background-size: 100%;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            background-color: #6F2323;
+
+
+        
+            // background-image: url('../../assets/maharajshri/backgroundbanner.png');
+            // background-repeat: no-repeat;
+            // padding-top: 20px;
+            
             
             
             
             // background-repeat: no-repeat;
             
-            width: auto;
-            height: 500px;
+            // width: 100%;
+            height: auto;
             // background-color: #6F2323;
-            align-items: center;
-            justify-content: center;
-            padding: 50px 50px;
-            gap: 50px;
+        
+            // padding: 50px 50px;
+            gap: 30px;
             padding-bottom: 20px;
     
             .containerRight{
-                padding: 30px;
-                max-width: 850px;
+                // padding: 30px;
+                // max-width: 850px;
                 text-align: start;
                 display: flex;
                 flex-direction: column;
-                gap: 15px;
+                // gap: 15px;
     
                 .item{
     
                     color: var(--White, #FFF);
         font-family: Poppins;
-        font-size: 18px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px; /* 177.778% */ 
+        line-height: 16px; /* 177.778% */ 
                 }
     
     
@@ -318,13 +326,13 @@
     
     
             .containerleft{
-                padding: 30px;
+                // padding: 30px;
     
                 // max-width: 500px;
                 text-align: start;
                 color: var(--White, #FFF);
     font-family: Poppins;
-    font-size: 32px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
@@ -336,21 +344,23 @@
     
         .maharajshriContentContainer2{
             display: flex;
-            flex-direction: column;
+            flex-direction: column !important;
             background-color: #6F2323;
             align-items: center;
             justify-content: center;
-            padding: 50px 50px;
+            // padding: 50px 50px;
             gap: 20px;
-            padding-bottom: 40px;
+            height: auto;
+            padding-bottom: 20px;
     
     
             .containerleft{
-                max-width: 80%;
+                width: auto !important;
+                // max-width: 80%;
                 text-align: start;
                 color: var(--White, #FFF);
     font-family: Poppins;
-    font-size: 32px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
@@ -358,7 +368,7 @@
     
     
             .containerRight{
-                max-width: 80%;
+                // max-width: 80%;
                 text-align: start;
                 display: flex;
                 flex-direction: column;
@@ -368,10 +378,10 @@
     
                     color: var(--White, #FFF);
         font-family: Poppins;
-        font-size: 18px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px; /* 177.778% */ 
+        line-height: 16px; /* 177.778% */ 
                 }
     
     
