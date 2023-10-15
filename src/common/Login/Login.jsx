@@ -73,7 +73,7 @@ const Login = () => {
             </div>
                 <div className="titles" >
                     <h2>Login</h2>
-                    <p>Login to your VJM Profile</p>
+                    {/* <p>Login to your VJM Profile</p> */}
 
                 </div>
 

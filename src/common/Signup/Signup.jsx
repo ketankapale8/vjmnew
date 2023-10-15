@@ -94,16 +94,16 @@ const Signup = () => {
     <>
     
     <div className='signup'>
-        <div className="loginContainer">
+        <div className="loginContainer1">
             <div className="topTitleBox">
                 <img alt='brand' src={logo} className='logo'/>
 
-            </div>
                 <div className="titles" >
                     <h2>Signup</h2>
                     {/* <p>Login to your VJM Profile</p> */}
 
                 </div>
+            </div>
 
                 <div className="inputBox">
                     <h4>Full Name</h4>

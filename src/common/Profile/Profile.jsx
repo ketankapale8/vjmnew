@@ -17,7 +17,7 @@ import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const Signup = () => {
+const Profile = () => {
   const url ="http://localhost:4000";
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
     // const [country, setCountry] = useState('');
@@ -102,8 +102,8 @@ const Signup = () => {
   return (
     <>
     
-    <div className='signup'>
-        <div className="loginContainer">
+    <div className='profile'>
+        <div className="loginContainer2">
             <div className="topTitleBox">
                 <img alt='brand' src={logo} className='logo'/>
 
@@ -245,4 +245,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Profile
