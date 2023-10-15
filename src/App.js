@@ -56,7 +56,7 @@ function App() {
     window.addEventListener('resize', updateSize);
     
   },[w])
-  console.log(w)
+  // console.log(w)
 
   // useEffect(()=>{
   //   setloading(true);

@@ -47,3 +47,57 @@ line-height: 32px; /* 177.778% */
 
     }
 }
+
+
+@media (min-width : 320px) and (max-width :760px){
+    .donationcommon{
+    width: 100%;
+    height: auto !important;
+    padding-bottom: 10px ;
+
+    .donationCommonContainer{
+        padding: 50px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        background: var(--Primary, #6F2323);
+
+        .donationCommonleft{
+            .leftImg{
+                width: 250px;
+height: 255px;
+flex-shrink: 0;
+            }
+        }
+        .donationCommonright{
+            width: auto !important;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .donationCommontitle{
+                color: var(--White, #FFF);
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+            }
+
+            .donationCommondesc{
+                color: var(--White, #FFF);
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 177.778% */
+
+            }
+        }
+
+
+    }
+}
+}

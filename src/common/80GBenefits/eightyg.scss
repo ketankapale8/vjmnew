@@ -17,3 +17,27 @@
 
     }
 }
+
+@media (min-width : 320px) and (max-width :760px){
+  .eightyg{
+    width: 100%;
+    padding-bottom: 10px;
+
+    .eightygContainer{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      
+      .eightygImg{
+        width: 330px;
+        height: auto;
+        object-fit: contain;
+      }
+
+
+    }
+}
+
+}

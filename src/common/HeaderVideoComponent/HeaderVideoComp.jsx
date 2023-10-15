@@ -8,7 +8,7 @@ const HeaderVideoComp = ({title , desc, video}) => {
             <div className="headerVideoComp">
                 <div className="title">{title}</div>
                 <div className="desc">{desc}</div>
-                <video src={video} width="900" height="700" controls="controls" autoplay="true" />
+                <video src={video}  controls="controls" autoplay="true" className='video' />
             </div>
         </div>
     </>

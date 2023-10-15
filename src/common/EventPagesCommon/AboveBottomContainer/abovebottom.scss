@@ -84,3 +84,94 @@
 
    
 }
+
+@media (min-width : 320px) and (max-width :760px){
+    .abovebottom{
+        width: 100%;
+        padding-bottom: 30px;
+    
+        .boxesContainer5{
+            display: flex;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 10px 10px;
+            padding-bottom: 30px;
+            padding-top: 50px;
+    
+            .boxContainer5{
+                display: flex;
+                // flex: 0.3;
+                flex-direction: row;
+                // margin-top: 20px;
+                height: 420px;
+                width: 548px;
+                padding-bottom: 3px;
+                background-color: white;
+                // box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+                margin-left: 30px ;
+                box-shadow: 0px 4px 4px 0px #0000001F;
+    
+       
+    
+                .top{
+    
+                    
+                    width: 50%;
+                    height: 100%;
+                    // border-radius: 0px 0px 100px 0px; 
+                    
+    
+                
+    
+                    .postImg{
+                        width: 100%;
+                        // clip-path: circle(78.5% at 32% 7%);
+                        
+    
+                        height: 100%
+                    }
+    
+                };
+                .bottom{
+                    width: 50%;
+                    max-height: 290px;
+                    height: 290px;
+                    padding-left: 20px;
+                    padding-right: 120px;
+                    display: flex;
+                    text-align: center;
+                    flex-direction: column;
+    
+    
+                    h4{
+                        text-align: start;
+                        font-size: 1.3rem;
+                         padding-left: 12px;
+    
+                    }
+    
+                    
+                    // background-color: bisque;
+    
+                    p{
+                        text-align: justify;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-align: start;
+                        
+                    }
+    
+                }
+      
+            }
+    
+    
+        }
+    
+       
+    }
+
+}
