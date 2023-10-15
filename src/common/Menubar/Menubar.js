@@ -132,7 +132,7 @@ function MenuBar() {
                           </Link>
                         </li>
                         <li>
-                        <Link to="/balkalyan" style={{textDecoration:'none'}}>
+                        <Link to="/balkalyaan" style={{textDecoration:'none'}}>
                         Balkalyan Yojna
                           </Link>
                         </li>
