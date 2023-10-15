@@ -329,7 +329,7 @@ height: 24px;
         width: 100%;
         height: auto;
 
-        padding: 0px 10px;
+        padding: 0px 0px;
         flex-shrink: 0; 
         background-color: #392727;
         
@@ -489,7 +489,7 @@ height: 24px;
                                 font-style: normal;
                                 font-weight: 700;
                                 width: 120px;
-                                line-height: 22px;
+                                line-height: 18px;
                             }
     
     
@@ -512,7 +512,7 @@ height: 24px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-                                line-height: 23px;
+                                line-height: 14px;
                             }
     
                             .contact{
@@ -562,12 +562,13 @@ height: 24px;
                     .rightsideContainer{
                         display: flex;
                         flex-direction: row;
-                        padding-left: 20px;
+                        padding-left: 5px;
                         padding-top: 10px;
     
                         .quickLinks3{
-                            padding-top: 20px;
-                            padding-left: 40px;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            padding-right: 10px;
     
                             .icons{
                                 display: flex;
