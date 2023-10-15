@@ -40,6 +40,7 @@ import VedicEducation from './components/VedicEducation/VedicEducation';
 import Maharajshri from './components/Maharajshri/Maharajshri';
 import Archikadidi from './components/ArchikaDidi/Archikadidi';
 import SideMenuComp from './common/SideMenuComponent/SideMenuComp';
+import OldAgeHome from './components/OldAgeHome/OldAgeHome';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -103,7 +104,7 @@ function App() {
           <Route path='/gurukul-vedic-edu' element={<VedicEducation/>}/>
           <Route path='/maharajshri' element={<Maharajshri/>}/>
           <Route path='/didi' element={<Archikadidi/>}/>
-
+          <Route path='/oldagehome' element={<OldAgeHome/>}/>
 
           {/* //login// */}
           <Route element={<Login/>} path='login'/>

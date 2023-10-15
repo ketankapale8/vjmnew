@@ -5,12 +5,14 @@
     .leftImgContainer{
         display: flex;
         flex-direction: row;
+        
         gap: 0px;
 
 
         .leftContainer{
             display: flex;
             flex-direction: column;
+            width: 50%;
             // align-items: center;
             justify-content: center;
             color: whitesmoke;

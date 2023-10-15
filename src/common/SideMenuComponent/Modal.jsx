@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
+import {AiOutlineCaretDown} from 'react-icons/ai'
+
 import {SiAboutdotme} from 'react-icons/si';
 
 import {MdOutlineMiscellaneousServices} from 'react-icons/md';
@@ -19,81 +21,17 @@ import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
 import './sidemenu.scss';
 
-// const routes = [
-
-//   {
-//     path: "/",
-//     name: "Home",
-//     icon: <FaHome />,
-//   },
-//   {
-//     path: "/aboutus",
-//     name: "About Us",
-//     icon: <SiAboutdotme />,
-//   },
-//   {
-//     path: "/services",
-//     name: "Services",
-//     icon: <MdOutlineMiscellaneousServices />,
-//   },
-//   {
-//     path: "/industries",
-//     name: "Industries",
-//     icon: <LiaIndustrySolid />,
-//   },
-//   {
-//     path: "/careers",
-//     name: "Careers",
-//     icon: <AiOutlineCodepenCircle />,
-//   },
-
-//   {
-//     path: "/letstalk",
-//     name: "Lets Talk",
-//     icon: <GiTalk />,
-//   },
-//   // {
-//   //   path: "/settings",
-//   //   name: "Settings",
-//   //   icon: <BiCog />,
-//   //   exact: true,
-//   //   subRoutes: [
-//   //     {
-//   //       path: "/settings/profile",
-//   //       name: "Profile ",
-//   //       icon: <FaUser />,
-//   //     },
-//   //     {
-//   //       path: "/settings/2fa",
-//   //       name: "2FA",
-//   //       icon: <FaLock />,
-//   //     },
-//   //     {
-//   //       path: "/settings/billing",
-//   //       name: "Billing",
-//   //       icon: <FaMoneyBill />,
-//   //     },
-//   //   ],
-//   // },  
-
-//   // {
-//   //   path: "/saved",
-//   //   name: "Saved",
-//   //   icon: <AiFillHeart />,
-//   // },
-// ];
-
 const routes = [
-
+  
   {
     path: "/",
     name: "Home",
-    icon: <FaHome />,
+    // icon: <FaHome />,
   },
   {
     path: "/aboutus",
     name: "About ",
-    icon: <SiAboutdotme />,
+    icon: <AiOutlineCaretDown />,
     subRoutes: [
       {
         path: "/maharajshri",
@@ -103,127 +41,219 @@ const routes = [
       {
         path: "/didi",
         name: "Didi",
-        icon: <FaLock />,
+        // icon: <FaLock />,
       },
       {
         path: "/aboutus",
         name: "About Us",
-        icon: <FaMoneyBill />,
+        // icon: <FaMoneyBill />,
       },
     ],
   },
   {
     path: "/wisdom",
     name: "Wisdom",
-    icon: <MdOutlineMiscellaneousServices />,
+    // icon: <MdOutlineMiscellaneousServices />,
   },
   {
     path: "/",
     name: "Events",
-    icon: <LiaIndustrySolid />,
+    icon: <AiOutlineCaretDown />,
     subRoutes: [
-          {
-            path: "ganeshlakshmi",
-            name: "Ganesh Lakshmi ",
-            icon: <FaUser />,
-          },
-          {
-            path: "/settings/2fa",
-            name: "Guru Purnima",
-            icon: <FaLock />,
-          },
-          {
-            path: "/settings/billing",
-            name: "MahaShiv Ratri",
-            icon: <FaMoneyBill />,
-          },
-        ],
+      {
+        path: "ganeshlakshmi",
+        name: "Ganesh Lakshmi ",
+        // icon: <FaUser />,
+      },
+      {
+        path: "gurupurnima",
+        name: "Guru Purnima",
+        // icon: <FaLock />,
+      },
+      {
+        path: "mahashivratri",
+        name: "MahaShivRatri",
+        // icon: <FaMoneyBill />,
+      },
+      {
+        path: "navprabhat",
+        name: "Nav Prabhat",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "manalimeditation",
+        name: "Manali Meditation",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "rishikeshmeditation",
+        name: "Rishikesh Meditation Retreat",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "newlifemeditation",
+        name: "Newlife Meditation",
+        // icon: <FaMoneyBill />,
+      },
+    ],
   },
   {
     path: "/",
     name: "Social Initiatives",
-    icon: <AiOutlineCodepenCircle />,
+    icon: <AiOutlineCaretDown />,
+    subRoutes: [
+      {
+        path: "annapoornayojna",
+        name: "Annapoorna Yojna ",
+        // icon: <FaUser />,
+      },
+      {
+        path: "balkalyaan",
+        name: "Balkalyan Yojna",
+        // icon: <FaLock />,
+      },
+      {
+        path: "gauseva",
+        name: "Cow Shelters",
+        // icon: <FaMoneyBill />,
+      },
+      {
+        path: "navprabhat",
+        name: "Nav Prabhat",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "dharm-kosh",
+        name: "Dharm Kosh",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "dharmada-seva",
+        name: " Dharmada Seva",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "gurukul-vedic-edu",
+        name: " Gurukul Vedic Education",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "healthcare",
+        name: " Healthcare",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "disaster-relief",
+        name: " Natural Disaster Relief",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "oldagehome",
+        name: " Old Age Home",
+        // icon: <FaMoneyBill />,
+      },
+    ],
   },
   // {
-  //   path: "/file-manager",
-  //   name: "File Manager",
-  //   icon: <AiTwotoneFileExclamation />,
-  //   subRoutes: [
-  //     {
-  //       path: "/settings/profile",
-  //       name: "Profile ",
-  //       icon: <FaUser />,
-  //     },
-  //     {
-  //       path: "/settings/2fa",
+    //   path: "/file-manager",
+    //   name: "File Manager",
+    //   icon: <AiTwotoneFileExclamation />,
+    //   subRoutes: [
+      //     {
+        //       path: "/settings/profile",
+        //       name: "Profile ",
+        //       icon: <FaUser />,
+        //     },
+        //     {
+          //       path: "/settings/2fa",
   //       name: "2FA",
   //       icon: <FaLock />,
   //     },
   //     {
-  //       path: "/settings/billing",
-  //       name: "Billing",
-  //       icon: <FaMoneyBill />,
-  //     },
-  //   ],
-  // },
-  {
-    path: "/news",
-    name: "News",
-    icon: <GiTalk />,
-  },
-
-  {
-    path: "/",
-    name: "Yoga and Meditation",
-    icon: <GiTalk />,
-  },
-
-  {
-    path: "/",
-    name: "Centers",
-    icon: <GiTalk />,
-  },
-  // {
-  //   path: "/settings",
-  //   name: "Settings",
-  //   icon: <BiCog />,
-  //   exact: true,
-  //   subRoutes: [
-  //     {
-  //       path: "/settings/profile",
-  //       name: "Profile ",
-  //       icon: <FaUser />,
-  //     },
-  //     {
-  //       path: "/settings/2fa",
-  //       name: "2FA",
-  //       icon: <FaLock />,
-  //     },
-  //     {
-  //       path: "/settings/billing",
+    //       path: "/settings/billing",
+    //       name: "Billing",
+    //       icon: <FaMoneyBill />,
+    //     },
+    //   ],
+    // },
+    {
+      path: "/news",
+      name: "News",
+      // icon: <GiTalk />,
+    },
+    
+    {
+      path: "/",
+      name: "Yoga and Meditation",
+      // icon: <GiTalk />,
+    },
+    
+    {
+      path: "/",
+      name: "Centers",
+      // icon: <GiTalk />,
+    },
+    // {
+      //   path: "/settings",
+      //   name: "Settings",
+      //   icon: <BiCog />,
+      //   exact: true,
+      //   subRoutes: [
+        //     {
+          //       path: "/settings/profile",
+          //       name: "Profile ",
+          //       icon: <FaUser />,
+          //     },
+          //     {
+            //       path: "/settings/2fa",
+            //       name: "2FA",
+            //       icon: <FaLock />,
+            //     },
+            //     {
+              //       path: "/settings/billing",
   //       name: "Billing",
   //       icon: <FaMoneyBill />,
   //     },
   //   ],
   // },  
-
+  
   // {
-  //   path: "/saved",
-  //   name: "Saved",
-  //   icon: <AiFillHeart />,
-  // },
-];
+    //   path: "/saved",
+    //   name: "Saved",
+    //   icon: <AiFillHeart />,
+    // },
+  ];
+  
+  
+  function Modal({closeModal}) {
+    const [currentSubRoute , setCurrentSubRoute] = useState(null);
+    const [show , setshow] = useState(false);
 
+    const openSubMenu = () =>{
+      if(show == true){
+        setshow(false)
+      }else{
+        setshow(true)
+      }
 
-function Modal({closeModal}) {
-
-  useEffect(()=>{
-    document.body.style.overflowY = "hidden";
-    return () =>{
-      document.body.style.overflowY = "scroll";
     }
-  },[])
-  return (
+    
+    useEffect(()=>{
+      document.body.style.overflowY = "hidden";
+      return () =>{
+        document.body.style.overflowY = "scroll";
+      }
+    },[])
+    return (
     <>
     
     <div className="blurBg" onClick={closeModal}></div>
@@ -233,25 +263,43 @@ function Modal({closeModal}) {
               
 
               return (
-                <NavLink
-                  to={route.path}
-                  key={index}
-                  className="link"
-                  // activeClassName="active"
-                >
-                  {/* <div className="icon">{route.icon}</div> */}
+                <>
+
                       <div
                         // variants={showAnimation}
                         // initial="hidden"
                         // animate="show"
                         // exit="hidden"
                         className="link_text"
-                        onClick={closeModal}
+                        // onClick={closeModal}
                       >
+                <NavLink
+                  to={route.path}
+                  key={index}
+                  className="link"
+                  onClick={closeModal}
+                  
+                  // activeClassName="active"
+                >
                         {route.name}
-                      </div>
-                    
                 </NavLink>
+                        <div className="icon" onClick={() => openSubMenu()} >{route.icon}</div> 
+                        </div>
+                        {show && (
+                          <>
+                            {route?.subRoutes?.map((subRoute , i) => (
+                              <NavLink to={subRoute.path} className="link">
+                              <div onClick={closeModal} className="link_text" style={{fontSize:'0.4rem' ,textDecoration:'none'}}>{subRoute.name}</div>
+                            </NavLink>
+                            ))
+            } 
+                          
+                          </>
+                        )}
+                      
+                
+                  
+                </>
               );
             })}
           </section>

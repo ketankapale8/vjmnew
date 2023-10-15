@@ -31,7 +31,7 @@ const SideMenuComp = () => {
   return (
     <>
     
-    <div style={{position: 'fixed' , top: '2%' , left: '45%' , zIndex: 9999}} >
+    <div style={{position: 'fixed' , top: '5%' , left: '70%' , zIndex: 9999}} >
       <FontAwesomeIcon color='#6F2323' icon={faBars} onClick={()=> setShowbar(true)} />
    
     </div>
