@@ -41,6 +41,7 @@ import Maharajshri from './components/Maharajshri/Maharajshri';
 import Archikadidi from './components/ArchikaDidi/Archikadidi';
 import SideMenuComp from './common/SideMenuComponent/SideMenuComp';
 import OldAgeHome from './components/OldAgeHome/OldAgeHome';
+import Mahashivratri from './components/Mahashivratri/Mahashivratri';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -105,6 +106,8 @@ function App() {
           <Route path='/maharajshri' element={<Maharajshri/>}/>
           <Route path='/didi' element={<Archikadidi/>}/>
           <Route path='/oldagehome' element={<OldAgeHome/>}/>
+          <Route path='/mahashivratri' element={<Mahashivratri/>}/>
+
 
           {/* //login// */}
           <Route element={<Login/>} path='login'/>
