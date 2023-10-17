@@ -1,7 +1,12 @@
 .middleContainer{
     padding-top: 100px;
-    margin: 20px 100px;
+    margin: 20px 20px;
     padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
     .middleTop{
         display: flex;
         align-items: center;
@@ -65,7 +70,7 @@
             display: flex;
             flex-direction: row;
             height: 523px;
-            width: 352px;
+            width: auto;
             gap: 40px;
             padding-bottom: 30px;
             .boxContainer{
