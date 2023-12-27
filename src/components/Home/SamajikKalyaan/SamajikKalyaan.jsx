@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './samajikalyaan.scss';
 import one from '../../../assets/samajkalyaan/one.png'
-import two from '../../../assets/samajkalyaan/two.png'
+import two from '../../../assets/samajkalyaan/two.png';
+import { Link } from 'react-router-dom';
 
 
 const KaryaKramArray = [
@@ -13,6 +14,7 @@ const KaryaKramArray = [
       date: "15,Feb,2023",
       city: "Bhopal",
       tag : "सत्संग",
+      link : "/dharmada-seva"
       // share : share,
       // date : '12th March'
     },
@@ -24,6 +26,7 @@ const KaryaKramArray = [
       date: "23,May,2023",
       city: "Delhi",
       tag : "पूर्णिमा",
+      link : "/gurukul-vedic-edu"
       // share : share,
       // date : '10th February'
     },
@@ -57,9 +60,12 @@ const SamajiKalyaan = () => {
 
                         <h4>{item.title}</h4>
                         <p>{item.desc}</p>
+                    <Link to={`${item.link}`}>
+                        <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', marginLeft:'10px', marginTop:'16px'}}>अन्वेषण करें {'>'} </button>
+                    
+                    </Link>
                  
                     </div>
-                        <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', marginLeft:'10px', marginTop:'16px'}}>अन्वेषण करें {'>'} </button>
                         </div>
                         
                         </>

@@ -132,9 +132,9 @@ function App() {
           <Route element={<AurJaane/>} path='/more'/>
 
         </Routes>
-        <Toaster/>
         <Footer/>
       </Router>
+        <Toaster/>
     </div>
   );
 }

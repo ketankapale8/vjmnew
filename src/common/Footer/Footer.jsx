@@ -200,7 +200,6 @@ const GetInvolved = [
                             </div>
 
                     </div>
-
                   
                 </div>
 

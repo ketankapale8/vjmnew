@@ -5,6 +5,7 @@ import BannerImg from '../../../assets/karyakramImgs/bannerImgKaryakram.png';
 import One from '../../../assets/karyakramImgs/1.png';
 import Two from '../../../assets/karyakramImgs/2.png';
 import Three from '../../../assets/karyakramImgs/3.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -89,7 +90,10 @@ const KaryakramSangya = () => {
                             {/* <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', padding: '6px 12px 12px 12px'}}>{item.tag}</button> */}
                         <p>{item.desc}</p>
                     </div>
+                    <Link to={"/donation"}>
                         <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', marginLeft:'10px', marginTop:'6px'}}>अन्वेषण करें {'>'} </button>
+                    
+                    </Link>
                         {/* <div className="tags">
                             <BsCalendarDate style={{ paddingLeft:'4px'}}/>
                             <p>{item.date}</p>

@@ -2,7 +2,8 @@ import React from 'react';
 import './navjeevansadhana.scss';
 import BannerImg from '../../../assets/navjeevansadhana/bannerImg.png'
 import Lotus from '../../../assets/navjeevansadhana/Lotus-Flower.png'
-import Design from '../../../assets/navjeevansadhana/Design.png'
+import Design from '../../../assets/navjeevansadhana/Design.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,7 +16,7 @@ const NavjeevanSadhana = () => {
             </div>
 
             <div className="sadhanaRight">
-              <img src={Design} className='topFlowerImg'/>
+              {/* <img src={Design} className='topFlowerImg'/> */}
                 <div className="sadhanaTitle">
                 नव जीवन साधना!
                 </div>
@@ -27,7 +28,9 @@ const NavjeevanSadhana = () => {
                 </div>
                 <div className="buttons">
                   <button className='exploremore'>और देखें </button>
-                  <button className='exploremore'>सदस्यता लें {'>'} </button>
+                  <Link to="/donation">
+                    <button className='exploremore'>सदस्यता लें {'>'} </button>
+                  </Link>
 
 
                 </div>
