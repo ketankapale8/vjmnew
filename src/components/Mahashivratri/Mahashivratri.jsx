@@ -132,19 +132,156 @@ const Mahashivratri = () => {
   const righttime4 = "शिव-शक्ति कृपा यज्ञ (सुबह 10:30 बजे से)";
   const rightdate4 = "संगीत संध्या व सत्संग (शाम 4 बजे से)"
 
+
+  const aurJaaneDesc = "यह ध्यान तकनीक साधकों को अपना तीसरा नेत्र खोलने और अपने मन को पूरी क्षमता से कार्य करने में मदद करती है। यह तकनीक उन्हें मन को नियंत्रित करने और परेशान करने वाले विचारों को दूर रखने में मदद करती है ताकि वे  ईश्वर से जुड़ सकें और जब एक साधक की आंतरिक शक्ति उसके साथ जुड़ जाती है तो जीवन की सभी असुरक्षाएं, भय और दुविधाएं दूर हो जाती हैं।"
+  const aurJaaneDesc1 = "यह 'शिव-शक्ति महाध्यान' का मूल है जिसका अभ्यास भगवान शिव के भक्त महाशिवरात्रि के शुभ दिन पर अपने गुरु की उपस्थिति में करते हैं। महाशिवरात्रि के दिन ध्यान करें और अपने हृदय में सर्वोच्च चेतना की उपस्थिति को महसूस करें, यह सकारात्मक ऊर्जा आपको अच्छा स्वास्थ्य और दिव्य प्रेम के रूप में शिव और शक्ति का आशीर्वाद प्रदान करेगी।"
+  const aurJaaneDesc2 = ""
+  const aurJaaneDesc3 = "  "
+  const aurJaaneDesc4= ""
+  const aurJaaneHeadings = [
+    {
+      title : "विशेष कार्यक्रम",
+      desc : [
+        {
+          one : "भक्तों के लिए एक विशेष संदेश - मनाली में आगामी चंद्रयान तप में भाग लेने वाले भक्तों एवं साधकों को शिव-शक्ति महाध्यान (ऑनलाइन) में नि:शुल्क भाग लेने का अवसर मिलेगा।",
+          two : " रुद्राभिषेक - महाशिवरात्रि पर, सवा लाख पार्थिव शिवलिंगों की पूजा करके भगवान शिव का आशीर्वाद प्राप्त करें। आप रुद्राभिषेक के लिए अपना स्वयं का शिवलिंग ला सकते हैं या आश्रम से भी प्राप्त कर सकते हैं। इस सुंदर अनुष्ठान में, लिंगम को वैदिक मंत्रों का जाप करते हुए तांबे के 'शृंगी' (अभिषेक अनुष्ठान के लिए इस्तेमाल किया जाने वाला एक विशेष सींग के आकार का बर्तन) का उपयोग करके जल/गाय के दूध की निरंतर धारा से स्नान कराया जाता है।",
+          three : "अनुष्ठान की शुरुआत लक्ष्मी गणेश पूजन से होती है और इसके बाद भगवान शिव का आकर्षक श्रृंगार किया जाता है। रुद्राभिषेक से जीवन में शुभता, समरसता और सफलता आती है। यह सकारात्मकता का आह्वान करता है और प्रतिकूलता को दूर करता है। रुद्राभिषेक करें और अपने जीवन से नकारात्मकता को दूर कर सौभाग्य को आमंत्रित करें।",
+          // four : " सकारात्मक सोच, मन, शरीर और आत्मा के आंतरिक संतुलन को बनाने के लिए अपने दिमाग को सशक्त बनाएं। ",
+          // five : "भक्तों द्वारा दिव्य सामूहिक मंत्र जाप। ",
+          // six : "श्री यंत्र की प्राण प्रतिष्ठा।",
+          // seven : " वैभव लक्ष्मी साधना।",
+          // eight : " वरदान सिद्धि साधना।"
+
+        }
+      ]
+    }
+  ]
+
+  const aurJaane1Desc = "ब्रह्मांड की रचना यज्ञ से ही प्रारंभ हुई थी। यह मनुष्य की सभी मनोकामनाओं को पूर्ण करता है। इसलिए, यदि आप अपने सांसारिक दायित्वों को निभाते हुए सुख और संतोष की तलाश करते हैं और आनंदमय जीवन जीने के लिए कष्टों से छुटकारा पाना चाहते हैं तो आपको यज्ञ अवश्य करना चाहिए। यज्ञ सभी पूजाओं और अनुष्ठानों में सबसे पवित्र है।  "
+  const aurJaane1Desc1 = "यह आपके संपूर्ण स्व और पर्यावरण को शुद्ध करता है। शिवरात्रि पर यज्ञ के माध्यम से अपने मन और शरीर में सुंदर सामंजस्य के साथ-साथ अपने भीतर शुद्ध ऊर्जा के अस्तित्व को महसूस करें।  "
+  const aurJaane1Desc2 = ""
+  const aurJaane1Desc3 = "  "
+  const aurJaane1Desc4= ""
+  const aurJaane1Headings = [
+    {
+      title : "",
+      desc : [
+        {
+          one : "",
+          two : "",
+          three : "",
+          // four : " सकारात्मक सोच, मन, शरीर और आत्मा के आंतरिक संतुलन को बनाने के लिए अपने दिमाग को सशक्त बनाएं। ",
+          // five : "भक्तों द्वारा दिव्य सामूहिक मंत्र जाप। ",
+          // six : "श्री यंत्र की प्राण प्रतिष्ठा।",
+          // seven : " वैभव लक्ष्मी साधना।",
+          // eight : " वरदान सिद्धि साधना।"
+
+        }
+      ]
+    }
+  ]
+
+  const aurJaane2Headings = [
+    {
+      title : "लाइव कार्यक्रम की मुख्य विशेषताएं",
+      desc : [
+        {
+          one : "पशुपतिनाथ शिवालय में ॐ नमः शिवाय का जाप करें।  ",
+          two : "महामृत्युंजय मंत्र का जाप करें।",
+          three : "अभिषेक एवं यज्ञ करें।",
+          four : "आरती में शामिल हों। ",
+          // five : "भक्तों द्वारा दिव्य सामूहिक मंत्र जाप। ",
+          // six : "श्री यंत्र की प्राण प्रतिष्ठा।",
+          // seven : " वैभव लक्ष्मी साधना।",
+          // eight : " वरदान सिद्धि साधना।"
+
+        }
+      ]
+    }
+  ]
+
+
+  const aurJaane3Headings = [
+    {
+      title : "लाइव कार्यक्रम की मुख्य विशेषताएं",
+      desc : [
+        {
+          one : "मुख्य यजमान (मुख्य वेदी) 23000/- रुपये | मुख्य वेदी यजमान - 13000/- रुपये |विशेष वेदी यजमान - 7100/- रुपये | सामन्य वेदी यजमान - 5100/- रुपये",
+          two : "17 फरवरी - 19 फरवरी 2023 | 3 दिन का कार्यक्रम - शिव-शक्ति महाध्यान - गहन ध्यान सत्र (17, 18 और 19 फरवरी) 1.25 लाख पार्थिव शिवलिंग रुद्राभिषेक और पूजन (18 फरवरी, सुबह 9:30 बजे से) शिव-शक्ति कृपा यज्ञ (18 फरवरी, सुबह 10:30 बजे से) शोभायात्रा में भागीदारी (19 फरवरी, सुबह 9:30 बजे से) संगीत संध्या और सत्संग (18 फरवरी, शाम 4 बजे से और 19 फरवरी, दोपहर 12 बजे से)  ",
+          three : "12 ज्योतिर्लिंग स्थानम का लोकार्पण (19 फरवरी, सुबह 11 बजे से)  मुख्य यजमान (मुख्य वेदी - युगल) 25000/- रुपये | मुख्य वेदी यजमान (युगल) - 15000/- रुपये | विशेष वेदी यजमान (युगल) - 9100/- रुपये | सामान्य वेदी यजमान (युगल) - 7100/- रुपये | सामान्य वेदी यजमान (अकेले) - 5100/- रुपये",
+          four : "मुख्य महा शिवरात्रि महोत्सव | 18 फरवरी 2023 -  1 दिवसीय कार्यक्रम (ऑफ़लाइन या ऑनलाइन भाग लें)  |  शिव-शक्ति महाध्यान (सुबह 8 बजे से) | 1.25 लाख पार्थिव शिवलिंग रुद्राभिषेक और पूजन (सुबह 9:30 बजे से) |शिव-शक्ति कृपा यज्ञ (सुबह 10:30 बजे से)  संगीत संध्या व सत्संग (शाम 4 बजे से)  ",
+          five : "कार्यक्रम में भाग लेने के लिए योगदान की राशि | मुख्य यजमान - 21000/- रुपये | मुख्य वेदी - 11000/- रुपये | विशिष्ट वेदी - 5100/- रुपये |  सामन्य वेदी - 3100/- रुपये | भारतीय नागरिक यहाँ रजिस्टर करें।           ",
+          six : "पंजीकरण के बाद, कृपया नीचे दिए गए संपर्क नंबर पर अपना विवरण उन लोगों की तस्वीरों के साथ साझा करें जो महाशिवरात्रि कार्यक्रमों में ऑनलाइन शामिल हो रहे हैं।          ",
+          seven : " कृपया संपर्क करें: +91 8826891955, 9589938938, 9685938938, 7291986653          ",
+          eight : " विदेशी नागरिक - आवासीय बुकिंग के लिए, कृपया नीचे दिए गए नंबर पर संपर्क करें:     (+91) 8826891955, 9589938938     "
+
+        }
+      ]
+    }
+  ]
+
+
+  
+
+
   return (
     <div className='ganeshlakshmi'>
         <HeaderImgC img={BannerImg}/>
         {/* <TitlePage title={title} desc={desc}/> */}
-        <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}/>
-        <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgLeft}/>
-        <RightImg righttitle={righttitle1} rightdate={rightdate1} rightdesc={rightdesc1} righttime={righttime1} bannerImg={bannerImgRight2}/>
-        <LeftImg lefttitle={lefttitle1} leftdate={leftdate1} leftdesc={leftdesc1} lefttime={lefttime1} bannerImg={bannerImgRight3}/>
-        <RightImg righttitle={righttitle2} rightdate={rightdate2} rightdesc={rightdesc2} righttime={righttime2} bannerImg={bannerImgLeft2}/>
+        <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}
+                  aurJaanetitle1={righttitle}
+                  aurJaaneDesc={aurJaane1Desc}
+                  aurJaaneDesc1={aurJaane1Desc1}
+                  aurJaaneDesc2={aurJaane1Desc2}
+                  aurJaaneDesc3={aurJaane1Desc3}
+                  aurJaaneDesc4={aurJaane1Desc4}
+         aurJaaneHeadings={aurJaaneHeadings}
+
+         
+        
+        />
+        <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgLeft}
+          aurJaanetitle1={"Content will be updated soon"}
+        
+        />
+        <RightImg righttitle={righttitle1} rightdate={rightdate1} rightdesc={rightdesc1} righttime={righttime1} bannerImg={bannerImgRight2}
+           aurJaanetitle1={righttitle1}
+           aurJaaneDesc={aurJaaneDesc}
+           aurJaaneDesc1={aurJaaneDesc1}
+           aurJaaneDesc2={aurJaaneDesc2}
+           aurJaaneDesc3={aurJaaneDesc3}
+           aurJaaneDesc4={aurJaaneDesc4}
+  aurJaaneHeadings={aurJaane1Headings}
+        
+        
+        />
+        <LeftImg lefttitle={lefttitle1} leftdate={leftdate1} leftdesc={leftdesc1} lefttime={lefttime1} bannerImg={bannerImgRight3}
+           aurJaanetitle1={"Content will be updated soon."}
+
+        />
+        <RightImg righttitle={righttitle2} rightdate={rightdate2} rightdesc={rightdesc2} righttime={righttime2} bannerImg={bannerImgLeft2}
+            aurJaanetitle1={righttitle2}
+            aurJaaneDesc={"प्रारंभ होने की तिथि: 28 जनवरी 2023"}
+            aurJaaneDesc1={"जो भक्त विदेश में हैं वे भी इसमें शामिल हो सकते हैं क्योंकि लाइव कार्यक्रम 21 दिनों तक लगातार चलेगा। सार्वभौम जाप में श्रद्धालु वर्चुअली जुड़ सकते हैं। दिव्य वातावरण में सामूहिक नामजप के द्वारा शिवलिंगों का सृजन किया जाएगा ।"}
+            aurJaaneDesc2={"आनंद धाम आश्रम में महाशिवरात्रि (ऑफलाइन)            "}
+            aurJaaneDesc3={"कुछ सौभाग्यशाली भक्तों को आनंदधाम आश्रम परिसर में महाराजश्री के साथ कुछ समय बिताने का अवसर प्राप्त होगा। शिवरात्रि पर्व के लिए विशेष कार्यक्रम तैयार किए गए हैं, जिनमें ध्यान सत्र, प्रार्थना, रुद्राभिषेक, शिव महायज्ञ और      	 देव दर्शन शामिल हैं। इसके लिए सीमित सीटें उपलब्ध हैं। यदि भक्त आश्रम में महाशिवरात्रि कार्यक्रमों में भाग लेना चाहते हैं तो वे अपनी बुकिंग जल्द से जल्द करवा लें क्योंकि बुकिंग महाशिवरात्रि से 1 सप्ताह पहले बंद हो जाएगी।            "}
+            aurJaaneDesc4={""}
+   aurJaaneHeadings={aurJaaneHeadings}
+        
+        />
         <CommonGyaan ArticleArray={ArticleArray} commongyaantitle={commongyaantitle} commongyaandesc={commongyaandesc}/>
-        <RightImg righttitle={righttitle3} rightdate={rightdate3} rightdesc={rightdesc3} righttime={righttime3} bannerImg={bannerImgRight4}/>
-        <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgRight5}/>
-        <RightImg righttitle={righttitle1} rightdate={rightdate1} rightdesc={rightdesc1} righttime={righttime1} bannerImg={bannerImgRight2}/>
+        <RightImg righttitle={righttitle3} rightdate={rightdate3} rightdesc={rightdesc3} righttime={righttime3} bannerImg={bannerImgRight4}
+                aurJaanetitle1={righttitle3}
+                aurJaaneDesc={"शिव-शक्ति महाध्यान - 3 दिवसीय गहन ध्यान सत्र    (सुबह 8 बजे और शाम 4 बजे)। 1.25 लाख पार्थिव शिवलिंग रुद्राभिषेक और पूजन में भागीदारी (सुबह 9.30 बजे)।           "}
+                aurJaaneDesc1={"शिव शक्ति कृपा यज्ञ में भाग लें। सत्संग और भजन संध्या में भाग लें  इस कार्यक्रम के लिए तैयार की गई अन्य गतिविधियों में भी भागीदार बनें।        "}
+                aurJaaneDesc2={" आनंद धाम आश्रम में महाशिवरात्रि (ऑफलाइन)      कुछ सौभाग्यशाली भक्तों को आनंदधाम आश्रम परिसर में महाराजश्री के साथ कुछ समय बिताने का अवसर प्राप्त होगा। शिवरात्रि पर्व के लिए विशेष कार्यक्रम तैयार किए गए हैं, जिनमें ध्यान सत्र, प्रार्थना, रुद्राभिषेक, शिव महायज्ञ और      	 देव दर्शन शामिल हैं। इसके लिए सीमित सीटें उपलब्ध हैं। यदि भक्त आश्रम में महाशिवरात्रि कार्यक्रमों में भाग लेना चाहते हैं तो वे अपनी बुकिंग जल्द से जल्द करवा लें क्योंकि बुकिंग महाशिवरात्रि से 1 सप्ताह पहले बंद हो जाएगी।"}
+                aurJaaneDesc3={""}
+                aurJaaneDesc4={""}
+       aurJaaneHeadings={aurJaane3Headings}
+        
+        />
+        {/* <LeftImg lefttitle={lefttitle} leftdate={leftdate} leftdesc={leftdesc} lefttime={lefttime} bannerImg={bannerImgRight5}/> */}
+        {/* <RightImg righttitle={righttitle1} rightdate={rightdate1} rightdesc={rightdesc1} righttime={righttime1} bannerImg={bannerImgRight2}/> */}
         {/* <Mahayagya/> */}
         <BankTransfer/>
     </div>

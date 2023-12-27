@@ -1,8 +1,18 @@
 import React from 'react';
 import './leftimg.scss';
-import vectorDesign from '../../../assets/commonAssets/vectorwhite.png'
+import vectorDesign from '../../../assets/commonAssets/vectorwhite.png';
+import { Link } from 'react-router-dom';
 
-const LeftImg = ({lefttitle , leftdesc, leftdate , lefttime , bannerImg }) => {
+
+const LeftImg = ({lefttitle , leftdesc, leftdate , lefttime , bannerImg
+  , aurJaanetitle1,
+   aurJaaneDesc,
+   aurJaaneDesc1,
+   aurJaaneDesc2,aurJaaneDesc3,
+   aurJaaneDesc4,
+   aurJaaneHeadings
+}) => {
+  
   return (
     <div className='leftimg'>
         <div className="leftImgContainer">
@@ -20,9 +30,21 @@ const LeftImg = ({lefttitle , leftdesc, leftdate , lefttime , bannerImg }) => {
                 <div className="LeftDesc">{lefttime}</div>
 
             </div>
-            <div className="buttons">
+            <div className="buttons" >
+            <Link to="/more" state={{aurJaanetitle1 :aurJaanetitle1 , 
+                aurJaaneDesc:aurJaaneDesc,
+                aurJaaneDesc1: aurJaaneDesc1,
+                aurJaaneDesc2: aurJaaneDesc2,
+                aurJaaneDesc3: aurJaaneDesc3,
+                aurJaaneDesc4: aurJaaneDesc4,
+
+                aurJaaneHeadings: aurJaaneHeadings
+
+                
+                }} >
                   <button className='exploremore1'>और अधिक जानें {'>'} </button>
-                  <button className='exploremore1'>शामिल हों  {'>'} </button>
+                </Link>
+                  {/* <button className='exploremore1'>शामिल हों  {'>'} </button> */}
 
 
                 </div>

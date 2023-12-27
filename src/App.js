@@ -42,6 +42,7 @@ import Archikadidi from './components/ArchikaDidi/Archikadidi';
 import SideMenuComp from './common/SideMenuComponent/SideMenuComp';
 import OldAgeHome from './components/OldAgeHome/OldAgeHome';
 import Mahashivratri from './components/Mahashivratri/Mahashivratri';
+import AurJaane from './common/AurJaanePage/AurJaane.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -124,6 +125,9 @@ function App() {
           <Route element={<DharmadaDonation/>} path='dharmada-donation'/>
           <Route element={<CowSheltersDonation/>} path='cowshelter-donation'/>
           <Route element={<AnnapoornaDonation/>} path='annapoorna-donation'/>
+
+          {/* // aurjaane  */}
+          <Route element={<AurJaane/>} path='/more'/>
 
         </Routes>
         <Toaster/>
