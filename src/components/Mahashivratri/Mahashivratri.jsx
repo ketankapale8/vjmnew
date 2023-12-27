@@ -1,5 +1,6 @@
 import React from 'react';
 import './mahashivratri.scss';
+import video from '../../assets/video/Shivratri.mp4'
 import HeaderImgC from '../../common/HeaderImgContainer/HeaderImgC';
 import BannerImg from '../../assets/BannerImgs/BannerImg15.png'
 import TitlePage from '../../common/EventPagesCommon/TitlePage/TitlePage';
@@ -22,6 +23,7 @@ import img1 from '../../assets/commongyaan/One.png'
 import img2 from '../../assets/commongyaan/Two.png'
 import img3 from '../../assets/commongyaan/Three.png'
 import share from '../../assets/articles/share.png'
+import HeaderVideoComp from '../../common/HeaderVideoComponent/HeaderVideoComp';
 
 // import Mahayagya from './MahaYagya/Mahayagya';
 
@@ -226,7 +228,8 @@ const Mahashivratri = () => {
 
   return (
     <div className='ganeshlakshmi'>
-        <HeaderImgC img={BannerImg}/>
+      <HeaderVideoComp itle={'शिवरात्रि'} desc={''}  video={video}/>
+        {/* <HeaderImgC img={BannerImg}/> */}
         {/* <TitlePage title={title} desc={desc}/> */}
         <RightImg righttitle={righttitle} rightdate={rightdate} rightdesc={rightdesc} righttime={righttime} bannerImg={bannerImg}
                   aurJaanetitle1={righttitle}

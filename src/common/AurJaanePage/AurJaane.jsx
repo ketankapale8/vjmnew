@@ -4,7 +4,11 @@ import { useLocation } from 'react-router-dom';
 
 const AurJaane = () => {
     const location = useLocation();
-    const {aurJaanetitle1 , aurJaaneDesc , aurJaaneDesc1 , aurJaaneDesc2 , aurJaaneDesc3 , aurJaaneDesc4, aurJaaneHeadings} = location?.state;
+    const {aurJaanetitle1 , aurJaaneDesc , aurJaaneDesc1 , aurJaaneDesc2 , 
+      aurJaaneDesc3 , aurJaaneDesc4,
+      aurJaaneDesc5,aurJaaneDesc6,aurJaaneDesc7,
+      
+      aurJaaneHeadings} = location?.state;
     // console.log(aurJaaneDesc)
 
   return (
@@ -18,6 +22,9 @@ const AurJaane = () => {
             <p>{aurJaaneDesc2}</p>
             <p>{aurJaaneDesc3}</p>
             <p>{aurJaaneDesc4}</p>
+            <p>{aurJaaneDesc5}</p>
+            <p>{aurJaaneDesc6}</p>
+            <p>{aurJaaneDesc7}</p>
 
 
 

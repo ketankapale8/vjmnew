@@ -9,6 +9,7 @@ const RightImg = ({righttitle , rightdesc, rightdate , righttime ,
    aurJaaneDesc1,
    aurJaaneDesc2,aurJaaneDesc3,
    aurJaaneDesc4,
+   aurJaaneDesc5,aurJaaneDesc6,aurJaaneDesc7,
    aurJaaneHeadings
 
 
@@ -32,6 +33,9 @@ const RightImg = ({righttitle , rightdesc, rightdate , righttime ,
                 aurJaaneDesc2: aurJaaneDesc2,
                 aurJaaneDesc3: aurJaaneDesc3,
                 aurJaaneDesc4: aurJaaneDesc4,
+                aurJaaneDesc5: aurJaaneDesc5,
+                aurJaaneDesc6: aurJaaneDesc6,
+                aurJaaneDesc7: aurJaaneDesc7,
 
                 aurJaaneHeadings: aurJaaneHeadings
 

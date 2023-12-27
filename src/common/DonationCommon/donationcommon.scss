@@ -42,6 +42,22 @@ font-weight: 500;
 line-height: 32px; /* 177.778% */
 
             }
+
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                .exploremore1{
+                    margin-top: 50px;
+                    background-color: transparent;
+                    border-radius: 46px;
+                    color: whitesmoke;
+    border: 2px solid var(--White, #FFF); 
+    width: 120px;
+    height: 46px;
+                }
+            }
+
         }
 
 

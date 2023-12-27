@@ -43,6 +43,7 @@ import SideMenuComp from './common/SideMenuComponent/SideMenuComp';
 import OldAgeHome from './components/OldAgeHome/OldAgeHome';
 import Mahashivratri from './components/Mahashivratri/Mahashivratri';
 import AurJaane from './common/AurJaanePage/AurJaane.jsx';
+import AboutVjm from './components/AboutVJM/AboutVjm.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -106,6 +107,7 @@ function App() {
           <Route path='/gurukul-vedic-edu' element={<VedicEducation/>}/>
           <Route path='/maharajshri' element={<Maharajshri/>}/>
           <Route path='/didi' element={<Archikadidi/>}/>
+          <Route path='/aboutvjm' element={<AboutVjm/>}/>
           <Route path='/oldagehome' element={<OldAgeHome/>}/>
           <Route path='/mahashivratri' element={<Mahashivratri/>}/>
 

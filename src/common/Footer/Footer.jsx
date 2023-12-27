@@ -8,6 +8,7 @@ import five from '../../assets/Footer/5.png'
 import six from '../../assets/Footer/appstore.png';
 import seven from '../../assets/Footer/playstore.png'
 import eight from '../../assets/Footer/hand.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +21,7 @@ const Footer = () => {
     },
     {
         title : "About Us",
-        link : "about-us"
+        link : "/aboutvjm"
     },
     {
         title : "Vision/Mission",
@@ -71,11 +72,11 @@ const GetInvolved = [
     },
     {
         title : "Volunteer with Us",
-        link : "/"
+        link : "/volunteer"
     },
     {
         title : "Donate Us",
-        link : "/"
+        link : "/donation"
     }
 ]
   return (
@@ -90,8 +91,11 @@ const GetInvolved = [
                         {quickLinks.map(item=>{
                             return (
                                 <>
+                                    
                                    <div className="itemlist">
-                                    {item.title}
+                                    <Link to={`${item.link}`} style={{textDecoration:'none', color:'inherit'}}>
+                                        {item.title}
+                                    </Link>
                                    </div>
                     
                                 </>
