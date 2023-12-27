@@ -113,13 +113,13 @@ nav a {
 	display:block;
 	padding:14px 42px;	
 	color:#FFF;
-	font-size:10px;
+	font-size:14px;
 	text-decoration:none;
 
 }
 
 
-nav ul li ul li:hover { text-decoration: underline; text-decoration-color: #FFF; }
+nav ul li ul li:hover { text-decoration: none; text-decoration-color: #FFF; }
 
 /* Background color change on Hover */
 /* nav a:hover { 
