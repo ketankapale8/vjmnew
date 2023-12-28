@@ -29,7 +29,7 @@ const routes = [
     // icon: <FaHome />,
   },
   {
-    path: "/aboutus",
+    path: "/aboutvjm",
     name: "About ",
     icon: <AiOutlineCaretDown />,
     subRoutes: [
@@ -44,15 +44,39 @@ const routes = [
         // icon: <FaLock />,
       },
       {
-        path: "/aboutus",
-        name: "About Us",
+        path: "/aboutvjm",
+        name: "About VJM",
         // icon: <FaMoneyBill />,
       },
     ],
   },
   {
-    path: "/wisdom",
+    path: "/",
     name: "Wisdom",
+    icon: <AiOutlineCaretDown />,
+
+    subRoutes :[
+      {
+        path: "/podcasts",
+        name: "Podcasts",
+        icon: <FaUser />,
+      },
+      {
+        path: "/videos",
+        name: "Videos",
+        // icon: <FaLock />,
+      },
+      {
+        path: "/articles",
+        name: "Articles",
+        // icon: <FaMoneyBill />,
+      },
+      {
+        path: "/quotes",
+        name: "Quotes",
+        // icon: <FaMoneyBill />,
+      },
+    ]
     // icon: <MdOutlineMiscellaneousServices />,
   },
   {
