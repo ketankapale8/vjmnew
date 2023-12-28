@@ -46,6 +46,7 @@ import AurJaane from './common/AurJaanePage/AurJaane.jsx';
 import AboutVjm from './components/AboutVJM/AboutVjm.jsx';
 import VideosComp from './components/VideosComp/VideosComp.jsx';
 import ArticlesComp from './components/ArticlesComp/ArticlesComp.jsx';
+import QuotesContainer from './components/QuotesContainer/QuotesContainer.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -121,6 +122,8 @@ function App() {
           <Route element={<Profile/>} path='profile'/>
           <Route element={<VideosComp/>} path='videos'/>
           <Route element={<ArticlesComp/>} path='articles'/>
+          <Route element={<QuotesContainer/>} path='quotes'/>
+
 
 
           {/* //Donation// */}
