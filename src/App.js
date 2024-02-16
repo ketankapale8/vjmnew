@@ -47,6 +47,11 @@ import AboutVjm from './components/AboutVJM/AboutVjm.jsx';
 import VideosComp from './components/VideosComp/VideosComp.jsx';
 import ArticlesComp from './components/ArticlesComp/ArticlesComp.jsx';
 import QuotesContainer from './components/QuotesContainer/QuotesContainer.jsx';
+import SponsorAGirl from './components/SponsorAGirl/SponsorAGirl.jsx';
+import Terms from './newpagescommoncomp/Terms&Conditions/Terms.jsx';
+import Contactus from './newpagescommoncomp/ContactUs/Contactus.jsx';
+import PrivacyPolicies from './newpagescommoncomp/PrivacyPolicies/PrivacyPolicies.jsx';
+import FrequentlyAskedQ from './newpagescommoncomp/FrequentyAskedQ/FrequentlyAskedQ.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -136,9 +141,20 @@ function App() {
           <Route element={<DharmadaDonation/>} path='dharmada-donation'/>
           <Route element={<CowSheltersDonation/>} path='cowshelter-donation'/>
           <Route element={<AnnapoornaDonation/>} path='annapoorna-donation'/>
-
           {/* // aurjaane  */}
           <Route element={<AurJaane/>} path='/more'/>
+
+          {/* // New Pages  */}
+          <Route element={<Terms/>} path='/terms'/>
+          <Route element={<FrequentlyAskedQ/>} path='/frequentlyaskedquestions'/>
+
+          <Route element={<PrivacyPolicies/>} path='/privacypolicy'/>
+
+
+          <Route element={<Contactus/>} path='contactus'/>
+
+          <Route element={<SponsorAGirl/>} path='/sponsor-a-girl'/> 
+
 
         </Routes>
         <Footer/>

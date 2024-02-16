@@ -1,0 +1,86 @@
+.galleryContainer{
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .gallerymainContainer{
+        display: flex;
+        padding: 90px 150px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .middleImg{
+          width: 225.2px;
+          height: 20px;
+      
+      }
+        
+
+
+    }
+    
+    .gallerymainContainer > div{
+        flex: 1 18%;
+width: 25%;
+padding: 5px;
+cursor: pointer;
+// border: 2px solid lightgray;
+   
+        // img{
+        //     width: 280px;
+        //     height: 180px;
+        //     object-fit: cover
+        // }
+    }
+    .gallerymainContainer > div  img {
+        width: 100%;
+        border: 3px solid gray;
+      }
+
+    .gallerymainContainer > div.active img {
+        border-color: skyblue;
+      }
+      
+
+      .image-slide > img {
+        width: 100%;
+        display: none;
+      }
+
+      
+    }
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .image-slide > img.active {
+      display: block;
+      animation-name: fade;
+      animation-duration: 0.75s;
+    }
+    
+    .image-navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-10%);
+      font-size: 3em;
+      cursor: pointer;
+    }
+    
+    .next {
+      right: 20px;
+    }
+    
+    .prev {
+      left: 20px;
+    }

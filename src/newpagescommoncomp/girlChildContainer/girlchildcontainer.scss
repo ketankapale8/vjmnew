@@ -1,0 +1,56 @@
+.girlchildcontainer{
+    width: auto;
+    height: 952px;
+    max-height: 932px;
+    padding-bottom: 30px;
+    background-color: #6F2323;
+
+    .girlchildmainBox{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        // gap: 520px;
+        z-index: -1;
+
+        .girlchildLeft{
+            flex: 0.6;
+            display: flex;
+            flex-direction: column;
+            padding-left: 220px;
+            padding-top: 30px;
+            color: white;
+
+            .girlchildTitle{
+                font-size: 2.2rem;
+            }
+
+            .middleImg{
+                width: 225.2px;
+                height: 20px;
+    
+            }
+            ul{
+                padding-top: 10px;
+            }
+            
+
+            p{
+                font-size: 1.15rem;
+            }
+
+        }
+
+        .girlchildRight{
+            flex: 0.5;
+
+            z-index: 1;
+            // padding-left: 43%;
+            .girlImg{
+                width: 856px;
+                height: 962px;
+                object-fit: cover;
+            }
+        }
+
+    }
+}

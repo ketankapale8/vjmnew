@@ -23,14 +23,19 @@ const Footer = () => {
         title : "About Us",
         link : "/aboutvjm"
     },
+
     {
-        title : "Vision/Mission",
-        link : "/"
+        title : "Terms & Conditions",
+        link : "/terms"
     },
-    {
-        title : "Leadership",
-        link : "/"
-    },
+    // {
+    //     title : "Vision/Mission",
+    //     link : "/"
+    // },
+    // {
+    //     title : "Leadership",
+    //     link : "/"
+    // },
     {
         title : "Contact Us",
         link : "/"
@@ -41,14 +46,19 @@ const Footer = () => {
     },
     {
         title : "Privacy Policy",
-        link : "/"
+        link : "/privacypolicy"
+    },
+    {
+        title : "FAQ",
+        link : "/frequentlyaskedquestions"
     }
+
 ]
 
 const GetInvolved = [
     {
         title : "Sponsor a girl",
-        link : "/"
+        link : "/sponsor-a-girl"
     },
     {
         title : "Feed Children",
@@ -116,7 +126,10 @@ const GetInvolved = [
                             return (
                                 <>
                                    <div className="itemlist1">
-                                    {item.title}
+                                   <Link to={`${item.link}`} style={{textDecoration:'none', color:'inherit'}}>
+                                        {item.title}
+
+                                   </Link>
                                    </div>
                     
                                 </>

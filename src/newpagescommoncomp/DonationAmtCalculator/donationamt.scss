@@ -1,0 +1,83 @@
+.donationContainer{
+        display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 4px;
+            
+                h3{
+                    font-size: 22px;
+                }
+                
+                p{
+                    max-width: 80%;
+                    font-size: 15px;
+                }
+
+                .middleImg{
+                    width: 225.2px;
+                    height: 20px;
+        
+                }
+                
+                .contributeSection{
+                    
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 340px;
+                    margin-top: 20px;
+                    padding: 0px 20px;
+                    .buttonContainer{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+
+                        gap: 20px;
+                        .buttons{
+                            border: none;
+                            border: 1px solid lightgray;
+                            background-color: white;
+                            color: black;
+                            border-radius: 4px;
+                            height: 35px;
+                            font-size: 21px;
+                            
+        
+                        }
+        
+                        .buttons-current{
+                            display: flex;
+                            border: 1px solid white;
+
+                            border: none;
+                            color: white;
+                            border-radius: 4px;
+                            height: 35px;
+                            font-size: 21px;
+                            background-color: #960808
+                        }
+                    }
+
+                    .commonDesc{
+                        color:#1C181899
+                    }
+    
+                    .contributeBtn{
+                        width: 180px;
+                        height: 55px;
+                        border-radius: 30px;
+                        border: none;
+                        background-color: #960808;
+                        color:white;
+                        font-size: medium;
+                        
+                    }
+                }
+
+
+
+}
