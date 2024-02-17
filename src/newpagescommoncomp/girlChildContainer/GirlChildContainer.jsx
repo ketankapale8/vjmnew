@@ -45,18 +45,18 @@ const GirlChildContainer = ({girlChildArr}) => {
                             return (
                                 <>
                                 <li>
-                                    <p>{i.title}</p>
+                                    <p>{i?.title}</p>
                                 </li>
                                 <li>
 
-                                    <p>{i.title1}</p>
+                                    <p>{i?.title1}</p>
                                 </li>
                                 <li>
 
-                                    <p>{i.title2}</p>
+                                    <p>{i?.title2}</p>
                                 </li>
                                 <li>
-                                    <p>{i.title3}</p>
+                                    <p>{i?.title3}</p>
 
                                 </li>
 
@@ -66,14 +66,14 @@ const GirlChildContainer = ({girlChildArr}) => {
                                  </li>
                                  <li>                                 
 
-<p>{i.title5}</p>
+<p>{i?.title5}</p>
                                  </li>
                                  <li>
-                                 <p>{i.title6}</p>
+                                 <p>{i?.title6}</p>
 
                                  </li>
                                  <li>
-<p>{i.title7}</p>
+<p>{i?.title7}</p>
 
                                  </li>
 

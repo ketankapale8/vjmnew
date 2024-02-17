@@ -48,10 +48,11 @@ import VideosComp from './components/VideosComp/VideosComp.jsx';
 import ArticlesComp from './components/ArticlesComp/ArticlesComp.jsx';
 import QuotesContainer from './components/QuotesContainer/QuotesContainer.jsx';
 import SponsorAGirl from './components/SponsorAGirl/SponsorAGirl.jsx';
-import Terms from './newpagescommoncomp/Terms&Conditions/Terms.jsx';
-import Contactus from './newpagescommoncomp/ContactUs/Contactus.jsx';
-import PrivacyPolicies from './newpagescommoncomp/PrivacyPolicies/PrivacyPolicies.jsx';
+import Terms from './components/Terms&Conditions/Terms.jsx';
+import Contactus from './components/ContactUs/Contactus.jsx';
+import PrivacyPolicies from './components/PrivacyPolicies/PrivacyPolicies.jsx';
 import FrequentlyAskedQ from './newpagescommoncomp/FrequentyAskedQ/FrequentlyAskedQ.jsx';
+import KanyaAtmanirbhal from './components/KanyaAtmanirbhal/KanyaAtmanirbhal.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -154,6 +155,8 @@ function App() {
           <Route element={<Contactus/>} path='/contactus'/>
 
           <Route element={<SponsorAGirl/>} path='/sponsor-a-girl'/> 
+          <Route element={<KanyaAtmanirbhal/>} path='/kanya'/> 
+
 
 
         </Routes>

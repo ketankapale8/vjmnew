@@ -73,8 +73,8 @@ const GetInvolved = [
         link : "/"
     },
     {
-        title : "Kaushal Vikas Yojna",
-        link : "/"
+        title : "Kanya Atmanirbhal Abhiyaan",
+        link : "/kanya"
     },
     {
         title : "Donate For Library",

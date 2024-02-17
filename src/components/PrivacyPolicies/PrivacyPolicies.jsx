@@ -1,5 +1,5 @@
 import React from 'react'
-import DataContainer from '../DataContainer1/DataContainer1'
+import DataContainer from '../../newpagescommoncomp/DataContainer1/DataContainer1'
 
 const PrivacyPolicies = () => {
   return (
