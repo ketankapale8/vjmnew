@@ -151,7 +151,7 @@ function App() {
           <Route element={<PrivacyPolicies/>} path='/privacypolicy'/>
 
 
-          <Route element={<Contactus/>} path='contactus'/>
+          <Route element={<Contactus/>} path='/contactus'/>
 
           <Route element={<SponsorAGirl/>} path='/sponsor-a-girl'/> 
 

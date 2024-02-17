@@ -1,0 +1,97 @@
+.contactus{
+    width: auto;
+    height: auto;
+    padding-bottom: 50px;
+
+    .contactusContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 150px;
+        gap: 50px;
+
+
+        .contactusleft{
+            width: 650px;
+            text-align: start;
+            height: 620px;
+            padding: 20px 20px;
+            border: 1px solid lightgray;
+            border-bottom: 3px solid lightgray;
+            display: flex;
+            flex-direction: column;
+
+            .address{
+                line-height: 10px;
+            }
+
+            .contactDetails{
+                line-height: 10px;
+
+            }
+            .map{
+                padding-top: 10px;
+            }
+            
+            // align-items: center;
+        }
+
+        .contactusright{
+            width: 650px;
+
+            // width: auto;
+            height: 620px;
+            padding: 20px 20px;
+            border: 1px solid lightgray;
+            border-bottom: 3px solid lightgray;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+
+            // align-items: center;
+
+            .contactusForm{
+                display: flex;
+                flex-direction: column;
+                gap: 1px;
+
+                .titles{
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                input{
+                    width: 500px;
+                    height: 32px;
+                    background-color: lightgray;
+                    border: none;
+                }
+
+                textarea{
+                    width: 500px;
+                    max-width: 500px;
+                    min-height: 150px;
+                    max-height: 150px;
+
+                    background-color: lightgray;
+                    border: none;
+                };
+
+                .contributeBtn1{
+                    margin-top: 10px;
+                    width: 140px;
+                    height: 55px;
+                    border-radius: 30px;
+                    border: none;
+                    background-color: #960808;
+                    color:white;
+                    font-size: medium;
+                    
+                }
+
+
+            }
+        }
+    }
+}

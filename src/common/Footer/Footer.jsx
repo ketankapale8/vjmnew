@@ -38,12 +38,12 @@ const Footer = () => {
     // },
     {
         title : "Contact Us",
-        link : "/"
+        link : "/contactus"
     },
-    {
-        title : "Join Team",
-        link : "/"
-    },
+    // {
+    //     title : "Join Team",
+    //     link : "/"
+    // },
     {
         title : "Privacy Policy",
         link : "/privacypolicy"
