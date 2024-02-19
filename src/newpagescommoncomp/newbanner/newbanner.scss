@@ -7,20 +7,24 @@
     .bannerContainer{
         display: flex;
         flex-direction: row;
+        flex: 1;
         gap: 20px;
 
         .leftContainer{
-            width: 60%;
+            flex: 0.6;
+            // width: 60%;
             height: 100%;
             .bannerImg{
-                width: 80%;
-                height: 100%;
+                width: 85%;
+                height: inherit;
                 object-fit: cover;
             }
         }
 
         .rightContainer{
-            width: 48%;
+            padding-top: 50px;
+            // width: 48%;
+            flex: 0.4;
             .rightContainerData{
                 display: flex;
                 flex-direction: column;
@@ -48,3 +52,32 @@
 
     }
 }
+
+@media (min-width : 761px) and (max-width :1400px){
+
+.banner{
+    .bannerContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        flex: 1;
+        gap: 20px;
+}
+
+.leftContainer{
+    .bannerImg{
+        width: 100%;
+    }
+}
+
+.rightContainer{
+    .rightContainerData{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+}}
