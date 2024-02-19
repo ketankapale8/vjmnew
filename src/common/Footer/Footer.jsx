@@ -65,12 +65,12 @@ const GetInvolved = [
         link : "/about-us"
     },
     {
-        title : "Bring Books for Children",
-        link : "/"
+        title : "Kaushal Vikas Yojna",
+        link : "/kaushal-vikas-yojna"
     },
     {
         title : "MidDay Meal",
-        link : "/"
+        link : "/middaymeal"
     },
     {
         title : "Kanya Atmanirbhal Abhiyaan",
@@ -78,7 +78,12 @@ const GetInvolved = [
     },
     {
         title : "Donate For Library",
-        link : "/"
+        link : "/library-donation"
+    },
+
+    {
+        title : "Donate For Birthday",
+        link : "/birthday-donation"
     },
     {
         title : "Volunteer with Us",

@@ -53,6 +53,8 @@ import Contactus from './components/ContactUs/Contactus.jsx';
 import PrivacyPolicies from './components/PrivacyPolicies/PrivacyPolicies.jsx';
 import FrequentlyAskedQ from './newpagescommoncomp/FrequentyAskedQ/FrequentlyAskedQ.jsx';
 import KanyaAtmanirbhal from './components/KanyaAtmanirbhal/KanyaAtmanirbhal.jsx';
+import LibraryDonation from './components/LibraryDonation/LibraryDonation.jsx';
+import KaushalVikasYojna from './components/KaushalVikasYojna/KaushalVIkasYojna.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -155,6 +157,10 @@ function App() {
           <Route element={<Contactus/>} path='/contactus'/>
 
           <Route element={<SponsorAGirl/>} path='/sponsor-a-girl'/> 
+          <Route element={<LibraryDonation/>} path='/library-donation'/> 
+          <Route element={<KaushalVikasYojna/>} path='/kaushal-vikas-yojna'/> 
+
+
           <Route element={<KanyaAtmanirbhal/>} path='/kanya'/> 
 
 

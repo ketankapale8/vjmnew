@@ -1,7 +1,7 @@
 .girlchildcontainer{
     width: auto;
-    height: 952px;
-    max-height: 932px;
+    height: 962px;
+    max-height: 952px;
     padding-bottom: 30px;
     background-color: #6F2323;
 
@@ -35,7 +35,7 @@
             
 
             p{
-                font-size: 1.15rem;
+                font-size: 0.84rem;
             }
 
         }
@@ -47,7 +47,7 @@
             // padding-left: 43%;
             .girlImg{
                 width: 856px;
-                height: 962px;
+                height:inherit;
                 object-fit: cover;
             }
         }
