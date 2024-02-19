@@ -160,27 +160,55 @@ function MenuBar() {
                         
                         </li>
                         <li>
-                        <Link to="/healthcare" style={{textDecoration:'none'}}>
-                        Healthcare
+                        <Link to="/sponsor-a-girl" style={{textDecoration:'none'}}>
+                        Sponsor A Girl
+                          </Link>
+                        
+                        </li>
+
+                        <li>
+                        <Link to="/kanya" style={{textDecoration:'none'}}>
+                        Kanya Atmanirbhal
+                          </Link>
+                        
+                        </li>
+
+                        <li>
+                        <Link to="/kaushal-vikas-yojna" style={{textDecoration:'none'}}>
+                        Kaushal Vikas Yojna
+                          </Link>
+                        
+                        </li>
+
+                        <li>
+                        <Link to="/middaymeal" style={{textDecoration:'none'}}>
+                        Midday Meal
                           </Link>
                         
                         </li>
                         <li>
-                        <Link to="/disaster-relief" style={{textDecoration:'none'}}>
-                        Natural Disaster Relief
+
+                          
+                        <Link to="/library-donation" style={{textDecoration:'none'}}>
+                        Donate a Library
                           </Link>
 
                         </li>
+
+                        <li>
+
+                          
+<Link to="/birthday-donation" style={{textDecoration:'none'}}>
+Contribute A Birthday
+  </Link>
+
+</li>
                         <li>
                         <Link to="/oldagehome" style={{textDecoration:'none'}}>
                         Old Age Home
                           </Link>
                         </li>
-                        <li>
-                        <Link to="/skill-development" style={{textDecoration:'none'}}>
-                        Skill Development
-                          </Link>
-                        </li>
+                   
                     </ul> 
 
                 </li>

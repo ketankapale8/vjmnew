@@ -60,21 +60,21 @@ const GetInvolved = [
         title : "Sponsor a girl",
         link : "/sponsor-a-girl"
     },
-    {
-        title : "Feed Children",
-        link : "/about-us"
-    },
+    // {
+    //     title : "Feed Children",
+    //     link : "/about-us"
+    // },
     {
         title : "Kaushal Vikas Yojna",
         link : "/kaushal-vikas-yojna"
     },
     {
-        title : "MidDay Meal",
-        link : "/middaymeal"
-    },
-    {
         title : "Kanya Atmanirbhal Abhiyaan",
         link : "/kanya"
+    },
+    {
+        title : "MidDay Meal",
+        link : "/middaymeal"
     },
     {
         title : "Donate For Library",
