@@ -93,7 +93,7 @@ nav ul {
 	display: flex;
 	justify-content: space-between;
 	float: right;
-	padding-left:0px;
+	padding-left:20px;
 	margin:0;
 	list-style: none;
 	position: relative;
@@ -111,7 +111,7 @@ nav ul li {
 /* Styling the links */
 nav a {
 	display:block;
-	padding:14px 42px;	
+	padding:12px 32px;	
 	color:#FFF;
 	font-size:14px;
 	text-decoration:none;
