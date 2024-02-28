@@ -27,8 +27,8 @@ const BalkalyanDonate = () => {
     const options = useMemo(() => countryList().getData(), [])
     const [total , setTotal] = useState(0)
     // const [countryList , setCountryList] = useState([{label : Country.getAllCountries().map(item=>item.name)}]);
-    console.log(countryList);
     const url ="http://localhost:4000";
+    const url1 = "https://vjmnewbackend.vercel.app"
 
    
     const countrySelection = (e) =>{
@@ -38,9 +38,13 @@ const BalkalyanDonate = () => {
 
     const checkoutHandler = async (amount) =>{
       const {data:{key}} = await axios.get(`${url}/api/v1/getkey`)
-      const {data :{order}} = await axios.post(`${url}/api/v1/checkout`,{
-        amount
+      const {data :{order}} = await axios.post(`${url1}/api/v1/payment/checkout`,{
+        amount,
+        
       })
+
+
+
 
 
       const options = {
@@ -51,7 +55,7 @@ const BalkalyanDonate = () => {
         description: "Payment Gateway",
         image: "https://vjmmeditation.com/assets/new_theme/new_logo.png",
         order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-        callback_url: "http://localhost:4000/api/v1/paymentverification",
+        callback_url: "https://vjmnewbackend.vercel.app/api/v1/payment/paymentverification",
         prefill: {
             name: user?.name,
             email: user?.email,

@@ -236,7 +236,6 @@ const MyAccount = () => {
             <div className="accountDividers">
             <div className="buttons">
                   <button className='exploremore1' onClick={()=>setCurrent('Account')}>Account Details </button>
-                  <button className='exploremore1' onClick={()=>setCurrent('Payments')}>Payments </button>
                   {/* <button className='exploremore1' onClick={()=>setCurrent('Profile_Update')}>Profile Update </button> */}
 
             </div>
@@ -245,9 +244,6 @@ const MyAccount = () => {
                 <AccountDetails/>
             }
 
-{current == 'Payments' &&
-                <PaymentSection/>
-            }
 
 
             </div>

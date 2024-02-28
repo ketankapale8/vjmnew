@@ -57,6 +57,8 @@ import LibraryDonation from './components/LibraryDonation/LibraryDonation.jsx';
 import KaushalVikasYojna from './components/KaushalVikasYojna/KaushalVIkasYojna.jsx';
 import BirthdayContribution from './components/BirthDayContribution/BirthdayContribution.jsx';
 import MiddayMeal from './newpagescommoncomp/MiddayMeal/Middaymeal.jsx';
+import PaymentSuccess from './components/PaymentSuccess/PaymentSuccess.jsx';
+import Dummy from './components/Dummy/Dummy.jsx';
 
 function App() {
   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
@@ -78,7 +80,7 @@ function App() {
   // useEffect(()=>{
   //   setloading(true);
   //   axios.get(`${url}/api/v1/me`, {
-  //     withCredentials:true
+  //     // withCredentials:true
   //   })
   //   .then(resp=>{
   //     setUser(resp.data.user);
@@ -161,6 +163,14 @@ function App() {
           <Route element={<KaushalVikasYojna/>} path='/kaushal-vikas-yojna'/> 
           <Route element={<BirthdayContribution/>} path='/birthday-donation'/> 
           <Route element={<KanyaAtmanirbhal/>} path='/kanya'/> 
+          
+          {/* //payment success// */}
+          <Route element={<PaymentSuccess/>} path='/paymentsuccess'/> 
+          <Route element={<Dummy/>} path='/dummy'/> 
+
+
+
+
         </Routes>
         <Footer/>
       </Router>

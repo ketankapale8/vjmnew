@@ -18,7 +18,11 @@ function MenuBar() {
         <label for="drop" class="toggle">Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
-                <li><a href="/">Home</a></li>
+                <li>
+                  <a href="/">
+                    Home
+                  </a>
+                  </li>
                 <li>
                     <label for="drop-1" class="toggle">About </label>
                     <a href="#">About</a>
@@ -45,7 +49,7 @@ function MenuBar() {
                 </li>
                 <li>
                     <label for="drop-1" class="toggle">Wisdom </label>
-                    <a href="/">Wisdom</a>
+                    <a href="javascript:void(0)">Wisdom</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
                         <li>
@@ -77,7 +81,7 @@ function MenuBar() {
                 </li>
                 <li>
                     <label for="drop-1" class="toggle">Events </label>
-                    <a href="/">Events</a>
+                    <a href="javascript:void(0)">Events</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
                         <li>
