@@ -37,7 +37,7 @@ const BalkalyanDonate = () => {
     const totalVal = Number(val) + Number(val1);
 
     const checkoutHandler = async (amount) =>{
-      const {data:{key}} = await axios.get(`${url}/api/v1/getkey`)
+      const {data:{key}} = await axios.get(`${url1}/api/v1/payment/getkey`)
       const {data :{order}} = await axios.post(`${url1}/api/v1/payment/checkout`,{
         amount,
         
@@ -48,7 +48,7 @@ const BalkalyanDonate = () => {
 
 
       const options = {
-        key, // Enter the Key ID generated from the Dashboard
+        key:'rzp_test_pUgEFcsTZIfdVk', // Enter the Key ID generated from the Dashboard
         amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         currency: "INR",
         name: "Balkalyan Yojana Donation",
