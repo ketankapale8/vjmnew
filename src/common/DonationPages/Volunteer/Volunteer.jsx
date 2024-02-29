@@ -33,7 +33,7 @@ const Volunteer = () => {
   return (
     <>
     
-    <div className='membership'>
+    <div className='membership1'>
         <div className="loginContainer">
             <div className="topTitleBox">
                 <img alt='brand' src={logo} className='logo'/>

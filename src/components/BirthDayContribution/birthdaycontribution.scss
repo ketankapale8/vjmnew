@@ -30,3 +30,40 @@
 
     }
 }
+
+@media (min-width : 320px) and (max-width :760px){
+
+    .birthday{
+        width: auto;
+        height: auto;
+        padding-bottom: 30px;
+        padding: 10px 10px;
+    
+        .birthdayContainer{
+            padding: 10px 10px;
+            display: flex;
+            flex-direction: column;
+       
+            text-align: start;
+            border: 1px solid lightgray;
+            border-bottom: 3px solid lightgray;
+            border-radius: 10px;
+            gap: 10px;
+    
+            .title{
+                font-size: 1.5rem;
+            }
+    
+            .desc{
+                font-size: 1rem;
+            }
+    
+            .title2{
+                font-size: 1.5rem;
+    
+            }
+    
+        }
+    }
+
+}

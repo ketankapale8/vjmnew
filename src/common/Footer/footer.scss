@@ -379,7 +379,7 @@ height: 24px;
                             .itemlist{
                                 display: flex;
                                 flex-direction: column;
-                                text-align: start;
+                                text-align: center;
     
                                 color: rgba(255, 255, 255, 0.80);
     font-size: 14px;
@@ -477,7 +477,7 @@ height: 24px;
                         .quickLinks2{
                             display: flex;
                             flex-direction: column;
-                            align-items: flex-start;
+                            align-items: start;
                             justify-content: center;
                             padding-top: 20px;
                             padding-left: 10px;
@@ -496,30 +496,33 @@ height: 24px;
                             h4{
                                 margin-top: 10px;
                                 color: whitesmoke;
-                                font-size: 14px;
-                                width: 120px;
+                                font-size: 10px;
+                                width: 150px;
                                 font-style: normal;
-                                line-height: 22px;
-    font-weight: 400
+                                line-height: 18px;
+                                font-weight: 400
     
                                 
                             }
     
                             .add{
-                                padding-top: 10px;
+                                display: flex;
+                                flex-direction: column;
+
+                                padding-top: 6px;
                                 text-align: start;
                                 color: rgba(255, 255, 255, 0.80);
-    font-size: 14px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
-                                line-height: 14px;
+                                line-height: 18px;
                             }
     
                             .contact{
                                 padding-top: 15px;
-                                font-size: 14px;
+                                font-size: 10px;
                                 font-style: normal;
-                                line-height: 23px;
+                                line-height: 13px;
                                 font-weight: 400;
                                 text-align: start;
                                 color: whitesmoke;
@@ -562,13 +565,12 @@ height: 24px;
                     .rightsideContainer{
                         display: flex;
                         flex-direction: row;
-                        padding-left: 5px;
-                        padding-top: 10px;
+                        padding-left: 15px;
+                        padding-top: 20px;
     
                         .quickLinks3{
                             padding-top: 10px;
-                            padding-left: 10px;
-                            padding-right: 10px;
+                           padding: 10px 10px;
     
                             .icons{
                                 display: flex;
@@ -592,7 +594,7 @@ height: 24px;
                             }
     
                             .downloadIconImages{
-                                width: 120px;
+                                width: 100px;
                                 height: 40px;
                                 padding-top: 20px;
                             }
@@ -608,7 +610,7 @@ height: 24px;
                                 .row1{
                                     display: flex;
                                     flex-direction: row;
-                                    gap: 26px;
+                                    gap: 16px;
     
                                     .iconStyle{
                                         width: 24px;
@@ -619,7 +621,7 @@ height: 24px;
                                 .row2{
                                     display: flex;
                                     flex-direction: row;
-                                    gap: 26px; 
+                                    gap: 16px; 
                                     .iconStyle{
                                         width: 24px;
     height: 24px;

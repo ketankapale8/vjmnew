@@ -154,3 +154,393 @@
 
     
 }
+
+@media (min-width : 761px) and (max-width :1400px){
+    .middleContainer{
+        width: auto;
+        padding: 10px 10px;
+        
+        .middleContainerMain{
+            display: flex;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+    
+            .leftmiddle{
+                padding : 10px 10px;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                max-width: 350px;
+                gap: 0px;
+                height: auto;
+                border: 1px solid lightgray;
+                border-bottom: 3px solid lightgrey;
+                border-radius: 14px;
+                box-shadow: 3px;
+                line-height: 1.3rem;
+    
+                .itemlist{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0px;
+                }
+                
+            }
+    
+            .rightmiddle{
+                display: flex;
+                flex-direction: column;
+                max-width: 320px;
+                gap: 20px;
+    
+                .donationContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 320px;
+                    height: auto;
+                    padding: 25px 25px ;
+                    padding-bottom: 10px !important;
+                    border: 1px solid lightgray;
+                    border-bottom: 3px solid lightgray;
+                    .rightTitle{
+                        span{
+                            color: #960808;
+                        }
+                    }
+        
+        
+                    .progressBarContainer{
+                        padding-bottom: 40px;
+                        .parent{
+                            height: 30px;
+                            width: 520px;
+                            background-color: lightgray;
+                        }
+        
+                        .child{
+                            height: 30px;
+                            background-color: #960808;
+        
+                            .progressText{
+                                display: flex;
+                                color: white;
+                                padding-left: 20px;
+                                align-items: center;
+                                padding-top: 2px;
+                            }
+                        }
+        
+        
+                        .remaining{
+                            display: flex;
+                            flex-direction: row;
+                            text-align: start;
+                            line-height: 15px;
+    
+                            // justify-content:space-around;
+                            
+                            .remainingLeft{
+                                height: 20px;
+    
+                            }
+                            .remainingRight{
+                                padding-top: 30px;
+                                padding-left: 40%;
+                                button{
+                                    width: 90px;
+                                    height: 45px;
+                                    border-radius: 15px;
+                                    border: none;
+                                    background-color: #960808;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .donationContainer1{
+                    display: flex;
+                    flex-direction: row;
+                    text-align: start;
+                    justify-content: space-between;
+                    // align-items: start;
+                    width: 540px;
+                    height: auto;
+                    padding: 25px 25px ;
+                    padding-bottom: 10px !important;
+                    border: 1px solid lightgray;
+                    border-bottom: 3px solid lightgray;
+    
+                    .rightTitleContainer1{
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 15px;
+                        max-width: 80%;
+                        gap: 2px;
+                        .rightTitle1{
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 1rem;
+        
+                            
+                        }
+                    }
+    
+                    .rightDonateContainer{
+                        padding-left: 10px;
+                        button{
+                            width: 90px;
+                            height: 45px;
+                            border-radius: 15px;
+                            border: none;
+                            background-color: #960808;
+                            color: white;
+                        }
+                    }
+    
+    
+                }
+    
+            }
+        }
+    
+    
+    
+    
+        
+    }
+}
+
+@media (min-width : 320px) and (max-width :760px){
+    .middleContainer{
+        width: auto;
+        padding: 10px 5px;
+        
+        .middleContainerMain{
+            display: flex;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+    
+            .leftmiddle{
+                padding : 10px 10px;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                max-width: 350px;
+                gap: 0px;
+                height: auto;
+                border: 1px solid lightgray;
+                border-bottom: 3px solid lightgrey;
+                border-radius: 14px;
+                box-shadow: 3px;
+                line-height: 1.3rem;
+    
+                .itemlist{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0px;
+                }
+                
+            }
+    
+            .rightmiddle{
+                display: flex;
+                flex-direction: column;
+                max-width: 320px;
+                padding : 0px 0px;
+                gap: 20px;
+                align-items: center;
+    
+                .donationContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 320px;
+                    height: auto;
+                    padding: 5px 10px ;
+                    padding-bottom: 10px !important;
+                    border: 1px solid lightgray;
+                    border-bottom: 3px solid lightgray;
+                    .rightTitle{
+                        span{
+                            color: #960808;
+                        }
+                    }
+        
+        
+                    .progressBarContainer{
+                        padding-bottom: 40px;
+                        .parent{
+                            height: 30px;
+                            width: 240px;
+                            background-color: lightgray;
+                        }
+        
+                        .child{
+                            height: 30px;
+                            background-color: #960808;
+        
+                            .progressText{
+                                display: flex;
+                                color: white;
+                                padding-left: 10px;
+                                align-items: center;
+                                padding-top: 2px;
+                            }
+                        }
+        
+        
+                        .remaining{
+                            display: flex;
+                            flex-direction: row;
+                            text-align: start;
+                            line-height: 15px;
+    
+                            // justify-content:space-around;
+                            
+                            .remainingLeft{
+                                height: 20px;
+    
+                            }
+                            .remainingRight{
+                                padding-top: 30px;
+                                padding-left: 20%;
+                                button{
+                                    width: 70px;
+                                    height: 45px;
+                                    border-radius: 15px;
+                                    border: none;
+                                    background-color: #960808;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .donationContainer1{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 320px;
+                    height: auto;
+                    padding: 5px 10px ;
+                    padding-bottom: 10px !important;
+                    border: 1px solid lightgray;
+                    border-bottom: 3px solid lightgray;
+                    .rightTitle{
+                        span{
+                            color: #960808;
+                        }
+                    }
+        
+        
+                    .progressBarContainer{
+                        padding-bottom: 40px;
+                        .parent{
+                            height: 30px;
+                            width: 240px;
+                            background-color: lightgray;
+                        }
+        
+                        .child{
+                            height: 30px;
+                            background-color: #960808;
+        
+                            .progressText{
+                                display: flex;
+                                color: white;
+                                padding-left: 20px;
+                                align-items: center;
+                                padding-top: 2px;
+                            }
+                        }
+        
+        
+                        .remaining{
+                            display: flex;
+                            flex-direction: row;
+                            text-align: start;
+                            line-height: 15px;
+    
+                            // justify-content:space-around;
+                            
+                            .remainingLeft{
+                                height: 20px;
+    
+                            }
+                            .remainingRight{
+                                padding-top: 30px;
+                                padding-left: 20%;
+                                button{
+                                    width: 70px;
+                                    height: 45px;
+                                    border-radius: 15px;
+                                    border: none;
+                                    background-color: #960808;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    
+                // .donationContainer1{
+                //     display: flex;
+                //     flex-direction: row;
+                //     text-align: start;
+                //     justify-content: space-between;
+                //     // align-items: start;
+                //     width: 540px;
+                //     height: auto;
+                //     padding: 25px 25px ;
+                //     padding-bottom: 10px !important;
+                //     border: 1px solid lightgray;
+                //     border-bottom: 3px solid lightgray;
+    
+                //     .rightTitleContainer1{
+                //         display: flex;
+                //         flex-direction: column;
+                //         line-height: 15px;
+                //         max-width: 80%;
+                //         gap: 2px;
+                //         .rightTitle1{
+                //             display: flex;
+                //             flex-direction: column;
+                //             font-size: 1rem;
+        
+                            
+                //         }
+                //     }
+    
+                //     .rightDonateContainer{
+                //         padding-left: 10px;
+                //         button{
+                //             width: 90px;
+                //             height: 45px;
+                //             border-radius: 15px;
+                //             border: none;
+                //             background-color: #960808;
+                //             color: white;
+                //         }
+                //     }
+    
+    
+                // }
+    
+            }
+        }
+    
+    
+    
+    
+        
+    }
+}

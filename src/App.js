@@ -26,7 +26,7 @@ import Donor from './common/DonationPages/Donor/Donor';
 import Donation from './common/DonationPages/Donation/Donation';
 import BalkalyanDonate from './common/DonationPages/BalkalyanDonate/BalkalyanDonate';
 import DharmadaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
-import AnnapoornaDonation from './common/DonationPages/DharmadaDonate/DharamadaDonation';
+import AnnapoornaDonation from './common/DonationPages/AnnapoornaDonate/AnnapoornaDonation.jsx';
 import CowSheltersDonation from './common/DonationPages/CowShelters/CowShelters';
 import { useContext, useEffect, useState } from 'react';
 import {Context} from './index.js'
