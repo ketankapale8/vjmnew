@@ -21,7 +21,7 @@ const BalkalyanDonate = () => {
     const [country, setCountry] = useState('');
     const [val , setVal] = useState();
     const [val1 , setVal1] = useState();
-    const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+    // const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
 
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
@@ -57,8 +57,8 @@ const BalkalyanDonate = () => {
         order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
         callback_url: "https://vjmnewbackend.vercel.app/api/v1/payment/paymentverification",
         prefill: {
-            name: user?.name,
-            email: user?.email,
+            name: "",
+            email: "",
             contact: "9000090000"
         },
         notes: {

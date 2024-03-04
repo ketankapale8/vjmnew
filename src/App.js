@@ -31,8 +31,8 @@ import CowSheltersDonation from './common/DonationPages/CowShelters/CowShelters'
 import { useContext, useEffect, useState } from 'react';
 import {Context} from './index.js'
 import axios from 'axios';
-import MyAccount from './components/MyAccount/MyAccount';
-import Profile from './common/Profile/Profile.jsx'
+import MyAccount from './features/auth/MyAccount/MyAccount.jsx';
+import Profile from './features/auth/Profile/Profile.jsx'
 import Dharamkosh from './components/Dharamkosh/Dharamkosh';
 import DharmadaSeva from './components/DharmadaSeva/DharmadaSeva';
 import NaturalDisaster from './components/NaturalDisaster/NaturalDisaster';
@@ -59,9 +59,11 @@ import BirthdayContribution from './components/BirthDayContribution/BirthdayCont
 import MiddayMeal from './newpagescommoncomp/MiddayMeal/Middaymeal.jsx';
 import PaymentSuccess from './components/PaymentSuccess/PaymentSuccess.jsx';
 import Dummy from './components/Dummy/Dummy.jsx';
+import Layout from './protectedlayout/Layout.js';
+import PersistLogin from './features/auth/PersistLogin.js';
 
 function App() {
-  const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+  // const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
   const [refresh , setRefresh] = useState(false);
   const url ="http://localhost:4000";
   let [w , setW] = useState(window.innerWidth)
@@ -100,12 +102,13 @@ function App() {
       <Router>
       <Suspense fallback={<h4>Loading...</h4>}>
           {/* { w > 870 ? <Navbar/>: <RenderSideBar/>} */}
-          { w > 870 ? <Navbar/>: <SideMenuComp/>}
 
+          { w > 870 ? <Navbar/>: <SideMenuComp/>}
 
         </Suspense>
         <Routes>
           {/* //components// */}
+
           <Route path='/' element={<Home/>}/>
           <Route path='/ganeshlakshmi' element={<GaneshLakshmi/>}/>
           <Route path='/manalimeditation' element={<ManaliMeditation/>}/>
@@ -126,28 +129,42 @@ function App() {
           <Route path='/oldagehome' element={<OldAgeHome/>}/>
           <Route path='/mahashivratri' element={<Mahashivratri/>}/>
 
-
-          {/* //login// */}
           <Route element={<Login/>} path='login'/>
           <Route element={<Signup/>} path='signup'/>
-          <Route element={<MyAccount/>} path='myaccount'/>
-          <Route element={<Profile/>} path='profile'/>
+
+          {/* //login// */}
+
           <Route element={<VideosComp/>} path='videos'/>
           <Route element={<ArticlesComp/>} path='articles'/>
           <Route element={<QuotesContainer/>} path='quotes'/>
+          <Route element={<PersistLogin/>}>
+            <Route path="private" element={<Layout/>}>
 
+              <Route path='myaccount'>
+                <Route element={<MyAccount/>} index/>
+              </Route>
+              <Route path='profile'>
+                <Route element={<Profile/>} index/>
+              </Route>
+              <Route path='volunteer'>
+                <Route element={<Volunteer/>} index />  
 
+              </Route>
+              <Route path='donation'>
+                  <Route element={<Donation/>} index/>
 
-          {/* //Donation// */}
+              </Route>
+
+          </Route>
           <Route element={<Dikshit/>} path='diksha'/>
-          <Route element={<Volunteer/>} path='volunteer'/>
           <Route element={<VJMMembership/>} path='vjm-membership'/>
           <Route element={<Donor/>} path='donor'/>
-          <Route element={<Donation/>} path='donation'/>
           <Route element={<BalkalyanDonate/>} path='balkalyan-donation'/>
           <Route element={<DharmadaDonation/>} path='dharmada-donation'/>
           <Route element={<CowSheltersDonation/>} path='cowshelter-donation'/>
           <Route element={<AnnapoornaDonation/>} path='annapoorna-donation'/>
+
+          {/* //Donation// */}
           {/* // aurjaane  */}
           <Route element={<AurJaane/>} path='/more'/>
 
@@ -169,6 +186,7 @@ function App() {
           <Route element={<Dummy/>} path='/dummy'/> 
 
 
+          </Route>
 
 
         </Routes>

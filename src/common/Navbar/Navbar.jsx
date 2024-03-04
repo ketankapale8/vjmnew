@@ -1,4 +1,5 @@
-import React , {useState} from 'react';
+import React , {useState , useEffect} from 'react';
+import { useContext } from 'react';
 import {Link} from 'react-router-dom'
 import './navbar.scss';
 import axios from 'axios';
@@ -21,8 +22,11 @@ import toast from 'react-hot-toast';
 // import EventsDropdown from './EventsDropdown';
 // import DropdownEvents from './DropdownEvents/DropdownEvents';
 import MenuBar from '../Menubar/Menubar.js';
-import { useContext } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'
+// import { useContext } from 'react';
 import {Context} from '../../index.js';
+import { useSendLogoutMutation } from '../../features/auth/authApiSlice.js';
+import { useSelector } from 'react-redux';
 
 
 const topNavbar = [
@@ -57,45 +61,43 @@ const topNavbar2 = [
   }
 ]
 
-// const bottomNavLinks = [
-//   {
-//     title : "About"
-//   },
-//   {
-//     title : "Wisdom"
-//   },
-//   {
-//     title : "Events"
-//   },
-//   {
-//     title : "Social Initiatives"
-//   },{
-//     title : "Yug Rishi Pooja Center"
-//   },
-//   {
-//     title : "Pooja & Medidation"
-//   },
-//   {
-//     title : "News"
-//   },
-//   {
-//     title : "Be A Member"
-//   },
-//   {
-//     title : "Centers"
-//   }
-// ]
+
 
 const Navbar = () => {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  // const {user} = useSelector((state)=> state?.auth?.user);
+  // console.log('user',user)
   const url ="http://localhost:4000";
-  const {isAuthenticated ,setIsAuthenticated , setloading , loading , user , setUser} =  useContext(Context);
-  console.log(user)
+  // const {isAuthenticated ,setIsAuthenticated} =  useContext(Context);
+  // console.log(user)
 
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownwisdom, setDropdownwisdom] = useState(false);
   const [dropdownsocial, setDropdownsocial] = useState(false);
   const [dropdownevents, setDropdownevents] = useState(false);
+
+  const [sendLogout, {
+    isLoading,
+    isSuccess,
+    isError,
+    error
+}] = useSendLogoutMutation();
+
+const Logout = () => {
+  return sendLogout;
+  
+}
+
+
+useEffect(() => {
+  if (isSuccess) navigate('/')
+}, [isSuccess, navigate])
+
+if (isLoading) return <p>Logging Out...</p>
+
+if (isError) return <p>Error: {error.data?.message}</p>
 
 
   // const [dropdown2, setDropdown2] = useState(false);
@@ -106,25 +108,25 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   const handleLogout = async () => {
-    setloading(true)
-    try{
-       await axios.get(
-        `${url}/api/v1/logout`,
+    // setloading(true)
+    // try{
+    //    await axios.get(
+    //     `${url}/api/v1/logout`,
         
-        // { withCredentials : true }
-      )
-      toast.success("Logged out Successfully")
-      setIsAuthenticated(false);
-      setUser({})
-      setloading(false)
+    //     // { withCredentials : true }
+    //   )
+    //   toast.success("Logged out Successfully")
+    //   setIsAuthenticated(false);
+    //   setUser({})
+    //   setloading(false)
       
 
-    }catch(err){
-      toast.error(err.msg);
-      setIsAuthenticated(true)
-      setloading(false)
+    // }catch(err){
+    //   toast.error(err.msg);
+    //   setIsAuthenticated(true)
+    //   setloading(false)
 
-    }
+    // }
 
     // dispatch(login(values.email , values.password , values.name))
     // localStorage.setItem("currentUser", JSON.stringify({values}))
@@ -219,69 +221,15 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="navbarTop">
-        <div className="top1">
-          {/* {topNavbar.map(item=>{
-            return (
-              <>
-                <div>
-                  <img className='iconImgs' src={item.icon} />
-                </div>
-              </>
-            )
-          })} */}
-        </div>
+    
         <div className="top2">
-            {/* {topNavbar2.map(item=>{
-              return (
-                <>
-                <Link to={item.link} style={{textDecoration:'none', color:'inherit'}}>
-                  <div className='top2Container'>
-                    <h5>{item.name}</h5>
 
-                  </div>
-                
-                </Link>
-                </>
-              )
-            })} */}
-
-<Link to='/donation' style={{textDecoration:'none', color:'inherit'}}>
-                  <div className='top2Container'>
-                    <h5>Donate</h5>
-
-                  </div>
-                
-</Link>
-{isAuthenticated ? (
-  <>
-  <Link to='/' style={{textDecoration:'none', color:'inherit'}} >
-                    <div className='top2Container' onClick={handleLogout}>
-                      <h5>Logout</h5>
-
-                    </div>
-                  
-  </Link>
-
-  <Link to='/myaccount' style={{textDecoration:'none', color:'inherit'}}>
-                    <div className='top2Container'>
-                      <h5>My Account</h5>
-
-                    </div>
-                  
-  </Link>
-
-  <Link to='/profile' style={{textDecoration:'none', color:'inherit'}}>
-                    <div className='top2Container'>
-                      <h5>Profile</h5>
-
-                    </div>
-                  
-  </Link>
   
   
-  </>
 
-) : (
+
+
+<>
 
 <Link to='/login' style={{textDecoration:'none', color:'inherit'}}>
                   <div className='top2Container'>
@@ -291,10 +239,51 @@ const Navbar = () => {
                 
 </Link>
 
-)}
+
+<Link to='/private/donation' style={{textDecoration:'none', color:'inherit'}}>
+                  <div className='top2Container'>
+                    <h5>Donate</h5>
+
+                  </div>
+                
+</Link>
+
+  
 
 
-<Link to='/volunteer' style={{textDecoration:'none', color:'inherit'}}>
+  <Link to='/private/myaccount' style={{textDecoration:'none', color:'inherit'}}>
+                    <div className='top2Container'>
+                      <h5>My Account</h5>
+
+                    </div>
+                  
+  </Link>
+
+  <Link to='/private/profile' style={{textDecoration:'none', color:'inherit'}}>
+                    <div className='top2Container'>
+                      <h5>Profile</h5>
+
+                    </div>
+                  
+  </Link>
+</>
+
+
+  <>
+    <Link to='/' style={{textDecoration:'none', color:'inherit'}} >
+                    <div className='top2Container' onClick={sendLogout}>
+                      <h5>Logout</h5>
+
+                    </div>
+                  
+  </Link>
+  </>
+
+
+{/* )} */}
+
+
+<Link to='private/volunteer' style={{textDecoration:'none', color:'inherit'}}>
                   <div className='top2Container'>
                     <h5>Volunteer</h5>
 

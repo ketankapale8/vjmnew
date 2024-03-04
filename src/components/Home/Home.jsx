@@ -10,7 +10,14 @@ import SamajiKalyaan from './SamajikKalyaan/SamajikKalyaan';
 import SamajikPehle from './SamajikPehle/SamajikPehle';
 import Gyaan from './GyaanSection/Gyaan';
 import NavjeevanSadhana from './NavjeevanSadhana/NavjeevanSadhana';
+import { useSelector } from 'react-redux';
+import useAuth from '../../hooks/useAuth.js';
 const Home = () => {
+  
+  // const {userInfo} = useAuth();
+  // console.log(userInfo)
+  // const user = useSelector((state)=> state.auth.user);
+  //   console.log(user)
   return (
     <div className='home'>
       {/* <HeaderVideoComp title={'अन्नपूर्णा योजना'} desc={''}  video={video} style={{width:'100%'}}/> */}

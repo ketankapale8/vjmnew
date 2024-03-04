@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import './myaccount.scss';
-import logo from '../../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import { useContext } from 'react';
-import {Context} from '../../index.js';
+import {Context} from '../../../index.js';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -11,6 +12,9 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const MyAccount = () => {
+    const user = useSelector((state)=> state?.auth?.user);
+    console.log(user)
+    
     const [nameChange , setNameChange] = useState('');
     const [userProfile , setUserProfile] =useState({})
     // const [values1 , setValues1] = useState({
@@ -30,19 +34,19 @@ const MyAccount = () => {
 
   
     //   })
-      const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+    //   const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
       const [current , setCurrent] = useState('Account')
       const url ="http://localhost:4000";
 
       useEffect(()=>{
-        axios.get(`${url}/api/v1/allusers`)
-        .then(resp=>
-            setUserProfile(resp.data)
-            // setUserProfile(resp.data?.user?.filter((item=>item?._id == user._id)))
-        )
+        // axios.get(`${url}/api/v1/allusers`)
+        // .then(resp=>
+        //     setUserProfile(resp.data)
+        //     // setUserProfile(resp.data?.user?.filter((item=>item?._id == user._id)))
+        // )
       },[])
 
-      const userValues = userProfile?.users?.filter(item=>item?._id == user._id)
+    //   const userValues = userProfile?.users?.filter(item=>item?._id == user._id)
 
   
   
@@ -87,33 +91,30 @@ const MyAccount = () => {
         return(
             <>
             <div className="inputBox1">
-                {userValues?.map(item=>{
-                    return (
                     <>
                     <h4>Name</h4>
-                    <input disabled type='text' value={item?.name}/>
+                    <input disabled type='text' value={user?.name}/>
                     <h4>Email</h4>
-                    <input disabled type='text'  value={item?.email}/>
+                    <input disabled type='text'  value={user?.email}/>
                     <h4 style={{paddingTop:'3px'}}>Enter State</h4>
-                    <input  disabled  value={item?.state} />
+                    <input  disabled  value={user?.state} />
                     <h4>Enter City</h4>
-                    <input disabled type='text'  value={item?.city}  />
+                    <input disabled type='text'  value={user?.city}  />
                     <h4>Enter Pincode</h4>
-                    <input disabled type='text'  value={item?.pincode}/>
+                    <input disabled type='text'  value={user?.pincode}/>
                    
                     <h4>Select your Gender</h4>
-                    <input disabled type='text'  value={item?.gender !== '' ? item?.gender : 'not updated' }/>
-                    <h4>Select your Occupation</h4>
-                    <input disabled type='text'  value={item?.occupation !== '' ? item?.occupation: 'not updated' }/>
+                    <input disabled type='text'  value={user?.gender !== '' ? user?.gender : 'not updated' }/>
+                    {/* <h4>Select your Occupation</h4>
+                    <input disabled type='text'  value={user?.occupation !== '' ? user?.occupation: 'not updated' }/>
                     <h4>Dikshit </h4>
-                    <input disabled type='text'  value={item?.dikshit !== '' ? item?.dikshit : 'not updated' }/>
+                    <input disabled type='text'  value={user?.dikshit !== '' ? user?.dikshit : 'not updated' }/>
 
                     <h4>Willing to Volunteer </h4>
-                    <input disabled type='text'  value={item?.volunteer !== '' ? item?.volunteer : 'not updated'  }/>
+                    <input disabled type='text'  value={user?.volunteer !== '' ? user?.volunteer : 'not updated'  }/> */}
                     
                     </>
-                    )
-                })}
+                    
             </div>
             </>
         )
@@ -225,8 +226,8 @@ const MyAccount = () => {
                 <img alt='brand' src={logo} className='logo'/>
                 <div className="titles" >
                     <p>Namaste <strong>
-                    {user?.name}
-                        </strong> Ji </p>
+                    {/* {user?.name} */}
+                        </strong> {user?.name} Ji </p>
                     {/* <p>Login to your VJM Profile</p> */}
 
                 </div>

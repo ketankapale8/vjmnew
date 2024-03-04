@@ -18,8 +18,8 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const Signup = () => {
-  const url ="http://localhost:4000";
-  const {isAuthenticated, setIsAuthenticated , loading , setloading} = useContext(Context)
+  const url ="https://vjmnewbackend.vercel.app/api/v1";
+  // const {isAuthenticated, setIsAuthenticated , loading , setloading} = useContext(Context)
     // const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
@@ -45,11 +45,10 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      setloading(true)
       try{
 
         const {data} = await axios.post(
-          `${url}/api/v1/register`, 
+          `${url}/create/createuser`, 
           {
             name  , 
             email ,
@@ -65,13 +64,9 @@ const Signup = () => {
         )
 
         toast.success(data.success)
-        setIsAuthenticated(true)
-        setloading(false)
         
       }catch(err){
         toast.error(err.message)
-        setIsAuthenticated(false)
-        setloading(false)
 
       }
       
@@ -80,7 +75,7 @@ const Signup = () => {
   }
 
 
-  if(isAuthenticated) return <Navigate to={"/"}/>
+  // if(isAuthenticated) return <Navigate to={"/"}/>
 
   console.log(values)
      

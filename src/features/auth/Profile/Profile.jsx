@@ -1,8 +1,8 @@
 import React , {useState , useMemo} from 'react';
 import './profile.scss';
 import { useContext } from 'react';
-import {Context} from '../../index.js';
-import logo from '../../assets/logo.png';
+// import {Context} from '../../index.js';
+import logo from '../../../assets/logo.png';
 import { Link , Navigate} from 'react-router-dom';
 import { Country, State, City }  from 'country-state-city';
 import Select from 'react-select';
@@ -13,13 +13,16 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import { useSelector } from 'react-redux';
 import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const Profile = () => {
-  const url ="http://localhost:4000";
-  const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
+  const user = useSelector((state)=> state?.auth?.user);
+  console.log(user)
+
+  // const {user , setUser , setIsAuthenticated , setloading} = useContext(Context);
     // const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const options = useMemo(() => countryList().getData(), [])
@@ -37,12 +40,13 @@ const Profile = () => {
       profession : '',
       occupation : '',
       dikshit : '', 
-      volunteer : ''
+      volunteer : '',
+      phone:''
 
     })
 
 
-    const {  email ,name , address  , state , city , pincode ,
+    const {  email ,name , address  , state , city , pincode , phone,
         
         gender , 
         profession,
@@ -52,41 +56,45 @@ const Profile = () => {
     } = values;
 
 
-
+    let baseUrl = 'http://localhost:4000/api/v1';
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try{
           await axios.put(
-            `${url}/api/v1/updateprofile`, 
+            `${baseUrl}/update/updateuser`, 
             {
-                email,
-                 name , address  , state , city , pincode ,
-        
-                gender , 
+                id : user?._id,
+                address,
+                state,
+                name,
+                city,
+                pincode,
+                gender,
+                occupation,
+                phone,
                 profession,
-              occupation ,
-              dikshit, 
-              volunteer
+                dikshit,
+                volunteer
+             
             },
             {
-              // headers : {
-              //   "Content-Type" : "application/json",
+              headers : {
+                "Content-Type" : "application/json",
     
-              // }, 
+              }, 
               withCredentials : true
             }
           )
           toast.success("Profile Details Updated Successfully on VJM'S Portal")
-          setIsAuthenticated(true)
-          setloading(false)
           
     
         }catch(err){
           toast.error("Something Wrong! Please Login back again!")
-          setIsAuthenticated(false)
-          setloading(false)
     
         }
+
+
       }
 
 //   if(isAuthenticated) return <Navigate to={"/"}/>
@@ -116,11 +124,11 @@ const Profile = () => {
 
                 <div className="inputBox">
                 <h4>Full Name</h4>
-                    <input placeholder='Please enter your name' type='email' onChange={(e)=> setValues({...values , name : e.target.value})}/>
+                    <input placeholder='Please enter your name' type='email' value={values.name} onChange={(e)=> setValues({...values , name : e.target.value})}/>
                     <h4>Email</h4>
-                    <input placeholder='Please enter your name' type='email' onChange={(e)=> setValues({...values , email : e.target.value})}/>
+                    <input placeholder='Please enter your name'  type='email' onChange={(e)=> setValues({...values , email : e.target.value})}/>
                     <h4>Address</h4>
-                    <input placeholder='Please enter your name' type='text' onChange={(e)=> setValues({...values , address : e.target.value})}/>
+                    <input placeholder='Please enter your name' type='text'  onChange={(e)=> setValues({...values , address : e.target.value})}/>
       
                  
                    
@@ -130,6 +138,8 @@ const Profile = () => {
                     <input placeholder='Please enter your City' type='text' onChange={(e)=> setValues({...values , city : e.target.value})}/>
                     <h4>Enter Pincode</h4>
                     <input placeholder='Please enter your Pincode' type='text' onChange={(e)=> setValues({...values , pincode : e.target.value})}/>
+                    <h4>Enter Phone No</h4>
+                    <input placeholder='Please enter your phoneno' type='text' onChange={(e)=> setValues({...values , phone : e.target.value})}/>
                     {/* <h4>Select your DOB</h4>
                     <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
                     <h4>Select your Gender</h4>

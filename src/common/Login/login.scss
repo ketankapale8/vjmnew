@@ -92,6 +92,23 @@
                 }
             }
 
+            .persistBtn{
+                padding-top: 20px;
+                .form__persist{
+
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    gap: 0em;
+
+                    .form__checkbox {
+                        width: 24px;
+                        height: 14px;
+                      }
+                }
+
+            }
+
             .signUpContainer{
                 display: flex;
                 align-items: center;
