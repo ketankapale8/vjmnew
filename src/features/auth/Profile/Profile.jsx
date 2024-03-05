@@ -56,7 +56,7 @@ const Profile = () => {
     } = values;
 
 
-    let baseUrl = 'http://localhost:4000/api/v1';
+    let baseUrl = 'https://vjmnewbackend.vercel.app/api/v1';
     const handleSubmit = async (e) => {
         e.preventDefault();
 
