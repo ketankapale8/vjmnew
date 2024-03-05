@@ -13,7 +13,7 @@ import toast from 'react-hot-toast';
 
 const MyAccount = () => {
     const user = useSelector((state)=> state?.auth?.user);
-    console.log(user)
+    // console.log(user)
     
     const [nameChange , setNameChange] = useState('');
     const [userProfile , setUserProfile] =useState({})
