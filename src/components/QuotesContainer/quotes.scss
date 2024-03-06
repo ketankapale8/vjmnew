@@ -67,8 +67,8 @@
 
         
         .events{
-            display: flex;
-            flex-direction: row;
+            display: grid !important;
+            grid-template-columns: 352px 352px 352px !important;
             height: 523px;
             width: auto;
             gap: 40px;
@@ -216,8 +216,8 @@
         }
     
         .middleMain{
-            display: flex;
-            flex-direction: column;
+            display: flex !important;
+            flex-direction: column !important;
             align-items: center;
             // align-items: flex-start;
             // justify-content: center;  

@@ -215,8 +215,8 @@
         }
     
         .middleMain{
-            display: flex;
-            flex-direction: column;
+            display: flex !important;
+            flex-direction: column !important;
             align-items: center;
             // align-items: flex-start;
             // justify-content: center;  

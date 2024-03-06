@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import './quotes.scss';
 import vectorDesign from '../../assets/commonAssets/Vector.png'
@@ -21,7 +22,7 @@ const EventsArrayHindi = [
     },
     {
       title : "You have to walk on the path of self-development by yourself",
-      desc : "पूर्णिमा जीवन में एक नया अध्याय शुरू करने का शुभ अवसर है और भक्त अपने गुरु के दर्शन के लिए इस दिन का बेसब्री से इंतजार करते हैं। पूर्णिमा दर्शन से     गुरु की पूर्ण कृपा एवं आशीष प्राप्त होता है।",
+      // desc : "पूर्णिमा जीवन में एक नया अध्याय शुरू करने का शुभ अवसर है और भक्त अपने गुरु के दर्शन के लिए इस दिन का बेसब्री से इंतजार करते हैं। पूर्णिमा दर्शन से गुरु की पूर्ण कृपा एवं आशीष प्राप्त होता है।",
     //   img: img2,
       tag: "Quote",
       date: "23,May,2023",
@@ -63,6 +64,18 @@ const EventsArrayHindi = [
   ]
 
 const QuotesContainer = ({}) => {
+  const [allQuotes , setallQuotes] = useState([])
+
+  useEffect(()=> {
+ 
+    getQuotes();
+  },[])
+
+  const getQuotes = async () =>{
+    await axios.get(`https://vjmnewbackend.vercel.app/api/v1/quote/allquotes`)
+      .then(resp => setallQuotes(resp.data.allQuotes))
+      .catch(err=>console.log(err))
+  }
   return (
     <div className='middleContainer1'>
         <div className="middleTop">
@@ -73,7 +86,7 @@ const QuotesContainer = ({}) => {
         </div>
         <div className="middleMain">
             <div className='events'>
-            {EventsArrayHindi.map(item=>{
+            {allQuotes.map(item=>{
   return (
     <>
     <div className="boxContainer1" 
@@ -91,8 +104,8 @@ const QuotesContainer = ({}) => {
             {/* <button style={{width: '86px' , height:'38px', borderRadius:'60px', backgroundColor:'#960808', color:'white', border:'none',fontSize: '0.8rem', padding: '6px 12px 12px 12px'}}>{item.tag}</button> */}
       </div>
           <div className="tags">
-            <p>{item.tag}</p>
-            <p>{item.date}</p>
+            {/* <p>{item.tag}</p> */}
+            <p>{item.createdAt}</p>
             {/* <BsCalendarDate style={{ paddingLeft:'4px'}}/> */}
             {/* <img style={{ paddingLeft:'4px'}} src={location}/> */}
             {/* <p>{item.city}</p> */}
