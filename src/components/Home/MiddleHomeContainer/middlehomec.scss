@@ -262,13 +262,13 @@
     
             
             .events{
-                display: flex;
-                flex-direction: column;
+                display: flex !important;
+                flex-direction: column !important;
                 height: auto !important;
                 width: 322px;
                 gap: 40px;
                 padding-bottom: 0px;
-                .boxContainer{
+                .boxContainer1{
                     display: flex;
                     // flex: 0.3;
                     flex-direction: column;
@@ -279,7 +279,7 @@
                     padding-bottom: 30px;
                     
                     // box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
-                    margin-left: 30px ;
+                    margin-left: 0px ;
                     box-shadow: 0px 4px 4px 0px #0000001F;
     
                     // border: 1px solid gray;
@@ -316,7 +316,7 @@
                         max-height: 290px;
                         height: 280px;
                         padding-left: 12px;
-                        padding-right: 120px;
+                        padding-right: 12px;
                         display: flex;
                         text-align: center;
                         flex-direction: column;
