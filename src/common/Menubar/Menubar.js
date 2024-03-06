@@ -329,11 +329,11 @@ Contribute A Birthday
 
                     </ul> 
                 </li>
-                <li>
+                {/* <li>
                 <label for="drop" class="toggle">Centers </label>
                     <a href="/">Centers</a>
                     
-                </li>
+                </li> */}
                 
                
             </ul>
