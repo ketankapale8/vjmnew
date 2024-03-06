@@ -48,7 +48,7 @@ const Gyaan = () => {
       ]
   return (
     <div className='gyaan'>
-        <div className="gyaanContainer">
+        <div className="gyaanContainer1">
             <div className="gyaanTitle">
             सुधांशु जी महाराज का नवीनतम ज्ञान
             </div>
