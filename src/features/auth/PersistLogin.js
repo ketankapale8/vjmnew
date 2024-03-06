@@ -62,7 +62,7 @@ const PersistLogin = () => {
     } else if (isError) { //persist: yes, token: no
         console.log('error')
         content = (
-            <div style={{width:'100%', paddingTop:'100px', display:'flex', flexDirection:'column', alignItems:'center' , justifyContent:'center'}}>
+            <div style={{width:'100%', paddingTop:'100px', display:'flex', flexDirection:'column', alignItems:'center' , justifyContent:'center' , border:'1px solid black', borderRadius:'4px'}}>
                 <div className='errmsg'  >
                     <h3>
                         {error.data?.message} to initiate on VJM Portal. 
@@ -70,7 +70,7 @@ const PersistLogin = () => {
                     </h3>
                         
                     <Link to="/login">
-                    <button style={{backgroundColor:"yellowgreen", width:'120px', height:'40px', borderRadius:'5px'}}>
+                    <button style={{backgroundColor:"#392727", color:"white", width:'120px', height:'40px', borderRadius:'5px'}}>
                     Login
                     </button>
                        

@@ -16,8 +16,11 @@ import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 import { useContext } from 'react';
 import {Context} from '../../../index.js';
+import { useSelector } from 'react-redux';
 
 const BalkalyanDonate = () => {
+  const user = useSelector((state) => state?.auth?.user);
+  console.log(user.name)
     const [country, setCountry] = useState('');
     const [val , setVal] = useState();
     const [val1 , setVal1] = useState();
@@ -48,18 +51,19 @@ const BalkalyanDonate = () => {
 
 
       const options = {
-        key:'rzp_test_pUgEFcsTZIfdVk', // Enter the Key ID generated from the Dashboard
+        key,
+        // key:'rzp_test_pUgEFcsTZIfdVk', // Enter the Key ID generated from the Dashboard
         amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         currency: "INR",
         name: "Balkalyan Yojana Donation",
         description: "Payment Gateway",
         image: "https://vjmmeditation.com/assets/new_theme/new_logo.png",
         order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-        callback_url: "https://vjmnewbackend.vercel.app/api/v1/payment/paymentverification",
+        // callback_url: "https://vjmnewbackend.vercel.app/api/v1/payment/paymentverification",
         prefill: {
-            name: "",
-            email: "",
-            contact: "9000090000"
+            name: user?.name,
+            email: user?.email,
+            contact: user?.phone
         },
         notes: {
             "address": "Razorpay Corporate Office"
