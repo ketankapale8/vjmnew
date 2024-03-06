@@ -11,6 +11,7 @@ import one from '../../assets/newassets/kanya/1.png';
 import two from '../../assets/newassets/kanya/2.png';
 import three from '../../assets/newassets/kanya/3.png';
 import four from '../../assets/newassets/kanya/4.png';
+import GirlStories from '../../newpagescommoncomp/girlStories/GirlStories';
 
 
 const KanyaAtmanirbhal = () => {
@@ -140,6 +141,7 @@ const KanyaAtmanirbhal = () => {
             <NewBanner bannerData={bannerData} Banner={Banner} />
         </div>
         <AboveBottomContainerForKanya ServicesArray1={ServicesArray1} ServicesArray2={ServicesArray2}/>
+        <GirlStories/>
 
     </div>
   )
