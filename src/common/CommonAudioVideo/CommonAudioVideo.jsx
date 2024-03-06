@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+
 import './commonaudiovideo.scss';
 import vectorDesign from '../../assets/commonAssets/Vector.png'
 import ReactPlayer from 'react-player'
@@ -63,6 +66,23 @@ const EventsArrayHindi = [
   ]
 
 const CommonAudioVideo = ({title}) => {
+  const [allVideos , setallVideos] = useState([])
+
+  useEffect(()=> {
+    // getUsers();
+    // getVolunteers();
+    // getBlogPosts();
+    // getPaymentsMade();
+    // getQuotes();
+    getYTVideos()
+  },[])
+
+  const getYTVideos = async () =>{
+    await axios.get(`https://vjmnewbackend.vercel.app/api/v1/videos/allvideos`)
+      .then(resp => setallVideos(resp.data.allVideos))
+      .catch(err=>console.log(err))
+  }
+
   return (
     <div className='middleContainer'>
         <div className="middleTop">
@@ -73,15 +93,15 @@ const CommonAudioVideo = ({title}) => {
         </div>
         <div className="middleMain">
             <div className='events'>
-            {videos.map(item=>{
+            {allVideos.map(item=>{
   return (
     <>
     <div className="boxContainer" 
     >
       <div className="top">
-        <ReactPlayer url={item.url} width={'400px'} height={"200px"} 
+        <ReactPlayer url={item.videoURL} width={'400px'} height={"200px"} 
         controls={true}
-        playing={true} /> 
+        playing={false} /> 
         {/* <img className='postImg' alt='post' src={item.img}/>   */}
       </div>
       <div className="bottom">

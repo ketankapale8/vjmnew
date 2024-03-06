@@ -67,8 +67,8 @@
 
         
         .events{
-            display: flex;
-            flex-direction: row;
+            display: grid !important;
+            grid-template-columns: 352px 352px 352px !important;
             height: 523px;
             width: auto;
             gap: 40px;
