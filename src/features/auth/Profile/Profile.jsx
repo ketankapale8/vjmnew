@@ -66,7 +66,7 @@ const Profile = () => {
             {
                 id : user?._id,
                 address,
-                state,
+                state,  
                 name,
                 city,
                 pincode,

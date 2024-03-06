@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './gyaan.scss';
 import vectorDesign from '../../../assets/commonAssets/Vector.png';
 import img1 from '../../../assets/articles/one.png'
 import img2 from '../../../assets/articles/two.png'
 import img3 from '../../../assets/articles/three.png'
-import share from '../../../assets/articles/share.png'
+import share from '../../../assets/articles/share.png';
+import axios from 'axios';
 
 
 
-const Gyaan = () => {
+const GyaanAPI = () => {
+    let baseURL = "https://vjmnewbackend.vercel.app/api/v1/posts/allblogposts"
     const ArticleArray = [
         {
           title : "दूसरों से तुलना का रोग !",
@@ -46,6 +48,22 @@ const Gyaan = () => {
           
         
       ]
+
+      const [ArticlesArray , setArticlesArray] = useState([])
+
+      useEffect(()=>{
+            getAllPosts()
+      },[])
+
+      const getAllPosts = ()  => {
+            axios.get(baseURL)
+                .then(resp => setArticlesArray(resp?.data?.allPosts))
+                .catch(err=>console.log(err))
+      }
+
+      console.log(ArticlesArray)
+
+
   return (
     <div className='gyaan'>
         <div className="gyaanContainer">
@@ -55,14 +73,14 @@ const Gyaan = () => {
             <img className='gyaanImg' src={vectorDesign} alt="design"/>
 
             <div className="boxesContainer2">
-            {ArticleArray.map(item=>{
+            {ArticlesArray.map(item=>{
                     return (
                         <>
                         
                             <div className="boxContainer2" 
                     >
                     <div className="top">
-                        <img className='postImg' alt='post' src={item.img}/>  
+                        <img className='postImg' alt='post' src={item.image}/>  
                     </div>
                     <div className="bottom">
 
@@ -92,4 +110,4 @@ const Gyaan = () => {
   )
 }
 
-export default Gyaan
+export default GyaanAPI

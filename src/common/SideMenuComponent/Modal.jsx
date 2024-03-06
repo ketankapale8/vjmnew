@@ -169,14 +169,38 @@ const routes = [
       },
 
       {
-        path: "healthcare",
-        name: " Healthcare",
+        path: "sponsor-a-girl",
+        name: " Sponsor A Girl",
         // icon: <FaMoneyBill />,
       },
 
       {
-        path: "disaster-relief",
-        name: " Natural Disaster Relief",
+        path: "kaushal-vikas-yojna",
+        name: " Kaushal Vikas Yojna",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "kanya",
+        name: " Kanya Atmanirbhal",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "middaymeal",
+        name: "Midday Meal",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "library-donation",
+        name: "Donate a Library",
+        // icon: <FaMoneyBill />,
+      },
+
+      {
+        path: "birthday-donation",
+        name: "Contribute A Birthday",
         // icon: <FaMoneyBill />,
       },
 
@@ -209,23 +233,23 @@ const routes = [
     //     },
     //   ],
     // },
-    {
-      path: "/news",
-      name: "News",
-      // icon: <GiTalk />,
-    },
+    // {
+    //   path: "/news",
+    //   name: "News",
+    //   // icon: <GiTalk />,
+    // },
     
-    {
-      path: "/",
-      name: "Yoga and Meditation",
-      // icon: <GiTalk />,
-    },
+    // {
+    //   path: "/",
+    //   name: "Yoga and Meditation",
+    //   // icon: <GiTalk />,
+    // },
     
-    {
-      path: "/",
-      name: "Centers",
-      // icon: <GiTalk />,
-    },
+    // {
+    //   path: "/",
+    //   name: "Centers",
+    //   // icon: <GiTalk />,
+    // },
     // {
       //   path: "/settings",
       //   name: "Settings",

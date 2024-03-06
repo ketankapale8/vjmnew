@@ -43,7 +43,18 @@ const EventsArrayHindi = [
       tag: "यज्ञ",
       // share : share,
       // date : '10th October'
-    }
+    },
+    // {
+    //   title : "यज्ञ",
+    //   desc : "यज्ञ करने से हमारा बाहरी और भीतरी वातावरण पवित्र होता है।जब हम गुरु के मार्गदर्शन में यज्ञ करते हैं तो हम भक्ति और आंतरिक शांति के उच्च स्तर पर पहुंच जाते हैं। विश्व जागृति मिशन, पर्यावरण शुद्धि और आंतरिक आनंद के लिए विशेष रूप से गणेश लक्ष्मी महायज्ञ,महाशिवरात्रि यज्ञ तथा समय-समय पर अन्य यज्ञों का आयोजन करता है। ",
+    //   img: img3,
+    //   date: "19,March,2023",
+    //   city: "Delhi",
+    //   tag: "यज्ञ",
+    //   // share : share,
+    //   // date : '10th October'
+    // },
+    
   ]
 
   const EventsArrayYugrishi = [
@@ -198,7 +209,7 @@ const EventsArrayHindi = [
 {current.map(item=>{
   return (
     <>
-    <div className="boxContainer" 
+    <div className="boxContainer1" 
     >
       <div className="top">
         <img className='postImg' alt='post' src={item.img}/>  
