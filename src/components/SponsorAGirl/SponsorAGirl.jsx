@@ -7,6 +7,7 @@ import GirlChildContainer from '../../newpagescommoncomp/girlChildContainer/Girl
 import FAQ from '../../newpagescommoncomp/FAQ\'s/FAQ';
 import FooterBanner from '../../newpagescommoncomp/FooterBanner/FooterBanner';
 import GalleryContainer from '../../newpagescommoncomp/GalleryContainer/GalleryContainer';
+import GirlStories from '../../newpagescommoncomp/girlStories/GirlStories';
 
 
 const SponsorAGirl = () => {
@@ -132,6 +133,7 @@ const bannerData = [
         <GirlChildContainer girlChildArr={girlChildArr}/>
         <FAQ/>
         <GalleryContainer/>
+        <GirlStories/>
         <FooterBanner/>
     
     </>

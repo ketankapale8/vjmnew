@@ -58,6 +58,7 @@ import KaushalVikasYojna from './components/KaushalVikasYojna/KaushalVIkasYojna.
 import BirthdayContribution from './components/BirthDayContribution/BirthdayContribution.jsx';
 import MiddayMeal from './newpagescommoncomp/MiddayMeal/Middaymeal.jsx';
 import PaymentSuccess from './components/PaymentSuccess/PaymentSuccess.jsx';
+import StoriesMore from './newpagescommoncomp/StoriesMore/StoriesMore.jsx';
 import Dummy from './components/Dummy/Dummy.jsx';
 import Layout from './protectedlayout/Layout.js';
 import PersistLogin from './features/auth/PersistLogin.js';
@@ -156,6 +157,7 @@ function App() {
               </Route>
 
           </Route>
+          </Route>
           <Route element={<Dikshit/>} path='diksha'/>
           <Route element={<VJMMembership/>} path='vjm-membership'/>
           <Route element={<Donor/>} path='donor'/>
@@ -167,6 +169,8 @@ function App() {
           {/* //Donation// */}
           {/* // aurjaane  */}
           <Route element={<AurJaane/>} path='/more'/>
+          <Route element={<StoriesMore/>} path='/storiesmore'/>
+
 
           {/* // New Pages  */}
           <Route element={<Terms/>} path='/terms'/>
@@ -186,7 +190,6 @@ function App() {
           <Route element={<Dummy/>} path='/dummy'/> 
 
 
-          </Route>
 
 
         </Routes>
