@@ -69,9 +69,9 @@
         .events{
             display: grid !important;
             grid-template-columns: 352px 352px 352px !important;
-            height: 523px;
+            height: auto;
             width: auto;
-            gap: 40px;
+            gap: 80px;
             padding-bottom: 30px;
             .boxContainer{
                 display: flex;
@@ -129,7 +129,7 @@
 
                     h4{
                         text-align: start;
-                        font-size: 1.7rem;
+                        font-size: 1.1rem;
                          padding-left: 12px;
                          color: black;
 
@@ -141,7 +141,7 @@
                     p{
                         text-align: justify;
                         font-weight: 500;
-                        font-size: 14px;
+                        font-size: 0.8rem;
                         line-height: 24px;
                         text-align: start;
                         

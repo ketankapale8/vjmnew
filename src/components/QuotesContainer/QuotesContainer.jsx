@@ -67,7 +67,6 @@ const QuotesContainer = ({}) => {
   const [allQuotes , setallQuotes] = useState([])
 
   useEffect(()=> {
- 
     getQuotes();
   },[])
 
@@ -76,6 +75,8 @@ const QuotesContainer = ({}) => {
       .then(resp => setallQuotes(resp.data.allQuotes))
       .catch(err=>console.log(err))
   }
+
+  console.log(allQuotes)
   return (
     <div className='middleContainer1'>
         <div className="middleTop">
